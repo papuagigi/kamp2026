@@ -7,8 +7,10 @@
 ## 준비
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+bash setup.sh
 ```
+
+`.venv` 가상환경을 만들고 `requirements.txt`의 패키지를 설치한 뒤 학습 장치를 확인합니다. Python 3.9에서 3.13 사이면 됩니다. `requirements.txt`에는 직접 쓰는 패키지의 버전이, `requirements.lock.txt`에는 설치된 모든 패키지의 정확한 버전이 있습니다. 결과가 미묘하게 다를 때는 lock 파일로 설치합니다.
 
 데이터는 저장소에 없습니다. KAMP 포털 공지(제6회 경진대회 과제공개)에서 `4. X-ray 검사장비 AI 데이터셋.zip`을 내려받아 압축을 풀고, 프로젝트 루트에 `제조AI데이터셋/4. X-ray 검사장비 AI 데이터셋/dataset/` 구조가 되도록 두면 됩니다. 코드는 이 폴더를 읽기만 합니다.
 
