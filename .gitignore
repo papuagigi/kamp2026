@@ -4,22 +4,20 @@ data/
 runs/
 reports/
 outputs/
+weights/
 .venv/
 __pycache__/
 *.pyc
 *.pt
 .DS_Store
-reports_train_log.txt
 
 # 로컬 참고 자료 (저장소에는 필수 파일만 둔다)
+archive/
 codex_analysis/
 docs/0*_*.md
-docs/Codex_지시문.md
 docs/figures/
+docs/대회자료/
 docs/리뷰_*.md
-scripts/inspect_datasets.py
-scripts/quick_baseline.py
-scripts/xray_smoke_test.py
 *.pdf
 *.rtf
 *.hwpx

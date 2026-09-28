@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 data/xray_v1 (촬영 묶음 분할)로 YOLO를 학습하고, val/test 예측을 CSV로 저장한다.
-사용: .venv/bin/python scripts/xray_train_yolo.py --model yolov8n.pt --imgsz 640 --epochs 30 --name v1_yolov8n_640
+사용: .venv/bin/python scripts/xray_train_yolo.py --model weights/yolov8n.pt --imgsz 640 --epochs 30 --name v1_yolov8n_640
 예측 CSV: reports/preds_<name>_<split>.csv (stem, cx, cy, w, h, score; 픽셀 단위)
 """
 import argparse, time, csv
@@ -24,7 +24,7 @@ def predict_to_csv(model, split, name, imgsz, device):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="yolov8n.pt"); ap.add_argument("--imgsz", type=int, default=640)
+    ap.add_argument("--model", default="weights/yolov8n.pt"); ap.add_argument("--imgsz", type=int, default=640)
     ap.add_argument("--epochs", type=int, default=30); ap.add_argument("--name", required=True)
     ap.add_argument("--device", default="mps"); ap.add_argument("--batch", type=int, default=16)
     a = ap.parse_args()

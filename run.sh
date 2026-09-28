@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 PY=.venv/bin/python
-MODEL=${MODEL:-yolov8n.pt}; IMGSZ=${IMGSZ:-640}; EPOCHS=${EPOCHS:-30}; NAME=${NAME:-v1_yolov8n_640}
+MODEL=${MODEL:-weights/yolov8n.pt}; IMGSZ=${IMGSZ:-640}; EPOCHS=${EPOCHS:-30}; NAME=${NAME:-v1_yolov8n_640}
 DEVICE=${DEVICE:-$($PY -c "import torch;print('mps' if torch.backends.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu')")}
 echo "[1/5] 데이터 준비";            $PY scripts/xray_prepare.py
 echo "[2/5] 고전 기준선";            (cd scripts && ../$PY xray_baseline_classical.py)
