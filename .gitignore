@@ -14,8 +14,10 @@ __pycache__/
 # 로컬 참고 자료 (저장소에는 필수 파일만 둔다)
 archive/
 codex_analysis/
-docs/0*_*.md
-docs/figures/
+docs/0[0-5]_*.md
+docs/figures/*
+!docs/figures/06_*.png
+!docs/figures/07_*.png
 docs/대회자료/
 docs/리뷰_*.md
 *.pdf

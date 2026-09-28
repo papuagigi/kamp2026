@@ -5,6 +5,7 @@
 - 점수 문턱값을 훑어 정밀도/재현율/F1, 최고 F1, AP(PR 곡선 면적)
 - 조건별 재현율: 시편 여부, 호기, 이미지 크기, 이물 크기, 제품 가장자리 거리, 대비
 사용: .venv/bin/python scripts/xray_eval.py reports/preds_v1_yolov8n_640_val.csv --split val [--thr 0.25]
+      일부 사진만: --split train,val,test --stems 사진이름목록.txt --tag 이름  (결과: <예측파일>_<이름>_eval.json)
 """
 import argparse, json
 from pathlib import Path
@@ -18,14 +19,15 @@ def product_mask(gray):
     if n <= 1: return m
     return (lab == 1 + np.argmax(stats[1:, cv2.CC_STAT_AREA])).astype(np.uint8)
 
-def load_gt(split):
-    man = pd.read_csv(DATA / "manifest.csv", encoding="utf-8-sig"); man = man[man.split == split]
+def load_gt(split, stems=None):
+    man = pd.read_csv(DATA / "manifest.csv", encoding="utf-8-sig"); man = man[man.split.isin(split.split(","))]
+    if stems is not None: man = man[man.stem.isin(stems)]
     gts = []
     for r in man.itertuples():
         W, H = r.width, r.height
-        gray = cv2.imread(str(DATA / "images" / split / f"{r.stem}.png"), cv2.IMREAD_GRAYSCALE)
+        gray = cv2.imread(str(DATA / "images" / r.split / f"{r.stem}.png"), cv2.IMREAD_GRAYSCALE)
         pm = product_mask(gray); dist = cv2.distanceTransform(pm, cv2.DIST_L2, 3)
-        for l in (DATA / "labels" / split / f"{r.stem}.txt").read_text().splitlines():
+        for l in (DATA / "labels" / r.split / f"{r.stem}.txt").read_text().splitlines():
             if not l.strip(): continue
             _, cx, cy, w, h = map(float, l.split()); cx, cy, w, h = cx * W, cy * H, w * W, h * H
             xi, yi = int(min(max(cx, 0), W - 1)), int(min(max(cy, 0), H - 1))
@@ -56,8 +58,8 @@ def match(preds, gts, dist_thr=8.0, iou_thr=0.3):
         if best >= 0: gt_hit[best] = p.score
     preds = preds.assign(hit=pred_hit); return preds, gt_hit
 
-def evaluate(pred_csv, split, thr=None):
-    gts, man = load_gt(split); preds = pd.read_csv(pred_csv)
+def evaluate(pred_csv, split, thr=None, stems=None):
+    gts, man = load_gt(split, stems); preds = pd.read_csv(pred_csv); preds = preds[preds.stem.isin(set(man.stem))]
     preds, gt_hit = match(preds, gts)
     scores = np.sort(preds.score.unique())[::-1]
     rows = []
@@ -87,8 +89,11 @@ def evaluate(pred_csv, split, thr=None):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("pred_csv"); ap.add_argument("--split", required=True); ap.add_argument("--thr", type=float, default=None)
-    a = ap.parse_args(); res, curve, gts = evaluate(a.pred_csv, a.split, a.thr)
-    out = REPORTS / (Path(a.pred_csv).stem + "_eval.json"); out.write_text(json.dumps(res, ensure_ascii=False, indent=2)); 
+    ap.add_argument("--stems", default=None, help="채점할 사진 이름 목록 파일 (한 줄에 하나). 없으면 split 전체")
+    ap.add_argument("--tag", default="", help="결과 파일 이름에 붙일 말")
+    a = ap.parse_args(); stems = set(Path(a.stems).read_text().split()) if a.stems else None
+    res, curve, gts = evaluate(a.pred_csv, a.split, a.thr, stems)
+    out = REPORTS / (Path(a.pred_csv).stem + (f"_{a.tag}" if a.tag else "") + "_eval.json"); out.write_text(json.dumps(res, ensure_ascii=False, indent=2)); 
     print(json.dumps({k: v for k, v in res.items() if k != "recall_by_condition"}, ensure_ascii=False))
     for c, d in res["recall_by_condition"].items(): print(f"  {c}: {d}")
     print("saved", out)
