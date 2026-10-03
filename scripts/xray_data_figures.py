@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 원본 데이터 설명용 그림. xray_data_audit.py 결과(reports/data_audit/)와 원본 사진을 읽어 docs/figures/06_*.png 를 만든다.
-- 06_raw_walkthrough.png : 원본 사진 한 장 읽기 (장비 표시, 정답 라벨, 지워야 할 픽셀, 마스킹 후)
+- 06_raw_walkthrough.png : 원본 사진 한 장 읽기 (색 네모, 정답 라벨, 지워야 할 픽셀, 마스킹 후)
 - 06_image_types.png     : 사진 종류 (시험편 막대 3개·1개, 위치 이상 사진, 표시나 라벨이 빠진 사진)
 - 06_time_pattern.png    : 하루 중 촬영 시각 분포, 날짜별·호기별 사진 수 (시험편 종류별)
 - 06_object_stats.png    : 금속구 라벨 크기, 대비, 제품 가장자리까지 거리 (호기별)
@@ -25,7 +25,7 @@ DS = ROOT / "제조AI데이터셋" / "4. X-ray 검사장비 AI 데이터셋" / "
 RAW = DS / "test1" / "yolov3" / "X선이물검출기(06.23_09.22)"; LAB = DS / "라벨링 6종 세트" / "labels"
 AUD = ROOT / "reports" / "data_audit"; FIG = ROOT / "docs" / "figures"
 BLUE, ORANGE, AQUA, GRAY, INK2 = "#2a78d6", "#eb6834", "#1baf7a", "#a3a29c", "#52514e"   # 분류용 색 1~3번, 중립 회색, 보조 글자색
-LABEL_C = "#00c800"                                                                   # 정답 라벨 표시 (장비 표시 색과 겹치지 않게)
+LABEL_C = "#00c800"                                                                   # 정답 라벨 표시 (색 네모 색과 겹치지 않게)
 MACHINES = ["1호기", "2호기", "3호기"]
 
 def rgb(path): return np.asarray(Image.open(path).convert("RGB"))

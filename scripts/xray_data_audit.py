@@ -2,7 +2,7 @@
 """
 원본 X-ray 데이터셋 점검. 원본 폴더는 읽기만 한다.
 - 원본 폴더의 모든 파일을 역할별로 목록화한다 (확장자와 실제 형식이 다른 파일도 표시)
-- 원본 사진(BMP)마다 호기, 촬영 시각, 크기, 중복, 라벨 여부, 장비 표시(팔레트 244~255번 색)를 기록한다
+- 원본 사진(BMP)마다 호기, 촬영 시각, 크기, 중복, 라벨 여부, 색 네모(팔레트 244~255번 색)를 기록한다
 - 공식 라벨 박스마다 크기, 장비 네모 안에 있는지, 대비, 제품 가장자리까지 거리, 마스킹이 박스를 건드리는지를 기록한다
 - 촬영 시각으로 연속 촬영 묶음(60초 이내)과 하루 중 촬영 시각 분포를 본다
 출력: reports/data_audit/{inventory.csv, raw_images.csv, label_boxes.csv, summary.json}
@@ -21,7 +21,7 @@ RAW = DS / "test1" / "yolov3" / "X선이물검출기(06.23_09.22)"
 LABSET = DS / "라벨링 6종 세트"
 OUT = ROOT / "reports" / "data_audit"
 PAT = re.compile(r"^(\d{3})_(\d{8})_(\d{6})\((\d+)\)$")
-MARK_MIN = 244            # 팔레트 244~255번은 장비 표시 색, 0~243번은 X-ray 회색
+MARK_MIN = 244            # 팔레트 244~255번은 색 네모 색, 0~243번은 X-ray 회색
 PRACTICE = [15, 50, 100, 200, 300, 400]
 
 GROUPS = [  # (상대경로 앞부분, 역할)
@@ -74,7 +74,7 @@ def clean(o):
     return o.item() if hasattr(o, "item") else o
 
 def mark_regions(idx):
-    """장비 표시 픽셀과, 네모 테두리가 둘러싼 안쪽 영역(구멍) 목록을 돌려준다."""
+    """색 네모 픽셀과, 네모 테두리가 둘러싼 안쪽 영역(구멍) 목록을 돌려준다."""
     mk = (idx >= MARK_MIN).astype(np.uint8)
     holes = []
     if mk.any():

@@ -6,7 +6,7 @@
 - 입력 조건 raw: 장비가 그린 색 네모가 남은 원본(cv2.imread). 가이드북이 학습한 입력과 같다.
   입력 조건 masked: scripts/xray_prepare.py 의 mask_image 로 색 네모를 지운 흑백을 3채널로 바꾼 것
 - 전처리·후처리는 가이드북 detect.py 와 같다: letterbox → BGR→RGB, CHW, /255 → model(img)[0]
-  → non_max_suppression → scale_coords(원본 픽셀) → 반올림. 단 채점기가 문턱값을 훑도록 conf 0.001 로 뽑는다(detect.py 기본 0.3).
+  → non_max_suppression → scale_coords(원본 픽셀) → 반올림. 단 채점기가 임계값을 훑도록 conf 0.001 로 뽑는다(detect.py 기본 0.3).
 - 원본 폴더(제조AI데이터셋/)는 읽기만 한다. 가이드북 코드를 import 해도 .pyc 가 생기지 않게 막는다.
 사용: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/xray_guidebook_probe.py --weights <실습별 가중치파일/last400.pt> --cond raw
       채점: .venv/bin/python scripts/xray_eval.py reports/preds_guidebook_last400_raw_labelonly100.csv --split train,val,test --stems reports/guidebook_probe/label_only_100.txt
@@ -131,16 +131,16 @@ def write_summary():
         e = J(f"{s}_common29_eval.json")
         tb.append(f"| {name} | {inp} | {e['n_images']} | {e['n_gt']} | {f(e['precision'])} | {f(e['recall'])} | {f(e['f1'])} | {f(e['ap'])} | {f(e['fp_per_image'])} | {f(e['thr'])} |")
     dev = ", ".join(sorted({r["device"] for r in runs})); sec = sum(r["sec_total"] for r in runs); r0 = runs[0]
-    head = "| 가중치 | 입력 | 사진 | 정답 | 정밀도 | 재현율 | F1 | AP | 사진당 오탐 | 최고 F1 문턱값 | 정밀도@0.3 | 재현율@0.3 | F1@0.3 |\n|---|---|" + "---:|" * 11
+    head = "| 가중치 | 입력 | 사진 | 정답 | 정밀도 | 재현율 | F1 | AP | 사진당 오탐 | 최고 F1 임계값 | 정밀도@0.3 | 재현율@0.3 | F1@0.3 |\n|---|---|" + "---:|" * 11
     md = ["# 가이드북 실습 가중치를 처음 보는 사진에 돌려 본 결과", "",
           "주최 측 가이드북의 YOLOv3-SPP 실습 가중치(last15~last400)를, 어느 실습 폴더에도 없는 라벨 전용 100장에 돌렸다.",
           "raw는 장비가 그린 색 네모가 남은 원본(가이드북이 학습한 입력), masked는 우리 마스킹 함수로 색 네모를 지운 사진이다.",
           "채점은 scripts/xray_eval.py, 표의 숫자는 채점 JSON 값을 소수 넷째 자리로 반올림한 것이다.", "",
-          "- 정밀도: 모델이 이물이라고 한 것 중 맞은 비율. 재현율: 실제 이물 중 찾아낸 비율. AP: 문턱값을 훑은 정밀도-재현율 곡선 아래 넓이.",
-          "- 사진당 오탐: 문턱값에서 정답과 맞지 않은 박스 수 / 사진 수. 최고 F1 문턱값: F1이 가장 높은 점수 문턱값. @0.3: detect.py 기본 문턱값 0.3으로 고정.", "",
+          "- 정밀도: 모델이 이물이라고 한 것 중 맞은 비율. 재현율: 실제 이물 중 찾아낸 비율. AP: 임계값을 훑은 정밀도-재현율 곡선 아래 넓이.",
+          "- 사진당 오탐: 임계값에서 정답과 맞지 않은 박스 수 / 사진 수. 최고 F1 임계값: F1이 가장 높은 점수 임계값. @0.3: detect.py 기본 임계값 0.3으로 고정.", "",
           "## 1. 가중치 × 입력 조건 (라벨 전용 100장)", "", head, *ta, "",
           "## 2. 공통 평가 29장 (라벨 전용 100장 중 우리 test 분할, 두 쪽 모두 학습에 안 쓴 사진)", "",
-          "| 모델 | 입력 | 사진 | 정답 | 정밀도 | 재현율 | F1 | AP | 사진당 오탐 | 최고 F1 문턱값 |\n|---|---|" + "---:|" * 8, *tb, "",
+          "| 모델 | 입력 | 사진 | 정답 | 정밀도 | 재현율 | F1 | AP | 사진당 오탐 | 최고 F1 임계값 |\n|---|---|" + "---:|" * 8, *tb, "",
           "## 실행 조건", "",
           f"- 장치 {dev}, torch {r0['torch']}, img-size {r0['img_size']}, conf {r0['conf']}, NMS iou {r0['iou']}",
           f"- 추론 12회(가중치 6개 × 입력 2개) 실행 시간 합계 {sec:.0f}초 (모델 불러오기 포함, 채점 시간 제외)",

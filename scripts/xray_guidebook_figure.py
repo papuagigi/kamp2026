@@ -2,7 +2,7 @@
 """
 가이드북 실습 가중치가 색 표시에 기대는지 보여 주는 그림.
 xray_guidebook_probe.py 가 만든 예측(reports/preds_guidebook_last*_{raw,masked}_labelonly100.csv)에서
-사진마다 가장 높은 점수를 뽑아, 색 네모가 남은 원본과 지운 사진을 나란히 그린다. 가이드북 기본 문턱값 0.3도 표시한다.
+사진마다 가장 높은 점수를 뽑아, 색 네모가 남은 원본과 지운 사진을 나란히 그린다. 가이드북 기본 임계값 0.3도 표시한다.
 출력: docs/figures/07_guidebook_mark_dependence.png
 사용: .venv/bin/python scripts/xray_guidebook_figure.py
 """
@@ -31,7 +31,7 @@ def main():
             v = top_scores(n, cond); x = i + off + rng.uniform(-0.07, 0.07, len(v))
             ax.scatter(x, v, s=9, color=c, alpha=0.55, linewidths=0, label=None)
             ax.plot([i + off - 0.12, i + off + 0.12], [np.median(v)] * 2, color="#0b0b0b", lw=1.6)
-    ax.axhline(0.3, color="#52514e", lw=1, ls="--"); ax.text(len(ns) - 0.45, 0.31, "가이드북 기본 문턱값 0.3", ha="right", va="bottom", color="#52514e")
+    ax.axhline(0.3, color="#52514e", lw=1, ls="--"); ax.text(len(ns) - 0.45, 0.31, "가이드북 기본 임계값 0.3", ha="right", va="bottom", color="#52514e")
     ax.set_xticks(range(len(ns))); ax.set_xticklabels([f"실습 {n}장\n가중치" for n in ns]); ax.set_ylim(0, 1.0)
     ax.set_ylabel("사진별 최고 점수"); ax.grid(axis="y", color="#e6e5e0", lw=0.6); ax.set_axisbelow(True)
     ax.scatter([], [], s=25, color=RAW_C, label="색 네모가 남은 원본 (가이드북이 학습한 형태)")

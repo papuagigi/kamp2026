@@ -1,0 +1,229 @@
+{
+  "scope": "official train and validation only; saved predictions rescored; no training or inference",
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+  "training_images": 296,
+  "training_boxes": 679,
+  "train_distribution": {
+    "size": {
+      "0": 6.0,
+      "0.25": 10.0,
+      "0.5": 11.0,
+      "0.75": 13.0,
+      "1": 21.0
+    },
+    "edge": {
+      "0": 38.07365417480469,
+      "0.25": 45.840087890625,
+      "0.5": 51.570098876953125,
+      "0.75": 60.16511535644531,
+      "1": 87.86016845703125
+    },
+    "contrast": {
+      "0": 24.0,
+      "0.25": 42.5,
+      "0.5": 48.0,
+      "0.75": 57.0,
+      "1": 74.0
+    },
+    "box_aspect_ratio": {
+      "0": 1.0,
+      "0.25": 1.0833333333333333,
+      "0.5": 1.125,
+      "0.75": 1.2613636363636362,
+      "1": 1.8571428571428572
+    },
+    "background_gray": {
+      "0": 78.0,
+      "0.25": 98.0,
+      "0.5": 106.0,
+      "0.75": 127.0,
+      "1": 143.0
+    },
+    "background_std": {
+      "0": 10.878036184084586,
+      "0.25": 12.818238071519072,
+      "0.5": 13.502099287944509,
+      "0.75": 14.234942825634754,
+      "1": 15.745342347330178
+    }
+  },
+  "validation_distribution": {
+    "size": {
+      "0": 7.0,
+      "0.25": 10.0,
+      "0.5": 11.0,
+      "0.75": 13.999999999999998,
+      "1": 20.0
+    },
+    "edge": {
+      "0": 38.2000732421875,
+      "0.25": 45.840087890625,
+      "0.5": 51.570098876953125,
+      "0.75": 60.101905822753906,
+      "1": 84.99516296386719
+    },
+    "contrast": {
+      "0": 25.0,
+      "0.25": 43.0,
+      "0.5": 49.0,
+      "0.75": 58.0,
+      "1": 72.0
+    },
+    "box_aspect_ratio": {
+      "0": 1.0,
+      "0.25": 1.0000000000000002,
+      "0.5": 1.1111111111111112,
+      "0.75": 1.2222222222222223,
+      "1": 1.8333333333333333
+    },
+    "background_gray": {
+      "0": 81.0,
+      "0.25": 100.0,
+      "0.5": 109.0,
+      "0.75": 130.5,
+      "1": 143.0
+    },
+    "background_std": {
+      "0": 10.265134665727263,
+      "0.25": 12.527159271858238,
+      "0.5": 13.269987518077295,
+      "0.75": 14.153071535542463,
+      "1": 15.833837122578654
+    }
+  },
+  "train_long_side_le_15": 643,
+  "cuts": {
+    "size": [
+      10.0,
+      13.0
+    ],
+    "edge": [
+      45.840087890625,
+      60.16511535644531
+    ],
+    "contrast": [
+      42.5,
+      57.0
+    ],
+    "box_aspect_ratio": [
+      1.0833333333333333,
+      1.2613636363636362
+    ],
+    "background_gray": [
+      98.0,
+      127.0
+    ],
+    "background_std": [
+      12.818238071519072,
+      14.234942825634754
+    ]
+  },
+  "definitions": {
+    "size": "max(TXT box width, height), original-image pixels; not measured physical defect diameter",
+    "edge": "center distance inside largest approximate product mask from xray_eval; not guaranteed bar boundary",
+    "contrast": "21x21 local median minus 5x5 central minimum, grayscale levels; xray_eval proxy",
+    "box_aspect_ratio": "long side / short side of official TXT box; not segmented object shape",
+    "background_gray": "local patch median excluding every TXT box in that image; includes nearby structures",
+    "background_std": "standard deviation in same patch; texture/edge proxy, not a verified complex-background label"
+  },
+  "models": [
+    {
+      "run": "v2_mix2453_yolo_mps",
+      "threshold": 0.68106407,
+      "images": 107,
+      "gt": 243,
+      "tp": 240,
+      "fp": 4,
+      "fn": 3,
+      "positive_images_with_any_alarm": 107,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 104,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_mix2453_faster_cuda",
+      "threshold": 0.999992,
+      "images": 107,
+      "gt": 243,
+      "tp": 240,
+      "fp": 3,
+      "fn": 3,
+      "positive_images_with_any_alarm": 107,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 104,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_mix2453_rfdetr_mps",
+      "threshold": 0.7691675,
+      "images": 107,
+      "gt": 243,
+      "tp": 240,
+      "fp": 3,
+      "fn": 3,
+      "positive_images_with_any_alarm": 107,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 104,
+      "real_normal_images": 0
+    }
+  ],
+  "validation_fn_categories": [
+    {
+      "run": "v2_mix2453_faster_cuda",
+      "category": "nearby_selected_box_iou_below_0.5",
+      "count": 3
+    },
+    {
+      "run": "v2_mix2453_rfdetr_mps",
+      "category": "nearby_selected_box_iou_below_0.5",
+      "count": 3
+    },
+    {
+      "run": "v2_mix2453_yolo_mps",
+      "category": "nearby_selected_box_iou_below_0.5",
+      "count": 3
+    }
+  ],
+  "validation_unique_missed_gt": 6,
+  "sources": [
+    {
+      "path": "reports/preds_v2_mix2453_yolo_mps_val.csv",
+      "sha256": "a1b132052363bc643e0c3e1c18ebc659ffdcdd744971c9e8baac7a547c930e2e"
+    },
+    {
+      "path": "reports/overnight_20261003/v2_mix2453_yolo_mps_evaluation.json",
+      "sha256": "6733c1a919837b9dd428041d33fba0d9de69b3656980f9dc5e560a22fbdd1cde"
+    },
+    {
+      "path": "reports/preds_v2_mix2453_faster_cuda_val.csv",
+      "sha256": "4677cf02d7a689f9a0eaf94aad63589896ccaadf00ed9eb394a15fe6d107ed25"
+    },
+    {
+      "path": "reports/overnight_20261003/v2_mix2453_faster_cuda_evaluation.json",
+      "sha256": "5edf9df2b5369208cb86625bde1c7c7a1732df5aadc60be58c8cfab515cf195a"
+    },
+    {
+      "path": "reports/preds_v2_mix2453_rfdetr_mps_val.csv",
+      "sha256": "d5653f888ee2b357c7f31fac124acdd5c5dd7ff41379b7a1f961c9f7f45f5649"
+    },
+    {
+      "path": "reports/overnight_20261003/v2_mix2453_rfdetr_mps_evaluation.json",
+      "sha256": "828cfc0068cdbf6cdfe484b328d5509a9c87186b8d362b6eb7fde9df7c629a92"
+    },
+    {
+      "path": "data/xray_v2/split.csv",
+      "sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40"
+    }
+  ],
+  "limitations": [
+    "Only 3 box FN per model. Associations do not establish causal failure conditions.",
+    "Same capture burst is correlated. No independent-object confidence intervals claimed.",
+    "Geometric FN and positive product without alarm are different endpoints.",
+    "Every validation image is positive. Normal false-alarm rate, factory review load and pass safety are not estimable.",
+    "Quartile thresholds fitted to training only; exploratory validation analysis after earlier test access.",
+    "GT-derived defect conditions cannot by themselves trigger live review when a defect is missed."
+  ]
+}

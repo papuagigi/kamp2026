@@ -4,12 +4,15 @@
 - 작은 가우시안(σ1)과 큰 가우시안(σ2)의 차(DoG)가 어두운 점에서 양수 봉우리가 된다
 - 봉우리를 국소 최대로 골라내고, 봉우리 높이를 국소 노이즈로 나눈 값을 점수로 쓴다
 - 제품 영역 안(가장자리 4px 제외)만 본다
-사용: .venv/bin/python scripts/xray_baseline_classical.py  → reports/preds_classical_dog_{val,test}.csv
+사용: .venv/bin/python scripts/xray_baseline_classical.py  → reports/preds_v2_classical_dog_{val,test}.csv
+      v2: XRAY_DATA=xray_v2 .venv/bin/python scripts/xray_baseline_classical.py  → reports/preds_v2_classical_dog_{val,test}.csv
 """
-import csv
+import csv, os, sys
 from pathlib import Path
 import numpy as np, cv2, pandas as pd
-ROOT = Path(__file__).resolve().parents[1]; DATA = ROOT / "data" / "xray_v1"; REPORTS = ROOT / "reports"
+ROOT = Path(__file__).resolve().parents[1]; REPORTS = ROOT / "reports"
+from xray_config import DATA, select_device
+TAG = "" if DATA.name == "xray_v1" else DATA.name.replace("xray_", "") + "_"   # v1 파일 이름은 예전 그대로
 from xray_eval import product_mask
 
 def detect(gray, s1=1.2, s2=3.0, box=12, max_det=30):
@@ -25,8 +28,17 @@ def detect(gray, s1=1.2, s2=3.0, box=12, max_det=30):
 
 def main():
     REPORTS.mkdir(exist_ok=True)
-    for split in ["val", "test"]:
-        out = REPORTS / f"preds_classical_dog_{split}.csv"
+    if "--images" in sys.argv:   # 임의 폴더 예측: --images <PNG 폴더> --out <CSV>
+        folder, out = Path(sys.argv[sys.argv.index("--images") + 1]), Path(sys.argv[sys.argv.index("--out") + 1])
+        with open(out, "w", newline="") as f:
+            w = csv.writer(f); w.writerow(["stem", "cx", "cy", "w", "h", "score"])
+            for p in sorted(folder.glob("*.png")):
+                gray = cv2.imread(str(p), cv2.IMREAD_GRAYSCALE)
+                for cx, cy, bw, bh, s in detect(gray): w.writerow([p.stem, f"{cx:.1f}", f"{cy:.1f}", bw, bh, f"{s:.4f}"])
+        print("saved", out); return
+    splits = sys.argv[sys.argv.index("--splits") + 1].split(",") if "--splits" in sys.argv else ["val", "test"]   # 예: --splits train,val,test
+    for split in splits:
+        out = REPORTS / f"preds_{TAG}classical_dog_{split}.csv"
         with open(out, "w", newline="") as f:
             w = csv.writer(f); w.writerow(["stem", "cx", "cy", "w", "h", "score"])
             for p in sorted((DATA / "images" / split).glob("*.png")):

@@ -18,8 +18,25 @@ docs/0[0-5]_*.md
 docs/figures/*
 !docs/figures/06_*.png
 !docs/figures/07_*.png
+!docs/figures/08_*.png
+!docs/figures/synth_*.png
+!docs/figures/19_*.png
+!docs/figures/20_*.png
+!docs/figures/16_types_actual_examples.png
+!docs/figures/README.md
 docs/대회자료/
 docs/리뷰_*.md
 *.pdf
 *.rtf
 *.hwpx
+
+# Git 공유에서 제외하는 전달 자료·실행 상태·모델
+preprocessed_data/
+logs/
+tmp/
+.ipynb_checkpoints/
+*.pth
+*.ckpt
+*.safetensors
+.env
+.env.*
