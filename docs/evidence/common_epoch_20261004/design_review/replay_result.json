@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "checked_files": 7233,
+  "models": [
+    {
+      "name": "v2_common20_yolo_mps_20261004",
+      "tp": 222,
+      "fp": 2,
+      "fn": 3,
+      "f1": 0.9888641425389755,
+      "precision": 0.9910714285714286,
+      "recall": 0.9866666666666667,
+      "ap": 0.9880395061728396
+    },
+    {
+      "name": "v2_common20_faster_cuda_20261004",
+      "tp": 222,
+      "fp": 3,
+      "fn": 3,
+      "f1": 0.9866666666666667,
+      "precision": 0.9866666666666667,
+      "recall": 0.9866666666666667,
+      "ap": 0.9793272438082254
+    },
+    {
+      "name": "v2_common20_rfdetr_mps_20261004",
+      "tp": 220,
+      "fp": 4,
+      "fn": 5,
+      "f1": 0.9799554565701559,
+      "precision": 0.9821428571428571,
+      "recall": 0.9777777777777777,
+      "ap": 0.9708676075342975
+    },
+    {
+      "name": "v2_common20_dfine_cuda_20261004",
+      "tp": 220,
+      "fp": 6,
+      "fn": 5,
+      "f1": 0.975609756097561,
+      "precision": 0.9734513274336283,
+      "recall": 0.9777777777777777,
+      "ap": 0.9690276217650412
+    },
+    {
+      "name": "v2_latest20_yolo11n_guard_mps_20261004",
+      "tp": 216,
+      "fp": 7,
+      "fn": 9,
+      "f1": 0.9642857142857143,
+      "precision": 0.968609865470852,
+      "recall": 0.96,
+      "ap": 0.9559064135163722
+    },
+    {
+      "name": "v2_latest20_yolo26n_guard_mps_20261004",
+      "tp": 219,
+      "fp": 6,
+      "fn": 6,
+      "f1": 0.9733333333333334,
+      "precision": 0.9733333333333334,
+      "recall": 0.9733333333333334,
+      "ap": 0.9605009844005966
+    }
+  ],
+  "scope": "exported files checksum and saved test prediction rescore",
+  "full_retraining": false,
+  "fresh_environment": false,
+  "new_inference": false,
+  "original_split_preserved": true
+}

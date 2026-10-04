@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "scope": "Read-only current data integrity; no model scoring or label semantic proof",
+  "counts": {
+    "train": 2453,
+    "val": 107,
+    "test": 97
+  },
+  "kinds": {
+    "crop": 295,
+    "offbar": 295,
+    "remove_partial_refined": 93,
+    "rotate_m": 295,
+    "rotate_p": 295,
+    "remove_all_refined": 82,
+    "basic": 296,
+    "accepted_pseudo": 802,
+    "official_val": 107,
+    "official_test": 97
+  },
+  "boxes": {
+    "train": 4950,
+    "val": 243,
+    "test": 225
+  },
+  "empty_label_images": {
+    "train": 82
+  },
+  "real_normal_validation_images": 0,
+  "real_normal_test_images": 0,
+  "source_and_destination_hash_matches": 2657,
+  "pixel_duplicates": 0,
+  "cross_split_capture_groups": 0,
+  "remaining_chromatic_pixels_images": 0,
+  "provenance_sha256": "0dbfb2a6b8e84dfeeda279dfbe49c9cd69077b050741047d64c813c81f6f2bf1",
+  "fixed_split": {
+    "data_version": "xray_v2",
+    "images": 500,
+    "split_images": {
+      "train": 296,
+      "val": 107,
+      "test": 97
+    },
+    "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc"
+  },
+  "limits": [
+    "Grayscale does not prove erased pixels recover the original signal.",
+    "Pseudo labels are training estimates; semantic correctness is not proven by hashes.",
+    "Removal-generated empty labels are synthetic negatives, not real normal products.",
+    "Burst and exact-pixel checks do not prove independence across dates or specimen types."
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "scope": "All 10 routed-or-IoU-error validation images, 28 official targets. Targeted single-AI review, not all 107 validation images.",
+  "reviewer": "Codex in this conversation; model identities known; not independent blind expert review.",
+  "observations": [
+    {
+      "case": "L001",
+      "figure_sha256": "75da732366cc27bbba6f02ae5b4847f36b70c7cf2257cff0bc7c23de1d59f09f",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        187
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1745
+      ]
+    },
+    {
+      "case": "L002",
+      "figure_sha256": "8c8b5ec81ce32d126b47297ca786a9823bc0e7c83c6b6ebf1a5397db81ae6ffc",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        189
+      ],
+      "yolo_uncertain_extra": [
+        188
+      ],
+      "rf_core_inside": [
+        1744
+      ]
+    },
+    {
+      "case": "L003",
+      "figure_sha256": "68e6b1b18caec50048645c795797716b90ccf9de898ee2455808f57fa60802ed",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        186
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1743
+      ]
+    },
+    {
+      "case": "L004",
+      "figure_sha256": "ff37757c51b2a522e6bb54eb1012b8cfac590b691a26570803a060a1c46e08b1",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        196
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        2034
+      ]
+    },
+    {
+      "case": "L005",
+      "figure_sha256": "4af56e17c2bb30529f650ce8aaa089a894e1fa871ff1193372a1ad08b0c0b102",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        195
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        2036
+      ]
+    },
+    {
+      "case": "L006",
+      "figure_sha256": "9506d462099a8803f5e3ff23581ad8ca41e1325194b52c150ba5b190dd8480fb",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        194
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        2035
+      ]
+    },
+    {
+      "case": "L007",
+      "figure_sha256": "8a77939caeae6f2e2a3f1329c750ff40d174c3656dbe37e17820ce6b2ca8dd19",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        129
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L008",
+      "figure_sha256": "d987aa10be3be6b36920170639bb99a7fa3529e4fbe1a249739643e331c94cf4",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        130
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L009",
+      "figure_sha256": "e20be8104b71ff7d67d2348f2aa77c0c1bc53d969fa5d4327c900f9bbf62d298",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        128
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L010",
+      "figure_sha256": "42702e82523d54b2d3f156609a2c6b0bb173c8eec9a7b65a66ff976960117f0e",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        0
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1
+      ]
+    },
+    {
+      "case": "L011",
+      "figure_sha256": "20be81039969d1effa7127323c1eb8fb692ac232a15fc51556d8f8f76a292abd",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        2
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        2
+      ]
+    },
+    {
+      "case": "L012",
+      "figure_sha256": "02b225c3ed317b806179a5d4dd1921fc3b28f9706795f4facd3601f4e6a1c755",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        1
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        0
+      ]
+    },
+    {
+      "case": "L013",
+      "figure_sha256": "c5230d956144c9c6f49a5870223fc17d7196c55077e9952963e3f111bb40f112",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        27
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        292
+      ]
+    },
+    {
+      "case": "L014",
+      "figure_sha256": "2cecce8c6bb51cbef2ed6d7e584a45098de90354c7a608ca17e24876193dafc3",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        26
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        291
+      ]
+    },
+    {
+      "case": "L015",
+      "figure_sha256": "e4b32ed50d7ff3d5a275720b8ab5ddf1de30addddf3db5e62ef085ef26b9e4f8",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        25
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        290
+      ]
+    },
+    {
+      "case": "L016",
+      "figure_sha256": "90be9596596dd8b74810f9610820b3efc8bcb1ff8221491878733384d4d3b880",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        40
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        576
+      ]
+    },
+    {
+      "case": "L017",
+      "figure_sha256": "4001398320dc137bc227de727ba2c67ef4d83c5e9f7d772f2647164f9b4e59eb",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        39
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        578
+      ]
+    },
+    {
+      "case": "L018",
+      "figure_sha256": "10013474fd94b1e2256980bb1ab963f8f3f7d55f67d473409950ce9a3b007899",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        41
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        577
+      ]
+    },
+    {
+      "case": "L019",
+      "figure_sha256": "96434d3326725154c23969f677b4ff254ac905e65c0d441c784f93715ef3a585",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        54
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        861
+      ]
+    },
+    {
+      "case": "L020",
+      "figure_sha256": "bde99aef1f58e817ca9ac043e85c6e0fe738624fdc47939298fe2834114d3b6e",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        52
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        862
+      ]
+    },
+    {
+      "case": "L021",
+      "figure_sha256": "4906e906f1c52aa8041ffe81a61fe03941114baee6244035faf6ac2916a46ae9",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        53
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        863
+      ]
+    },
+    {
+      "case": "L022",
+      "figure_sha256": "b6463a309154593cb7eeecc905292f3c0ed6b4b91b7fda05cd986be28a573499",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        67
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L023",
+      "figure_sha256": "ce931db2025ef8636c53799cb46d610255f5642e6297ad35a97715a5d7eab67c",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        69
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L024",
+      "figure_sha256": "80d0b248639563f9a2acb0df7832284b72277333d6b199040adfb5a694e7c670",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        68
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": null
+    },
+    {
+      "case": "L025",
+      "figure_sha256": "1c2b4b59d512797a755acac1edda850ae8a630dba72c81fc1368bde3fed41bbe",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        73
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1152
+      ]
+    },
+    {
+      "case": "L026",
+      "figure_sha256": "9317150cb2905c0ee25c88a76df495b571afe64b5c9ee9a2093c9b9e18a2b0ba",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        75
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1154
+      ]
+    },
+    {
+      "case": "L027",
+      "figure_sha256": "86f7c0b3ca07926c856581dceb013a18227cc4d8a37693bfeb0615075a893356",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        74
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1153
+      ]
+    },
+    {
+      "case": "L028",
+      "figure_sha256": "be767d465b2bc84d427c1ea6d1b968c3964540918a98020c3f4f22209acd9658",
+      "target_core_visible": "yes",
+      "yolo_core_inside": [
+        85
+      ],
+      "yolo_uncertain_extra": [],
+      "rf_core_inside": [
+        1447
+      ]
+    }
+  ],
+  "uncertain": "L002 additional YOLO box covers faint texture away from official targets. Physical foreign-body identity cannot be settled from this image. Preserve for reinspection; do not relabel as normal.",
+  "decision": "No repeated actual missing official target observed within this reviewed subset. No specialist fine-tuning justified by these cases alone.",
+  "all_validation_visual_f1": null
+}

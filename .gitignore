@@ -47,3 +47,15 @@ tmp/
 !docs/figures/common20_threshold_example.png
 !docs/submission_review_20261004/Xray_결과보고서_EDA보완.pdf
 !docs/submission_review_20261004/Xray_발표자료_EDA보완.pdf
+
+!docs/figures/common20_visual_review_examples.png
+!docs/figures/common20_cascade_validation_examples.png
+
+!docs/figures/common20_live_conflict.png
+!docs/submission_review_20261004/Xray_결과보고서_단계적검사보완.pdf
+!docs/submission_review_20261004/Xray_발표자료_단계적검사보완.pdf
+
+!docs/figures/common20_stable_error_example.png
+
+!docs/submission_review_20261004/Xray_결과보고서_FN위험보완.pdf
+!docs/submission_review_20261004/Xray_발표자료_FN위험보완_최종검토.pdf

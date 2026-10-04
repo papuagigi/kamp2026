@@ -1,0 +1,120 @@
+{
+  "policy_sha256": "0898eab3e2013d7a4af8bed2cb1c98a94c6d8f0a2686279f2c7a0e01a4021004",
+  "execution_sha256": "8394cce6995865f6c1438e8f1fc9815c49b59a9ca2613c1c98bbe6dec77b6175",
+  "device": "mps",
+  "validation_images": 107,
+  "validation_gt": 243,
+  "repeats": [
+    {
+      "repeat": 0,
+      "referred": 8,
+      "states": {
+        "SECOND_MODEL_AGREES_DETECTION": 7,
+        "FIRST_MODEL_DETECTION": 99,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "baseline": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564
+      },
+      "replacement_control": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029
+      }
+    },
+    {
+      "repeat": 1,
+      "referred": 8,
+      "states": {
+        "SECOND_MODEL_AGREES_DETECTION": 7,
+        "FIRST_MODEL_DETECTION": 99,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "baseline": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564
+      },
+      "replacement_control": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029
+      }
+    },
+    {
+      "repeat": 2,
+      "referred": 8,
+      "states": {
+        "SECOND_MODEL_AGREES_DETECTION": 7,
+        "FIRST_MODEL_DETECTION": 99,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "baseline": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564
+      },
+      "replacement_control": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029
+      }
+    }
+  ],
+  "latency": {
+    "all": {
+      "n": 321,
+      "mean_ms": 19.033931825474596,
+      "median_ms": 15.833583000130602,
+      "p95_ms": 43.555125001148554,
+      "max_ms": 70.35137499951816
+    },
+    "not_referred": {
+      "n": 297,
+      "mean_ms": 16.74398341406277,
+      "median_ms": 15.641666999727022,
+      "p95_ms": 25.581741399946615,
+      "max_ms": 70.35137499951816
+    },
+    "referred": {
+      "n": 24,
+      "mean_ms": 47.37204341669591,
+      "median_ms": 45.08845849977661,
+      "p95_ms": 57.82446690109282,
+      "max_ms": 59.662542000296526
+    }
+  },
+  "loading_seconds": 3.2533004589986376,
+  "resident_after_warmup": {
+    "allocated_bytes": 150741760,
+    "driver_bytes": 1359183872
+  },
+  "largest_observed_memory": {
+    "allocated_bytes": 150741760,
+    "driver_bytes": 1359790080
+  },
+  "conflict_stems": [
+    "002_20200625_042957(3)"
+  ],
+  "errors": 0,
+  "timeouts": 0,
+  "latency_scope": "Warm resident models, PNG read, conversion, original+flip forward, canonical score conversion, routing, conditional RF full-image forward, disagreement comparison, synchronization. Excludes model load, warmup, telemetry write, color removal, camera, factory I/O and queue.",
+  "memory_scope": "MPS allocator and driver snapshots at warmup and each image completion; not exact peak RSS or peak GPU usage.",
+  "operational_f1": null,
+  "operational_f1_reason": "Policy preserves two outputs and defers disagreement; replacement control is not operational adjudication.",
+  "limitations": [
+    "Exploratory reused validation, no new held-out test.",
+    "All real validation products contain labeled targets; normal-product false alarms and referral fraction not estimable.",
+    "Soft deadline checks after synchronous return; no hard interruption watchdog or factory deadline validation.",
+    "Only full-frame second inference, no specialist fine-tuning or ROI/tiling.",
+    "One Mac session and correlated capture groups. Not a production latency guarantee."
+  ]
+}

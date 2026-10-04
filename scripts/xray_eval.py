@@ -172,6 +172,132 @@ def evaluate(pred_csv, split, thr=None, stems=None, matching="legacy"):
     res["recall_by_condition"] = cond
     return res, curve, gts
 
+def visual_review_counts(cases, decisions):
+    """Aggregate explicit AI visual decisions, not a geometry-based new matcher.
+
+    One row identifies one official target and one anonymous panel per model.
+    Ambiguous judgments remain in denominators and produce bounds, not a
+    falsely precise point estimate. AP is unavailable: only frozen-threshold
+    predictions were inspected. This never changes evaluate() or its metrics.
+    """
+    if len({c['case'] for c in cases}) != len(cases):
+        raise ValueError('Duplicate review case identifier')
+    index = {}
+    for d in decisions:
+        key = (d['case'], d['panel'])
+        if key in index:
+            raise ValueError('Duplicate review decision')
+        index[key] = d
+    expected = {(c['case'], code) for c in cases for code in c['panels']}
+    if set(index) != expected:
+        raise ValueError('Incomplete or unexpected visual review decisions')
+    groups, seen_predictions, seen_targets = {}, set(), set()
+    for case in cases:
+        for code, panel in case['panels'].items():
+            run, split = panel['run'], case['split']
+            target = (run, split, case['gt_index'])
+            if target in seen_targets:
+                raise ValueError('Duplicate official target')
+            seen_targets.add(target)
+            d = index[(case['case'], code)]
+            if d.get('target_visible') not in ['yes', 'uncertain']:
+                raise ValueError('Reference visibility must be yes or uncertain')
+            if d.get('evidence_sha256') != case['figure_sha256']:
+                raise ValueError('Review evidence hash mismatch')
+            tokens = [p['token'] for p in panel['predictions']]
+            marks = d['matches'] + d['nonmatches'] + d['uncertain']
+            if len(set(tokens)) != len(tokens) or sorted(marks) != sorted(tokens):
+                raise ValueError('Every displayed prediction needs exactly one decision')
+            if d['target_visible'] == 'uncertain' and d['matches']:
+                raise ValueError('Uncertain reference cannot create a confirmed match')
+            for p in panel['predictions']:
+                pk = (run, split, p['pred_index'])
+                if pk in seen_predictions:
+                    raise ValueError('A prediction cannot appear under multiple targets')
+                seen_predictions.add(pk)
+            group = groups.setdefault((run, split), [])
+            group.append(dict(stem=case['stem'], n_pred=len(tokens),
+                confirmed=int(bool(d['matches'])), possible=int(bool(d['matches'] or d['uncertain'])),
+                uncertain=len(d['uncertain']), reference_uncertain=int(d['target_visible']=='uncertain'),
+                duplicate=max(0,len(d['matches'])-1)))
+    results = []
+    for (run, split), rows in groups.items():
+        n_gt, n_pred = len(rows), sum(r['n_pred'] for r in rows)
+        lo, hi = sum(r['confirmed'] for r in rows), sum(r['possible'] for r in rows)
+        uncertain = sum(r['uncertain'] for r in rows)
+        ref_uncertain = sum(r['reference_uncertain'] for r in rows)
+        def metrics(tp):
+            fp, fn = n_pred-tp, n_gt-tp
+            return dict(tp=tp, fp=fp, fn=fn,
+                precision=tp/n_pred if n_pred else None,
+                recall=tp/n_gt if n_gt else None,
+                f1=2*tp/(n_pred+n_gt) if n_pred+n_gt else None)
+        exact = not uncertain and not ref_uncertain
+        by_image = {}
+        for r in rows:by_image.setdefault(r['stem'], []).append(r)
+        results.append(dict(run=run, split=split, metric_version='ai_visual_review_v1',
+            n_images=len(by_image), n_gt=n_gt, n_selected_predictions=n_pred,
+            **(metrics(lo) if exact else {k:None for k in metrics(lo)}),
+            lower_bound=metrics(lo), upper_bound=metrics(hi),
+            unresolved_predictions=uncertain, unresolved_references=ref_uncertain,
+            duplicate_predictions=sum(r['duplicate'] for r in rows),
+            images_with_no_selected_box=sum(not any(r['n_pred'] for r in rs) for rs in by_image.values()),
+            images_with_all_targets_confirmed=sum(all(r['confirmed'] for r in rs) for rs in by_image.values()),
+            ap=None, ap_definition='not_computed_only_fixed_threshold_predictions_reviewed',
+            evaluation_status='exploratory_single_ai_review' if exact else 'unresolved_ai_review'))
+    return sorted(results,key=lambda r:(r['split'],r['run']))
+
+
+def evaluate_visual_review(directory):
+    """Verify complete evidence and frozen predictions before visual aggregation."""
+    directory = Path(directory)
+    policy_path = directory/'policy.json'
+    policy = json.loads(policy_path.read_text())
+    cases = json.loads((directory/'case_manifest.json').read_text())
+    review = json.loads((directory/'decisions.json').read_text())
+    sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+    if review['policy_sha256'] != sha(policy_path):raise ValueError('Review policy changed')
+    for name,digest in policy['source_hashes'].items():
+        if sha(ROOT/name) != digest:raise ValueError('Source evidence changed: '+name)
+    frozen = json.loads((directory.parent/'frozen_selection.json').read_text())
+    if hashlib.md5((DATA/'split.csv').read_bytes()).hexdigest() != frozen['split_md5']:
+        raise ValueError('Dataset split changed')
+    checked = set()
+    for c in cases:
+        for name,key in [('source','source_sha256'),('figure','figure_sha256')]:
+            path=ROOT/c[name]
+            if path not in checked:
+                if sha(path)!=c[key]:raise ValueError('Visual evidence changed')
+                checked.add(path)
+    for split in {c['split'] for c in cases}:
+        subset=[c for c in cases if c['split']==split]
+        stems={c['stem'] for c in subset}
+        gt,manifest=load_gt(split)
+        if split=='test' and stems!=set(manifest.stem):raise ValueError('Test images missing')
+        expected_gt=gt[gt.stem.isin(stems)]
+        if {c['gt_index'] for c in subset}!=set(expected_gt.index):raise ValueError('Official targets missing')
+        for c in subset:
+            g=gt.loc[c['gt_index']]
+            if c['stem']!=g.stem or not np.allclose(c['reference_box'],g[['cx','cy','w','h']].to_numpy(float),rtol=0,atol=1e-8):
+                raise ValueError('Official target changed')
+            if {p['run'] for p in c['panels'].values()}!=set(frozen['runs']):raise ValueError('Model missing')
+        for run,info in frozen['runs'].items():
+            path=ROOT/'reports'/f'preds_{run}_{split}.csv'
+            raw=pd.read_csv(path)
+            selected=raw[(raw.stem.isin(stems)) & (raw.score>=info['thresholds']['iou50'])]
+            shown={p['pred_index']:(c,p) for c in subset for panel in c['panels'].values()
+                   if panel['run']==run for p in panel['predictions']}
+            if set(shown)!=set(selected.index):raise ValueError('Frozen prediction coverage mismatch')
+            for ix,(c,p) in shown.items():
+                r=selected.loc[ix]
+                if r.stem!=c['stem'] or not np.allclose(p['box']+[p['score']],r[['cx','cy','w','h','score']].to_numpy(float),rtol=0,atol=1e-8):
+                    raise ValueError('Frozen prediction changed')
+    return dict(policy=policy, policy_sha256=sha(policy_path),
+        decisions_sha256=sha(directory/'decisions.json'),
+        manifest_sha256=sha(directory/'case_manifest.json'),
+        scores=visual_review_counts(cases,review['decisions']))
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("pred_csv"); ap.add_argument("--split", required=True); ap.add_argument("--thr", type=float, default=None)
     ap.add_argument("--stems", default=None, help="채점할 사진 이름 목록 파일 (한 줄에 하나). 없으면 split 전체")

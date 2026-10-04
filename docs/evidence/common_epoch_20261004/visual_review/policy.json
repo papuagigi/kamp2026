@@ -1,0 +1,23 @@
+{
+  "version": "ai_visual_review_v1",
+  "seed": 0,
+  "purpose": "Exploratory AI-assisted review of visible foreign-body indication, not factory deployment validation.",
+  "reviewer": "Codex in this conversation; model names, score and IoU omitted from panels; prior results already seen.",
+  "positive": "The compact dark core of the labeled target is visibly inside the box, which indicates this local target rather than the whole product. Not a pixel-perfect contour judgment.",
+  "negative": "The box visibly fails to contain the target core or marks a different background feature.",
+  "uncertain": "Core or boundary is ambiguous, target is clipped, box is excessively broad, or an unlabelled candidate appears. Never silently turn uncertainty into success.",
+  "reference": "Official TXT provides target identity. A nearest-reference assignment is only a display index, never an automatic visual match.",
+  "duplicate": "One prediction and one official target can contribute at most one TP; extra duplicates are FP.",
+  "unresolved": "Publish unresolved cases and score bounds; do not drop them from denominators.",
+  "scope": "12 validation images for a reviewer preflight and all 97 previously viewed test images. No new threshold selection.",
+  "limitations": [
+    "Single AI reviewer; no independent expert validation.",
+    "A preflight on official targets is not proof of AI judgment accuracy on new X-rays.",
+    "No real normal products; no normal-product specificity or manufacturing throughput claim."
+  ],
+  "source_hashes": {
+    "reports/common_epoch_20261004/evaluation/diagnostics/ground_truth_detail.csv": "f7efc163688a33ce5d44c67b67b72320ca025938bf93721c62024b0c14df3093",
+    "reports/common_epoch_20261004/evaluation/diagnostics/selected_predictions.csv": "140d3741d08932e5195ed81af2b72bbe1f455c7db60041b8b241758eb861b86d",
+    "reports/common_epoch_20261004/evaluation/frozen_selection.json": "11810e5837cac1e9b6eb0f8f936740c0e74f285b0276aee39e867407543c0130"
+  }
+}

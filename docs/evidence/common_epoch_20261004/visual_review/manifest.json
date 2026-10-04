@@ -1,0 +1,30 @@
+[
+  {
+    "file": "policy.json",
+    "sha256": "9f42396cc317d2efb423e365fc7aa6df966fab90922e74235d9a0e4dae14198d"
+  },
+  {
+    "file": "case_manifest.json",
+    "sha256": "bd89050c0cb6da6adfb270a93cc0e615cc7d8ce674336f332b31ae7f1d77a188"
+  },
+  {
+    "file": "decisions.json",
+    "sha256": "51497cbdc7b10a91f7244da43a4fab31dea9484437a45df4140e9fec6df1e413"
+  },
+  {
+    "file": "results.json",
+    "sha256": "b1cc72ff92eb8275228c888f34458a73f1d1a64157313b4ee408e1981941a701"
+  },
+  {
+    "file": "comparison.csv",
+    "sha256": "b5e9ece94bf6c3d1f6bcef80ee33009e8ad4bc7efd351e5daddb077b41af0b9d"
+  },
+  {
+    "file": "original_iou_regression.json",
+    "sha256": "a2d28130b37380781e2121c9448e1ed0867f7f45ff06665a67322a0e751f9965"
+  },
+  {
+    "file": "qa.json",
+    "sha256": "fecc6a4a495a7443861fedd67c7ac9c7365b7af1602be0ee981f387517ec488b"
+  }
+]

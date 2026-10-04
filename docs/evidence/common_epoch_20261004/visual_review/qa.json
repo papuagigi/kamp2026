@@ -1,0 +1,22 @@
+{
+  "reviewed_validation_images": 12,
+  "reviewed_validation_targets": 26,
+  "reviewed_test_images": 97,
+  "reviewed_test_targets": 225,
+  "reviewed_test_predictions": 899,
+  "reviewed_model_target_panels": 1004,
+  "iou_regression_tests_passed": 19,
+  "visual_aggregation_tests_passed": 11,
+  "all_four_saved_iou_results_unchanged": true,
+  "source_image_and_prediction_hash_checks": "passed",
+  "visual_judge_reliability_independently_measured": false,
+  "cascade_experiment_executed": false,
+  "new_training_or_inference": false,
+  "source_code_sha256": {
+    "scripts/xray_eval.py": "3ce012a09d7588f637b2266358d37dddab10b90cddc92ee073b3eea8ac583da2",
+    "scripts/xray_visual_review_prepare.py": "889d90533f7e8add30f3a10c28560df929b9ff6c8c220555a8e12c5c8386027a",
+    "scripts/xray_visual_review_report.py": "1dccae85391c31e1dcfaaf5f19b6ac770226b20e77456d7088096993b00275c1",
+    "scripts/xray_visual_review_figure.py": "a4296f488a89de2a5c49e7b8d83756c65c0d96988937f268357ebd10fc034a85",
+    "scripts/test_xray_visual_review.py": "59ea9c3af934dae02f673d94ac603f842308fd45d9f6c94b6ebab46d08f0d70b"
+  }
+}

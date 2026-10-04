@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checkpoint_loads": [
+    "runs/v2_common20_dfine_cuda_20261004/selected/best.pth",
+    "runs/v2_common20_faster_cuda_20261004/selected/best.pt",
+    "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+    "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+    "runs/v2_latest20_yolo11n_guard_mps_20261004/selected/best.pt",
+    "runs/v2_latest20_yolo26n_guard_mps_20261004/selected/best.pt"
+  ],
+  "prediction_checks": [
+    {
+      "run": "v2_common20_yolo_mps_20261004",
+      "stem": "001_20200623_203217(4)",
+      "boxes": 3,
+      "matches_saved": true
+    },
+    {
+      "run": "v2_common20_yolo_mps_20261004",
+      "stem": "002_20200624_203044(4)",
+      "boxes": 3,
+      "matches_saved": true
+    },
+    {
+      "run": "v2_common20_yolo_mps_20261004",
+      "stem": "002_20200906_003132(7)",
+      "boxes": 1,
+      "matches_saved": true
+    },
+    {
+      "run": "v2_common20_faster_cuda_20261004",
+      "stem": "001_20200623_203217(4)",
+      "boxes": 3,
+      "matches_saved": true
+    },
+    {
+      "run": "v2_common20_faster_cuda_20261004",
+      "stem": "002_20200624_203044(4)",
+      "boxes": 3,
+      "matches_saved": true
+    },
+    {
+      "run": "v2_common20_faster_cuda_20261004",
+      "stem": "002_20200906_003132(7)",
+      "boxes": 1,
+      "matches_saved": true
+    }
+  ],
+  "device": "mps",
+  "scope": "6 checkpoint loads; 2 models x 3 validation images inference; same installed environment, not full fresh-environment retraining",
+  "tensor_storage_byte_preservation": true
+}

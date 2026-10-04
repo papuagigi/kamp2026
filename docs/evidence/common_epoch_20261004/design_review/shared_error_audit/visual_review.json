@@ -1,0 +1,5 @@
+{
+  "scope": "single AI inspection of one shared-error example; not full validation scoring",
+  "observation": "All four displayed model outputs visibly contain the dark target core. Original and restored-flip YOLO have official-box IoU failures. This is evidence of a referral blind spot for localization error, not a newly proven physical foreign-body omission.",
+  "figure": "reports/design_review_20261004/shared_error_audit/stable_error_example.png"
+}

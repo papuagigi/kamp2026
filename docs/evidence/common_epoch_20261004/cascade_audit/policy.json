@@ -1,0 +1,43 @@
+{
+  "version": "cascade_validation_replay_v1",
+  "split": "val",
+  "device_of_predictions": "mps",
+  "no_training": true,
+  "no_new_inference": true,
+  "test_used_in_this_analysis": false,
+  "earlier_test_exposure": true,
+  "validation_reused_for_model_selection": true,
+  "confidence_margin": 0.05,
+  "random_audit_fraction_of_other_images": 0.2,
+  "seed": 0,
+  "thresholds": {
+    "v2_common20_yolo_mps_20261004": 0.68106407,
+    "v2_common20_faster_cuda_20261004": 0.9999857,
+    "v2_common20_rfdetr_mps_20261004": 0.70370466,
+    "v2_common20_dfine_cuda_20261004": 0.72014374
+  },
+  "rules": [
+    "no_detection",
+    "score_margin",
+    "score_margin_plus_sample",
+    "all_images_control"
+  ],
+  "matching": "iou50",
+  "first": "v2_common20_yolo_mps_20261004",
+  "seconds": [
+    "v2_common20_faster_cuda_20261004",
+    "v2_common20_rfdetr_mps_20261004",
+    "v2_common20_dfine_cuda_20261004"
+  ],
+  "replacement_control": "Keep first output on unrefered photos; replace by second output on referred photos. Each model is filtered at its frozen threshold before xray_eval thr=0. No combined AP.",
+  "deployment": "Retain both predictions and hold disagreement. No implemented production PASS, fusion, or specialist.",
+  "source_hashes": {
+    "reports/common_epoch_20261004/evaluation/frozen_selection.json": "11810e5837cac1e9b6eb0f8f936740c0e74f285b0276aee39e867407543c0130",
+    "reports/common_epoch_20261004/evaluation/diagnostics/benchmark_mps.json": "f5b2846592da49f5ed52047119831f2251ab3b03e77e2b3c3d9993b7b1c14bf0",
+    "data/xray_v2/split.csv": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40",
+    "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_yolo_mps_20261004_benchmark_validation.csv": "a1b132052363bc643e0c3e1c18ebc659ffdcdd744971c9e8baac7a547c930e2e",
+    "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_faster_cuda_20261004_benchmark_validation.csv": "784271acc08fb68c946575f5d87c77112ee7b7cdad16835fa84cce78066f4e66",
+    "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_rfdetr_mps_20261004_benchmark_validation.csv": "f571678c89c1b8157e5a8137a68f0d574c1cf18e54e63e991ccefe02544321f5",
+    "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_dfine_cuda_20261004_benchmark_validation.csv": "82e732d2fcc2b2ae8c195f5178b86f375cabcc92154f662b8bdbaab3841ffb5d"
+  }
+}

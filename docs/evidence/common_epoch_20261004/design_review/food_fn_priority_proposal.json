@@ -1,0 +1,24 @@
+{
+  "created_unix": 1791112485.236659,
+  "reason": "User explicitly emphasized food manufacturing FN severity after descriptive latest tests. Preserve earlier F1-first proposal unchanged.",
+  "prior_proposal_sha256": "92833281539f81630718f84ffab4e3f2d8bcda5c1e7591e5ec96fe7c5c14c7c4",
+  "selection_proposal": "YOLOv8n + independent full-frame Faster R-CNN",
+  "basis": "Validation pair diagnostics already recorded before latest test: own reviewer FN2/FP2; covers baseline FN3, shared FN0. RF shared FN1; D-FINE reviewer FN4/FP4. Accuracy priority, no speed rejection.",
+  "risk_priority": [
+    "actual missed contaminated product",
+    "remaining shared detection failures",
+    "false alarm and review load",
+    "latency"
+  ],
+  "thresholds_unchanged": true,
+  "thresholds_not_safety_calibrated": true,
+  "no_auto_pass": true,
+  "all_image_review": true,
+  "operating_release_rule": null,
+  "prospectively_validated": false,
+  "test_already_seen": true,
+  "test_used_to_retune": false,
+  "new_independent_test_required": true,
+  "possible_common_failure": true,
+  "final_team_confirmation": true
+}

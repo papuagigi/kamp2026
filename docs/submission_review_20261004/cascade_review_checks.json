@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-04T18:11:23.528013",
+  "scope": "Report and slides draft revision; not final clean-environment submission reproduction.",
+  "artifacts": [
+    {
+      "file": "Xray_결과보고서_단계적검사보완.docx",
+      "bytes": 1307031,
+      "sha256": "bbd75bbeee41f315188f6e32ed161d41e27cae71dd0b3972a7b9575274348182"
+    },
+    {
+      "file": "Xray_결과보고서_단계적검사보완.pdf",
+      "bytes": 1426806,
+      "sha256": "6f14dca81586ff098ab9f40bb23061dc5430c08fde32867d4db3c56e7c4e9b03"
+    },
+    {
+      "file": "Xray_발표자료_단계적검사보완.pptx",
+      "bytes": 1381579,
+      "sha256": "4a03616b5f6151cb16821423da937af6325f408cd508738df04fa2ff20aff153"
+    },
+    {
+      "file": "Xray_발표자료_단계적검사보완.pdf",
+      "bytes": 1282739,
+      "sha256": "bd6bc3bc8915d21ecb97dd030ffb87c7d1a558cb6bcd409e0e1172b02509a62c"
+    }
+  ],
+  "evidence_copies": 18,
+  "layout_review": {
+    "report_pages": 23,
+    "presentation_slides": 20,
+    "all_pages_and_slides_visually_inspected": true,
+    "unchanged_report_pages_verified_pixel_equal": true,
+    "korean_fonts_explicit_fontconfig_for_bundled_renderer": true,
+    "font_limitation": "AppleMyungjo substitute; required Human Myeongjo still requires final check."
+  },
+  "ml_validation": {
+    "live_validation_images": 107,
+    "repeats": 3,
+    "runtime_state_unit_tests_passed": 9,
+    "python_files_compiled": 5,
+    "new_training": false,
+    "new_test_optimization": false,
+    "operational_f1": null,
+    "factory_validation": false,
+    "hard_timeout_watchdog_tested": false
+  }
+}

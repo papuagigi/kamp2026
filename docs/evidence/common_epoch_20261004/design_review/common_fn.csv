@@ -1,0 +1,3 @@
+gt_index,stem,cx,cy,w,h,skipped_by_flip_gate,detected_by
+103,002_20200623_163032(5),157.5,187.0,7.0,8.0,True,"{'Faster R-CNN': True, 'RF-DETR-S': True, 'D-FINE-S': True}"
+235,001_20200814_203442(4),327.5,166.0,9.0,12.0,False,"{'Faster R-CNN': True, 'RF-DETR-S': True, 'D-FINE-S': True}"

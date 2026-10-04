@@ -1,0 +1,110 @@
+[
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/execution.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/execution.json",
+    "sha256": "8394cce6995865f6c1438e8f1fc9815c49b59a9ca2613c1c98bbe6dec77b6175",
+    "bytes": 359557
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/hflip_repeat0_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/hflip_repeat0_val.csv",
+    "sha256": "faf2f214cc566650a5855c830300790939a189d9513b06cffb8b064fe7ebdd3a",
+    "bytes": 25451
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/hflip_repeat1_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/hflip_repeat1_val.csv",
+    "sha256": "faf2f214cc566650a5855c830300790939a189d9513b06cffb8b064fe7ebdd3a",
+    "bytes": 25451
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/hflip_repeat2_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/hflip_repeat2_val.csv",
+    "sha256": "faf2f214cc566650a5855c830300790939a189d9513b06cffb8b064fe7ebdd3a",
+    "bytes": 25451
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/original_repeat0_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/original_repeat0_val.csv",
+    "sha256": "3ff4023b3674833da17e2ca4f4d2a43785b27c9fea5b379aa1db995668a8993e",
+    "bytes": 23462
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/original_repeat1_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/original_repeat1_val.csv",
+    "sha256": "3ff4023b3674833da17e2ca4f4d2a43785b27c9fea5b379aa1db995668a8993e",
+    "bytes": 23462
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/original_repeat2_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/original_repeat2_val.csv",
+    "sha256": "3ff4023b3674833da17e2ca4f4d2a43785b27c9fea5b379aa1db995668a8993e",
+    "bytes": 23462
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/policy.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/policy.json",
+    "sha256": "0898eab3e2013d7a4af8bed2cb1c98a94c6d8f0a2686279f2c7a0e01a4021004",
+    "bytes": 1296
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/replacement_control_repeat0_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/replacement_control_repeat0_val.csv",
+    "sha256": "fe825e650e4851b89e29ac7dc602037165e81a6dd71914c063b677584f0c56a2",
+    "bytes": 21644
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/replacement_control_repeat1_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/replacement_control_repeat1_val.csv",
+    "sha256": "fe825e650e4851b89e29ac7dc602037165e81a6dd71914c063b677584f0c56a2",
+    "bytes": 21644
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/replacement_control_repeat2_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/replacement_control_repeat2_val.csv",
+    "sha256": "fe825e650e4851b89e29ac7dc602037165e81a6dd71914c063b677584f0c56a2",
+    "bytes": 21644
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/second_repeat0_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/second_repeat0_val.csv",
+    "sha256": "a0d59b249c478f4c39b5333a9af6c0b9fd79bddecb3e23c3303d9b771a24ae4f",
+    "bytes": 212034
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/second_repeat1_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/second_repeat1_val.csv",
+    "sha256": "a0d59b249c478f4c39b5333a9af6c0b9fd79bddecb3e23c3303d9b771a24ae4f",
+    "bytes": 212034
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/second_repeat2_val.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/second_repeat2_val.csv",
+    "sha256": "a0d59b249c478f4c39b5333a9af6c0b9fd79bddecb3e23c3303d9b771a24ae4f",
+    "bytes": 212034
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/summary.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/summary.json",
+    "sha256": "7b94ebf65057cf50a7102b085acd3e63fd8e5628673ed1190f50b1139e4010be",
+    "bytes": 3580
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/visual/cases.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/visual/cases.json",
+    "sha256": "a2ba0d90e3013bdcc2a8c8b5a5c4451eb38289bcee694070b0f6b94d1b515971",
+    "bytes": 28858
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/visual_review.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/visual_review.json",
+    "sha256": "8c25480f82407abddac0faf7fd599b9f4b5a7ff3a9eb1b19869464522fc0cf13",
+    "bytes": 8722
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_live/visual_scope.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_live/visual_scope.json",
+    "sha256": "43f742d3edb378c5cf486cf0845e9eeb4f0e982b89240b203e3c273fd820c92d",
+    "bytes": 835
+  }
+]

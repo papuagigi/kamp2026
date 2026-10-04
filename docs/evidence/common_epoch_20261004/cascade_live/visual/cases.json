@@ -1,0 +1,1150 @@
+[
+  {
+    "case": "L001",
+    "stem": "002_20200625_042957(3)",
+    "gt_index": 51,
+    "reference": [
+      206.99999999999997,
+      178.5,
+      10.0,
+      9.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 187,
+          "box": [
+            206.1036376953125,
+            178.83038330078125,
+            9.657394,
+            9.294418
+          ],
+          "score": 0.8918515
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1745,
+          "box": [
+            205.9318695068359,
+            179.42367553710938,
+            9.911774,
+            9.243439
+          ],
+          "score": 0.7380849
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "REINSPECTION_DISAGREEMENT",
+    "source": "data/xray_v2/images/val/002_20200625_042957(3).png",
+    "source_sha256": "c6525dd1bb4d68299ba558bd62ae398d81540dc67a8d263ed92ff4792fdf9bb5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L001.png",
+    "figure_sha256": "75da732366cc27bbba6f02ae5b4847f36b70c7cf2257cff0bc7c23de1d59f09f"
+  },
+  {
+    "case": "L002",
+    "stem": "002_20200625_042957(3)",
+    "gt_index": 52,
+    "reference": [
+      208.5,
+      204.0,
+      11.0,
+      8.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 188,
+          "box": [
+            243.0485076904297,
+            198.9302215576172,
+            10.188293,
+            9.485718
+          ],
+          "score": 0.88982064
+        },
+        {
+          "pred_index": 189,
+          "box": [
+            208.7480926513672,
+            203.2698974609375,
+            9.508179,
+            9.985367
+          ],
+          "score": 0.87714934
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1744,
+          "box": [
+            208.51608276367188,
+            203.97364807128903,
+            9.069595,
+            9.220093
+          ],
+          "score": 0.7987358
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "REINSPECTION_DISAGREEMENT",
+    "source": "data/xray_v2/images/val/002_20200625_042957(3).png",
+    "source_sha256": "c6525dd1bb4d68299ba558bd62ae398d81540dc67a8d263ed92ff4792fdf9bb5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L002.png",
+    "figure_sha256": "8c8b5ec81ce32d126b47297ca786a9823bc0e7c83c6b6ebf1a5397db81ae6ffc"
+  },
+  {
+    "case": "L003",
+    "stem": "002_20200625_042957(3)",
+    "gt_index": 53,
+    "reference": [
+      212.0,
+      235.0,
+      10.0,
+      10.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 186,
+          "box": [
+            212.68405151367188,
+            235.44351196289065,
+            9.430038,
+            9.380783
+          ],
+          "score": 0.895481
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1743,
+          "box": [
+            212.6592254638672,
+            235.64930725097656,
+            9.835571,
+            9.135223
+          ],
+          "score": 0.8303772
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "REINSPECTION_DISAGREEMENT",
+    "source": "data/xray_v2/images/val/002_20200625_042957(3).png",
+    "source_sha256": "c6525dd1bb4d68299ba558bd62ae398d81540dc67a8d263ed92ff4792fdf9bb5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L003.png",
+    "figure_sha256": "68e6b1b18caec50048645c795797716b90ccf9de898ee2455808f57fa60802ed"
+  },
+  {
+    "case": "L004",
+    "stem": "002_20200629_082639(2)",
+    "gt_index": 57,
+    "reference": [
+      202.5,
+      167.49999999999997,
+      9.0,
+      11.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 196,
+          "box": [
+            203.30242919921875,
+            168.108642578125,
+            9.053146,
+            9.311035
+          ],
+          "score": 0.83014435
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 2034,
+          "box": [
+            202.70816040039065,
+            168.34011840820312,
+            9.487732,
+            9.357574
+          ],
+          "score": 0.79681903
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200629_082639(2).png",
+    "source_sha256": "4db7fa5e85a081cbfaaab6db69ff4347c2858295d1c8d1c78c6be774af5dc71c",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L004.png",
+    "figure_sha256": "ff37757c51b2a522e6bb54eb1012b8cfac590b691a26570803a060a1c46e08b1"
+  },
+  {
+    "case": "L005",
+    "stem": "002_20200629_082639(2)",
+    "gt_index": 58,
+    "reference": [
+      202.5,
+      192.5,
+      11.0,
+      6.999999999999999
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 195,
+          "box": [
+            202.4770965576172,
+            191.3236389160156,
+            7.7781067,
+            9.256577
+          ],
+          "score": 0.85708165
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 2036,
+          "box": [
+            202.86880493164065,
+            192.2708282470703,
+            8.760971,
+            9.1779785
+          ],
+          "score": 0.77955925
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200629_082639(2).png",
+    "source_sha256": "4db7fa5e85a081cbfaaab6db69ff4347c2858295d1c8d1c78c6be774af5dc71c",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L005.png",
+    "figure_sha256": "4af56e17c2bb30529f650ce8aaa089a894e1fa871ff1193372a1ad08b0c0b102"
+  },
+  {
+    "case": "L006",
+    "stem": "002_20200629_082639(2)",
+    "gt_index": 59,
+    "reference": [
+      203.5,
+      225.0,
+      9.0,
+      8.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 194,
+          "box": [
+            204.2479248046875,
+            224.50531005859375,
+            8.256714,
+            8.879974
+          ],
+          "score": 0.883553
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 2035,
+          "box": [
+            203.9516143798828,
+            225.1776428222656,
+            9.442963,
+            8.947449
+          ],
+          "score": 0.7892867
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200629_082639(2).png",
+    "source_sha256": "4db7fa5e85a081cbfaaab6db69ff4347c2858295d1c8d1c78c6be774af5dc71c",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L006.png",
+    "figure_sha256": "9506d462099a8803f5e3ff23581ad8ca41e1325194b52c150ba5b190dd8480fb"
+  },
+  {
+    "case": "L007",
+    "stem": "002_20200623_163032(5)",
+    "gt_index": 102,
+    "reference": [
+      152.0,
+      165.0,
+      10.0,
+      10.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 129,
+          "box": [
+            150.81964111328125,
+            165.65670776367188,
+            11.369553,
+            10.269424
+          ],
+          "score": 0.90604395
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200623_163032(5).png",
+    "source_sha256": "5518869265c51c0adf100eaebf9f570c8c310ede1a88f8662ae9e450e2e398ef",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L007.png",
+    "figure_sha256": "8a77939caeae6f2e2a3f1329c750ff40d174c3656dbe37e17820ce6b2ca8dd19"
+  },
+  {
+    "case": "L008",
+    "stem": "002_20200623_163032(5)",
+    "gt_index": 103,
+    "reference": [
+      157.5,
+      187.0,
+      7.0,
+      8.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 130,
+          "box": [
+            158.08106994628906,
+            187.86195373535156,
+            11.325256,
+            12.202759
+          ],
+          "score": 0.9039183
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200623_163032(5).png",
+    "source_sha256": "5518869265c51c0adf100eaebf9f570c8c310ede1a88f8662ae9e450e2e398ef",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L008.png",
+    "figure_sha256": "d987aa10be3be6b36920170639bb99a7fa3529e4fbe1a249739643e331c94cf4"
+  },
+  {
+    "case": "L009",
+    "stem": "002_20200623_163032(5)",
+    "gt_index": 104,
+    "reference": [
+      167.50000000000003,
+      217.5,
+      11.0,
+      9.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 128,
+          "box": [
+            167.54257202148438,
+            217.44732666015625,
+            11.121658,
+            10.818314
+          ],
+          "score": 0.91482884
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/002_20200623_163032(5).png",
+    "source_sha256": "5518869265c51c0adf100eaebf9f570c8c310ede1a88f8662ae9e450e2e398ef",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L009.png",
+    "figure_sha256": "e20be8104b71ff7d67d2348f2aa77c0c1bc53d969fa5d4327c900f9bbf62d298"
+  },
+  {
+    "case": "L010",
+    "stem": "001_20200623_203217(4)",
+    "gt_index": 161,
+    "reference": [
+      353.5,
+      206.0,
+      15.0,
+      12.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 0,
+          "box": [
+            353.28363037109375,
+            205.0044708251953,
+            13.36557,
+            12.515015
+          ],
+          "score": 0.886362
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1,
+          "box": [
+            353.0264587402344,
+            204.60792541503903,
+            13.935974,
+            12.400787
+          ],
+          "score": 0.7874436
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200623_203217(4).png",
+    "source_sha256": "3e25a1ca32829284b382f218b7536e10ffba903926d1579c79924f8863c85f7d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L010.png",
+    "figure_sha256": "42702e82523d54b2d3f156609a2c6b0bb173c8eec9a7b65a66ff976960117f0e"
+  },
+  {
+    "case": "L011",
+    "stem": "001_20200623_203217(4)",
+    "gt_index": 162,
+    "reference": [
+      354.5,
+      238.5,
+      15.0,
+      13.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 2,
+          "box": [
+            353.65850830078125,
+            237.5821990966797,
+            15.396454,
+            12.761169
+          ],
+          "score": 0.84275705
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 2,
+          "box": [
+            354.7452697753906,
+            237.6327362060547,
+            14.432312,
+            12.658112
+          ],
+          "score": 0.77728593
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200623_203217(4).png",
+    "source_sha256": "3e25a1ca32829284b382f218b7536e10ffba903926d1579c79924f8863c85f7d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L011.png",
+    "figure_sha256": "20be81039969d1effa7127323c1eb8fb692ac232a15fc51556d8f8f76a292abd"
+  },
+  {
+    "case": "L012",
+    "stem": "001_20200623_203217(4)",
+    "gt_index": 163,
+    "reference": [
+      356.5,
+      283.0,
+      11.0,
+      12.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 1,
+          "box": [
+            356.77398681640625,
+            283.1746826171875,
+            13.040314,
+            12.737091
+          ],
+          "score": 0.8689404
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 0,
+          "box": [
+            356.91937255859375,
+            284.134765625,
+            14.668823,
+            11.673859
+          ],
+          "score": 0.7943164
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200623_203217(4).png",
+    "source_sha256": "3e25a1ca32829284b382f218b7536e10ffba903926d1579c79924f8863c85f7d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L012.png",
+    "figure_sha256": "02b225c3ed317b806179a5d4dd1921fc3b28f9706795f4facd3601f4e6a1c755"
+  },
+  {
+    "case": "L013",
+    "stem": "001_20200624_123322(3)",
+    "gt_index": 185,
+    "reference": [
+      365.0,
+      151.0,
+      14.0,
+      13.999999999999998
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 27,
+          "box": [
+            363.2489318847656,
+            149.77337646484375,
+            12.167908,
+            11.137558
+          ],
+          "score": 0.8298786
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 292,
+          "box": [
+            363.6611328125,
+            151.14169311523438,
+            11.553223,
+            11.289764
+          ],
+          "score": 0.74996036
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_123322(3).png",
+    "source_sha256": "bff46fff309f2a79ce61f497ce8ad5bb239497c4e251f9bacf60bf0b5f725fc5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L013.png",
+    "figure_sha256": "c5230d956144c9c6f49a5870223fc17d7196c55077e9952963e3f111bb40f112"
+  },
+  {
+    "case": "L014",
+    "stem": "001_20200624_123322(3)",
+    "gt_index": 186,
+    "reference": [
+      369.0,
+      182.0,
+      14.0,
+      16.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 26,
+          "box": [
+            367.9515380859375,
+            181.27224731445312,
+            13.891388,
+            13.69487
+          ],
+          "score": 0.89593846
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 291,
+          "box": [
+            367.25927734375,
+            181.83734130859375,
+            12.422363,
+            11.472763
+          ],
+          "score": 0.767083
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_123322(3).png",
+    "source_sha256": "bff46fff309f2a79ce61f497ce8ad5bb239497c4e251f9bacf60bf0b5f725fc5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L014.png",
+    "figure_sha256": "2cecce8c6bb51cbef2ed6d7e584a45098de90354c7a608ca17e24876193dafc3"
+  },
+  {
+    "case": "L015",
+    "stem": "001_20200624_123322(3)",
+    "gt_index": 187,
+    "reference": [
+      374.0,
+      219.0,
+      18.0,
+      16.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 25,
+          "box": [
+            373.9386291503906,
+            217.6910095214844,
+            11.975647,
+            12.745834
+          ],
+          "score": 0.90942216
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 290,
+          "box": [
+            373.3649291992187,
+            218.25259399414065,
+            12.929871,
+            12.042862
+          ],
+          "score": 0.7683219
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_123322(3).png",
+    "source_sha256": "bff46fff309f2a79ce61f497ce8ad5bb239497c4e251f9bacf60bf0b5f725fc5",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L015.png",
+    "figure_sha256": "e4b32ed50d7ff3d5a275720b8ab5ddf1de30addddf3db5e62ef085ef26b9e4f8"
+  },
+  {
+    "case": "L016",
+    "stem": "001_20200624_162816(3)",
+    "gt_index": 197,
+    "reference": [
+      344.5,
+      175.5,
+      19.0,
+      15.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 40,
+          "box": [
+            343.98150634765625,
+            174.6996612548828,
+            14.255157,
+            14.325836
+          ],
+          "score": 0.89235944
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 576,
+          "box": [
+            343.3720703125,
+            176.6611328125,
+            14.754639,
+            13.726273
+          ],
+          "score": 0.81604207
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162816(3).png",
+    "source_sha256": "192b4be3bee1f3754249896d6d96f931a765b5fb0dc555178cd9ff93d1f39c35",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L016.png",
+    "figure_sha256": "90be9596596dd8b74810f9610820b3efc8bcb1ff8221491878733384d4d3b880"
+  },
+  {
+    "case": "L017",
+    "stem": "001_20200624_162816(3)",
+    "gt_index": 198,
+    "reference": [
+      350.0,
+      209.0,
+      16.0,
+      16.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 39,
+          "box": [
+            351.38665771484375,
+            208.7420654296875,
+            13.650238,
+            14.238174
+          ],
+          "score": 0.93608296
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 578,
+          "box": [
+            351.4642333984375,
+            208.37896728515625,
+            14.266083,
+            13.065933
+          ],
+          "score": 0.7764078
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162816(3).png",
+    "source_sha256": "192b4be3bee1f3754249896d6d96f931a765b5fb0dc555178cd9ff93d1f39c35",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L017.png",
+    "figure_sha256": "4001398320dc137bc227de727ba2c67ef4d83c5e9f7d772f2647164f9b4e59eb"
+  },
+  {
+    "case": "L018",
+    "stem": "001_20200624_162816(3)",
+    "gt_index": 199,
+    "reference": [
+      363.0,
+      249.5,
+      16.0,
+      15.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 41,
+          "box": [
+            363.0438232421875,
+            250.86038208007812,
+            14.890198,
+            14.670792
+          ],
+          "score": 0.8740348
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 577,
+          "box": [
+            362.3584899902344,
+            251.8230743408203,
+            13.979675,
+            12.049225
+          ],
+          "score": 0.79161984
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162816(3).png",
+    "source_sha256": "192b4be3bee1f3754249896d6d96f931a765b5fb0dc555178cd9ff93d1f39c35",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L018.png",
+    "figure_sha256": "10013474fd94b1e2256980bb1ab963f8f3f7d55f67d473409950ce9a3b007899"
+  },
+  {
+    "case": "L019",
+    "stem": "001_20200624_162835(8)",
+    "gt_index": 206,
+    "reference": [
+      364.0,
+      147.0,
+      12.0,
+      12.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 54,
+          "box": [
+            363.5896606445313,
+            146.02725219726562,
+            10.71756,
+            10.569946
+          ],
+          "score": 0.7807988
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 861,
+          "box": [
+            364.207275390625,
+            148.30502319335938,
+            12.154449,
+            11.331528
+          ],
+          "score": 0.7883083
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162835(8).png",
+    "source_sha256": "22b7880b79c88907531b24f5c1f6df8b37e462dde3750954419e64574e283e0d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L019.png",
+    "figure_sha256": "96434d3326725154c23969f677b4ff254ac905e65c0d441c784f93715ef3a585"
+  },
+  {
+    "case": "L020",
+    "stem": "001_20200624_162835(8)",
+    "gt_index": 207,
+    "reference": [
+      366.0,
+      178.0,
+      12.0,
+      12.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 52,
+          "box": [
+            367.7378845214844,
+            178.967529296875,
+            13.808655,
+            12.230499
+          ],
+          "score": 0.8705994
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 862,
+          "box": [
+            367.6588745117187,
+            179.0707244873047,
+            13.01001,
+            11.792236
+          ],
+          "score": 0.7749012
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162835(8).png",
+    "source_sha256": "22b7880b79c88907531b24f5c1f6df8b37e462dde3750954419e64574e283e0d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L020.png",
+    "figure_sha256": "bde99aef1f58e817ca9ac043e85c6e0fe738624fdc47939298fe2834114d3b6e"
+  },
+  {
+    "case": "L021",
+    "stem": "001_20200624_162835(8)",
+    "gt_index": 208,
+    "reference": [
+      371.5,
+      216.5,
+      13.0,
+      15.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 53,
+          "box": [
+            373.3571166992187,
+            217.3294982910156,
+            13.126251,
+            13.68573
+          ],
+          "score": 0.8568067
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 863,
+          "box": [
+            372.661865234375,
+            216.0719757080078,
+            12.296997,
+            11.780121
+          ],
+          "score": 0.7484487
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200624_162835(8).png",
+    "source_sha256": "22b7880b79c88907531b24f5c1f6df8b37e462dde3750954419e64574e283e0d",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L021.png",
+    "figure_sha256": "4906e906f1c52aa8041ffe81a61fe03941114baee6244035faf6ac2916a46ae9"
+  },
+  {
+    "case": "L022",
+    "stem": "001_20200629_082834(2)",
+    "gt_index": 218,
+    "reference": [
+      362.0,
+      183.5,
+      12.0,
+      11.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 67,
+          "box": [
+            361.2097778320313,
+            184.50010681152344,
+            15.416718,
+            14.009216
+          ],
+          "score": 0.8987085
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082834(2).png",
+    "source_sha256": "0c61b83965aa8d82b78f4b262c1490f2520cfd8397f82385075e6dbf69ba0869",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L022.png",
+    "figure_sha256": "b6463a309154593cb7eeecc905292f3c0ed6b4b91b7fda05cd986be28a573499"
+  },
+  {
+    "case": "L023",
+    "stem": "001_20200629_082834(2)",
+    "gt_index": 219,
+    "reference": [
+      357.0,
+      219.0,
+      14.0,
+      13.999999999999998
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 69,
+          "box": [
+            357.67083740234375,
+            217.2863922119141,
+            14.697662,
+            13.651825
+          ],
+          "score": 0.86090237
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082834(2).png",
+    "source_sha256": "0c61b83965aa8d82b78f4b262c1490f2520cfd8397f82385075e6dbf69ba0869",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L023.png",
+    "figure_sha256": "ce931db2025ef8636c53799cb46d610255f5642e6297ad35a97715a5d7eab67c"
+  },
+  {
+    "case": "L024",
+    "stem": "001_20200629_082834(2)",
+    "gt_index": 220,
+    "reference": [
+      350.0,
+      263.0,
+      20.0,
+      18.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 68,
+          "box": [
+            351.93621826171875,
+            263.154296875,
+            11.955719,
+            12.238861
+          ],
+          "score": 0.8791109
+        }
+      ],
+      "RF": []
+    },
+    "rf_executed": false,
+    "state": "FIRST_MODEL_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082834(2).png",
+    "source_sha256": "0c61b83965aa8d82b78f4b262c1490f2520cfd8397f82385075e6dbf69ba0869",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L024.png",
+    "figure_sha256": "80d0b248639563f9a2acb0df7832284b72277333d6b199040adfb5a694e7c670"
+  },
+  {
+    "case": "L025",
+    "stem": "001_20200629_082840(2)",
+    "gt_index": 224,
+    "reference": [
+      357.0,
+      205.0,
+      16.0,
+      13.999999999999998
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 73,
+          "box": [
+            355.4476013183594,
+            206.14859008789065,
+            13.219849,
+            12.599945
+          ],
+          "score": 0.8977343
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1152,
+          "box": [
+            357.0977783203125,
+            205.59405517578125,
+            13.4288025,
+            12.178024
+          ],
+          "score": 0.77808076
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082840(2).png",
+    "source_sha256": "2d883a41288f8fde60bbbade0ef8b11d7417be28ea377a1dd06dc225046d01b0",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L025.png",
+    "figure_sha256": "1c2b4b59d512797a755acac1edda850ae8a630dba72c81fc1368bde3fed41bbe"
+  },
+  {
+    "case": "L026",
+    "stem": "001_20200629_082840(2)",
+    "gt_index": 225,
+    "reference": [
+      356.0,
+      238.5,
+      12.0,
+      15.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 75,
+          "box": [
+            356.824951171875,
+            239.15628051757812,
+            11.78949,
+            12.981033
+          ],
+          "score": 0.8648872
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1154,
+          "box": [
+            357.07183837890625,
+            240.14984130859375,
+            14.587372,
+            13.743576
+          ],
+          "score": 0.76793915
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082840(2).png",
+    "source_sha256": "2d883a41288f8fde60bbbade0ef8b11d7417be28ea377a1dd06dc225046d01b0",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L026.png",
+    "figure_sha256": "9317150cb2905c0ee25c88a76df495b571afe64b5c9ee9a2093c9b9e18a2b0ba"
+  },
+  {
+    "case": "L027",
+    "stem": "001_20200629_082840(2)",
+    "gt_index": 226,
+    "reference": [
+      357.5,
+      285.5,
+      13.0,
+      11.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 74,
+          "box": [
+            356.49591064453125,
+            285.48284912109375,
+            12.991058,
+            12.080231
+          ],
+          "score": 0.8972994
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1153,
+          "box": [
+            356.48687744140625,
+            286.10797119140625,
+            14.525085,
+            12.763977
+          ],
+          "score": 0.76960313
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200629_082840(2).png",
+    "source_sha256": "2d883a41288f8fde60bbbade0ef8b11d7417be28ea377a1dd06dc225046d01b0",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L027.png",
+    "figure_sha256": "86f7c0b3ca07926c856581dceb013a18227cc4d8a37693bfeb0615075a893356"
+  },
+  {
+    "case": "L028",
+    "stem": "001_20200814_203442(4)",
+    "gt_index": 235,
+    "reference": [
+      327.5,
+      166.0,
+      9.0,
+      12.0
+    ],
+    "panels": {
+      "YOLO": [
+        {
+          "pred_index": 85,
+          "box": [
+            328.43267822265625,
+            163.39385986328125,
+            13.693634,
+            13.762161
+          ],
+          "score": 0.9176716
+        }
+      ],
+      "RF": [
+        {
+          "pred_index": 1447,
+          "box": [
+            327.9573059082031,
+            163.6437530517578,
+            11.589478,
+            11.115265
+          ],
+          "score": 0.78671867
+        }
+      ]
+    },
+    "rf_executed": true,
+    "state": "SECOND_MODEL_AGREES_DETECTION",
+    "source": "data/xray_v2/images/val/001_20200814_203442(4).png",
+    "source_sha256": "8e062ea212ce59880145be489431f5b0b0f9d9660f3b440568b8a3a85ebe5f18",
+    "figure": "reports/common_epoch_20261004/evaluation/cascade_live/visual/L028.png",
+    "figure_sha256": "be767d465b2bc84d427c1ea6d1b968c3964540918a98020c3f4f22209acd9658"
+  }
+]

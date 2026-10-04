@@ -1,0 +1,30 @@
+{
+  "first": {
+    "run": "v2_common20_yolo_mps_20261004",
+    "model": "yolo",
+    "checkpoint": "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+    "sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+    "threshold": 0.68106407
+  },
+  "second": {
+    "run": "v2_common20_faster_cuda_20261004",
+    "model": "faster",
+    "checkpoint": "runs/v2_common20_faster_cuda_20261004/selected/best.pt",
+    "sha256": "926f1347018c66c281476ca16c22dda7b37a48e03b60cf8b8e7d2ea58ff664fc",
+    "threshold": 0.9999857
+  },
+  "scope": "all",
+  "repeats": 3,
+  "device": "mps",
+  "no_test": true,
+  "no_pass": true,
+  "validation_reused": true,
+  "seed": 0,
+  "resolution": 512,
+  "invalid_geometry": "preserve raw outputs; negative or nonfinite -> reinspection error",
+  "deadline": null,
+  "deadline_reason": "No factory limit supplied; offline accuracy comparison",
+  "on_conflict": "retain both and refer",
+  "agreement_is_truth": false,
+  "split_sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40"
+}

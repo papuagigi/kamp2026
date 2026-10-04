@@ -1,0 +1,9 @@
+run,split,metric_version,n_images,n_gt,n_selected_predictions,tp,fp,fn,precision,recall,f1,unresolved_predictions,unresolved_references,duplicate_predictions,images_with_no_selected_box,images_with_all_targets_confirmed,ap,ap_definition,evaluation_status
+v2_common20_dfine_cuda_20261004,test,ai_visual_review_v1,97,225,226,225,1,0,0.995575221238938,1.0,0.9977827050997783,0,0,1,0,97,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_faster_cuda_20261004,test,ai_visual_review_v1,97,225,225,225,0,0,1.0,1.0,1.0,0,0,0,0,97,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_rfdetr_mps_20261004,test,ai_visual_review_v1,97,225,224,224,0,1,1.0,0.9955555555555555,0.9977728285077951,0,0,0,1,96,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_yolo_mps_20261004,test,ai_visual_review_v1,97,225,224,224,0,1,1.0,0.9955555555555555,0.9977728285077951,0,0,0,1,96,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_dfine_cuda_20261004,val,ai_visual_review_v1,12,26,26,26,0,0,1.0,1.0,1.0,0,0,0,0,12,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_faster_cuda_20261004,val,ai_visual_review_v1,12,26,26,26,0,0,1.0,1.0,1.0,0,0,0,0,12,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_rfdetr_mps_20261004,val,ai_visual_review_v1,12,26,26,26,0,0,1.0,1.0,1.0,0,0,0,0,12,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review
+v2_common20_yolo_mps_20261004,val,ai_visual_review_v1,12,26,26,26,0,0,1.0,1.0,1.0,0,0,0,0,12,,not_computed_only_fixed_threshold_predictions_reviewed,exploratory_single_ai_review

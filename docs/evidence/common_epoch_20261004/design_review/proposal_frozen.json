@@ -1,0 +1,38 @@
+{
+  "created_unix": 1791112147.763437,
+  "no_test_based_selection": true,
+  "test_runs": [
+    "v2_latest20_yolo11n_guard_mps_20261004",
+    "v2_latest20_yolo26n_guard_mps_20261004"
+  ],
+  "specs": {
+    "v2_latest20_yolo11n_guard_mps_20261004": {
+      "run": "v2_latest20_yolo11n_guard_mps_20261004",
+      "model": "yolo",
+      "checkpoint": "runs/v2_latest20_yolo11n_guard_mps_20261004/selected/best.pt",
+      "sha256": "241a5decaec30be48b14ed9e69dc3f95a07d4f6854ecdc686422d4419b37fe33",
+      "threshold": 0.48035392
+    },
+    "v2_latest20_yolo26n_guard_mps_20261004": {
+      "run": "v2_latest20_yolo26n_guard_mps_20261004",
+      "model": "yolo",
+      "checkpoint": "runs/v2_latest20_yolo26n_guard_mps_20261004/selected/best.pt",
+      "sha256": "196f0c5614aa48174ab4cbcf7e5bd4eaa1a9b13d31e1eb1152cd285bb7242f4a",
+      "threshold": 0.6521711
+    }
+  },
+  "first_proposal": "YOLO11n",
+  "secondary_proposal": "RF-DETR-S",
+  "scope": "all-image independent secondary review comparator; no production deployment",
+  "first_reason": "YOLO11n/26n validation F1 and recall tie; same-device measured YOLO11n faster",
+  "secondary_reason": "Faster and RF have same own val FN/FP; RF covers 2 of 3 YOLO11n localization misses vs Faster 1 of 3",
+  "alternative": "YOLOv8n plus Faster R-CNN retains zero shared IoU FN in this validation; oracle diagnostic only",
+  "no_auto_pass": true,
+  "prior_test_exposure": true,
+  "after_test_change_selection": false,
+  "validation_evidence": {
+    "comparison_policy.json": "14b4f352ce544b47d5364f0366178f0d6abf5c93a44cb0c47bb2fc62320ad1be",
+    "six_model_validation.json": "d95b40c895e9df2aa3cebda7ef96ddbf7d95233a61cadf6dfba05c96ee7a2592",
+    "latest_inference_validation.json": "0cd6f59c9f32e973e72c80a03a15e2c2166a04bbbf0b5f04f21746fc36ab4ba8"
+  }
+}

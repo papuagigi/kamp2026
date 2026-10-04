@@ -1,0 +1,141 @@
+{
+  "policy": {
+    "first": {
+      "run": "v2_common20_yolo_mps_20261004",
+      "model": "yolo",
+      "checkpoint": "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+      "sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+      "threshold": 0.68106407
+    },
+    "second": {
+      "run": "v2_common20_faster_cuda_20261004",
+      "model": "faster",
+      "checkpoint": "runs/v2_common20_faster_cuda_20261004/selected/best.pt",
+      "sha256": "926f1347018c66c281476ca16c22dda7b37a48e03b60cf8b8e7d2ea58ff664fc",
+      "threshold": 0.9999857
+    },
+    "scope": "all",
+    "repeats": 3,
+    "device": "mps",
+    "no_test": true,
+    "no_pass": true,
+    "validation_reused": true,
+    "seed": 0,
+    "resolution": 512,
+    "invalid_geometry": "preserve raw outputs; negative or nonfinite -> reinspection error",
+    "deadline": null,
+    "deadline_reason": "No factory limit supplied; offline accuracy comparison",
+    "on_conflict": "retain both and refer",
+    "agreement_is_truth": false,
+    "split_sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40"
+  },
+  "execution_sha256": "31a12ff2fe3315fdec4b135f765f679060d1e46fc91d5482d3cd6284b37c8a2c",
+  "repeats": [
+    {
+      "repeat": 0,
+      "first": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564,
+        "recall": 0.9876543209876543,
+        "precision": 0.9836065573770492
+      },
+      "second": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "precision": 0.9917695473251029
+      },
+      "pair": {
+        "first_fn_covered": 3,
+        "shared_fn": 0,
+        "first_correct_second_wrong": 2
+      },
+      "states": {
+        "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "conflicts": [
+        "002_20200625_042957(3)"
+      ],
+      "referred": 107,
+      "errors": 0
+    },
+    {
+      "repeat": 1,
+      "first": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564,
+        "recall": 0.9876543209876543,
+        "precision": 0.9836065573770492
+      },
+      "second": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "precision": 0.9917695473251029
+      },
+      "pair": {
+        "first_fn_covered": 3,
+        "shared_fn": 0,
+        "first_correct_second_wrong": 2
+      },
+      "states": {
+        "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "conflicts": [
+        "002_20200625_042957(3)"
+      ],
+      "referred": 107,
+      "errors": 0
+    },
+    {
+      "repeat": 2,
+      "first": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564,
+        "recall": 0.9876543209876543,
+        "precision": 0.9836065573770492
+      },
+      "second": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "precision": 0.9917695473251029
+      },
+      "pair": {
+        "first_fn_covered": 3,
+        "shared_fn": 0,
+        "first_correct_second_wrong": 2
+      },
+      "states": {
+        "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+        "REINSPECTION_DISAGREEMENT": 1
+      },
+      "conflicts": [
+        "002_20200625_042957(3)"
+      ],
+      "referred": 107,
+      "errors": 0
+    }
+  ],
+  "mean_ms": 1226.5185619874946,
+  "p95_ms": 1253.5622920004243,
+  "latency_scope": "warm resident PNG read, inference, correspondence, synchronization; excludes masking, camera, equipment, queue, telemetry I/O",
+  "operational_f1": null,
+  "shared_fn_is_iou_not_physical": true,
+  "agreement_does_not_prove_correctness": true,
+  "normal_product_false_alarm_rate": null
+}

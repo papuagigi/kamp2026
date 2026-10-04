@@ -1,0 +1,38 @@
+{
+  "version": "accuracy_first_development_comparison_v1",
+  "date": "2026-10-04",
+  "scope": "validation-only model development; prior validation and previous test exposure disclosed",
+  "first_candidates": [
+    "v2_common20_yolo_mps_20261004",
+    "v2_latest20_yolo11n_guard_mps_20261004",
+    "v2_latest20_yolo26n_guard_mps_20261004"
+  ],
+  "second_candidates": [
+    "v2_common20_faster_cuda_20261004",
+    "v2_common20_rfdetr_mps_20261004",
+    "v2_common20_dfine_cuda_20261004"
+  ],
+  "checkpoint_and_threshold_selection": "existing common20 policy, validation F1 then recall then AP75 then earlier epoch; no test selection",
+  "architecture_comparison": [
+    "official IoU50 TP FP FN F1",
+    "same-device inference time",
+    "physical containment review of errors, explicitly supplementary",
+    "shared errors by capture groups"
+  ],
+  "first_candidate_proposal": "validation F1 priority; higher recall if tied; measured speed if accuracy ties. No claim of statistical superiority from a one-error difference.",
+  "second_candidate_proposal": "compare own FN/FP and remaining shared errors with first; accuracy priority, latency reported separately. Exact risk/false-alarm tradeoff remains uncalibrated without normal products.",
+  "review_scopes": [
+    "flip-gated baseline",
+    "independent full-frame all-images comparator"
+  ],
+  "conflict": "retain both outputs and mark for reinspection; never erase first warning",
+  "no_detection": "not a validated PASS result",
+  "agreement": "does not certify true presence or absence",
+  "normal_product_false_alarm": null,
+  "calibrated_manufacturing_probability": false,
+  "additional_training": "YOLO11n and YOLO26n same mixed2453 20epoch setting; specialist only when repeated real omission supported",
+  "no_new_test_access_until_selection_record_frozen": true,
+  "new_test_reporting": "previously seen split; descriptive comparison only, not a newly independent final estimate",
+  "partial_validation_already_seen": true,
+  "governance": "team confirms final deployment proposal; current output is research prototype"
+}

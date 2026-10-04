@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "source_sha256": "2a1e7333d3bd95f32d4fa6c4c75c3d97eb8a6aca7b11881e62d2d5840221ccd1",
+  "images": 107,
+  "bursts": 24,
+  "resamples": 2000,
+  "seed": 0,
+  "unit": "capture group, paired across models",
+  "results": [
+    {
+      "model": "YOLO11n",
+      "observed_f1_difference": 0.0020280376200978445,
+      "percentile_95": [
+        -0.016129032258064502,
+        0.016396757936042193
+      ],
+      "contains_zero": true
+    },
+    {
+      "model": "YOLO26n",
+      "observed_f1_difference": 0.0020280376200978445,
+      "percentile_95": [
+        -0.014926284329269447,
+        0.01902863627722634
+      ],
+      "contains_zero": true
+    }
+  ],
+  "limits": [
+    "Conditional on selected checkpoints and thresholds; excludes selection uncertainty.",
+    "Repeated validation use and earlier test exposure remain; not a fresh generalization estimate.",
+    "Few capture groups and shared specimen types limit bootstrap validity.",
+    "No statement about physical detection or production safety."
+  ]
+}

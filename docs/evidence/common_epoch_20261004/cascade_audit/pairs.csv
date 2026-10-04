@@ -1,0 +1,4 @@
+second,first_fn,recoverable_first_fn,first_tp_second_fn,missed_by_both
+Faster R-CNN,3,3,2,0
+RF-DETR-S,3,2,1,1
+D-FINE-S,3,3,4,0

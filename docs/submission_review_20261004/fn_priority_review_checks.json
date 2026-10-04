@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "file": "Xray_결과보고서_FN위험보완.docx",
+      "bytes": 1321553,
+      "sha256": "5b0b83661e62a14f229db6483247c1ade47f9733b18d3b0e360feb88180398b1"
+    },
+    {
+      "file": "Xray_결과보고서_FN위험보완.pdf",
+      "bytes": 1512969,
+      "sha256": "7ab04e1e75f3fb0e67aa0238daa6c82c8c0267ab0f859bcc32a7f92b90df38a4"
+    },
+    {
+      "file": "Xray_발표자료_FN위험보완_최종검토.pptx",
+      "bytes": 1392912,
+      "sha256": "6f025bc9d9cecea32bbe2c9b66c5a07d1c38af1c0daffbbf3f601768a0b0afe8"
+    },
+    {
+      "file": "Xray_발표자료_FN위험보완_최종검토.pdf",
+      "bytes": 1385951,
+      "sha256": "7d844de9cd2b692015ad17c300aff6dbe0de9c046623a72688441ad5ea9acca1"
+    }
+  ],
+  "package": {
+    "path": "outputs/submission_review_20261004/Xray_재현자료_FN위험보완.zip",
+    "files": 7234,
+    "bytes": 1416290737,
+    "sha256": "49126f9dd991a47a1b9fb050de95e7b3efdcd0aa3f6d7bc535b4baf01166466b",
+    "redacted_files": 90,
+    "crc_check": "passed"
+  },
+  "visual_review": {
+    "report_pages": 27,
+    "slides": 23,
+    "all_pages_reviewed": true,
+    "unchanged_pages_pixel_compared": true,
+    "final_report_changed_pages_reviewed": [
+      21,
+      25
+    ],
+    "final_slide_changed_pages_reviewed": [
+      20,
+      23
+    ],
+    "native_powerpoint_app": false
+  },
+  "blind_scan": "DOCX/PPTX XML, both PDFs, package text, selected checkpoint string metadata",
+  "pptx_structure_layout_reimport": "passed",
+  "unit_tests": 81,
+  "reproduction": {
+    "checked_files": 7233,
+    "models_rescored": 6,
+    "checkpoint_loads": 6,
+    "two_models_three_images_mps": true,
+    "final_package_checkpoint_inner_bytes_identical_to_smoke": true,
+    "fresh_environment_retraining": false
+  },
+  "human_remaining": [
+    "team name and date",
+    "names and signatures",
+    "survey screenshot",
+    "team approval",
+    "required font confirmation and final PDF review",
+    "portal size limit and final submission"
+  ],
+  "deployment_not_verified": [
+    "representative normal and abnormal product evaluation",
+    "independent new capture groups",
+    "factory throughput and acceptable miss risk",
+    "PLC reject device and failure handling"
+  ],
+  "source_files": {
+    "replay": "reports/design_review_20261004/replay_result.json",
+    "inference_smoke": "reports/design_review_20261004/package_inference_smoke.json",
+    "unit_tests": "reports/design_review_20261004/tests_final.log"
+  },
+  "not_performed": [
+    "new training after completed model comparison",
+    "test-driven threshold changes",
+    "automatic PASS",
+    "GitHub push",
+    "portal submission"
+  ]
+}

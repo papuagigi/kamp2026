@@ -1,0 +1,122 @@
+[
+  {
+    "source": "reports/design_review_20261004/data_integrity.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/data_integrity.json",
+    "source_sha256": "9b9558a5e02c8a9faf89322e0096e69f211e380d3abdedf75f1cd6bfa2c9fca6",
+    "export_sha256": "9b9558a5e02c8a9faf89322e0096e69f211e380d3abdedf75f1cd6bfa2c9fca6"
+  },
+  {
+    "source": "reports/design_review_20261004/six_model_validation.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/six_model_validation.json",
+    "source_sha256": "d95b40c895e9df2aa3cebda7ef96ddbf7d95233a61cadf6dfba05c96ee7a2592",
+    "export_sha256": "d95b40c895e9df2aa3cebda7ef96ddbf7d95233a61cadf6dfba05c96ee7a2592"
+  },
+  {
+    "source": "reports/design_review_20261004/latest_validation_comparison.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/latest_validation_comparison.json",
+    "source_sha256": "2a1e7333d3bd95f32d4fa6c4c75c3d97eb8a6aca7b11881e62d2d5840221ccd1",
+    "export_sha256": "2a1e7333d3bd95f32d4fa6c4c75c3d97eb8a6aca7b11881e62d2d5840221ccd1"
+  },
+  {
+    "source": "reports/design_review_20261004/latest_validation_uncertainty.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/latest_validation_uncertainty.json",
+    "source_sha256": "0eecb790bad2887ced970f5b35eb713bc450f72005aa86fda2b028b2728b19d4",
+    "export_sha256": "0eecb790bad2887ced970f5b35eb713bc450f72005aa86fda2b028b2728b19d4"
+  },
+  {
+    "source": "reports/design_review_20261004/latest_inference_validation.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/latest_inference_validation.json",
+    "source_sha256": "0cd6f59c9f32e973e72c80a03a15e2c2166a04bbbf0b5f04f21746fc36ab4ba8",
+    "export_sha256": "0cd6f59c9f32e973e72c80a03a15e2c2166a04bbbf0b5f04f21746fc36ab4ba8"
+  },
+  {
+    "source": "reports/design_review_20261004/latest_test_descriptive.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/latest_test_descriptive.json",
+    "source_sha256": "474a8602e68ad80a0ef5ef5c45f34db83dc75bba8f0d4131c231004b341fd0a4",
+    "export_sha256": "474a8602e68ad80a0ef5ef5c45f34db83dc75bba8f0d4131c231004b341fd0a4"
+  },
+  {
+    "source": "reports/design_review_20261004/proposal_frozen.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/proposal_frozen.json",
+    "source_sha256": "92833281539f81630718f84ffab4e3f2d8bcda5c1e7591e5ec96fe7c5c14c7c4",
+    "export_sha256": "92833281539f81630718f84ffab4e3f2d8bcda5c1e7591e5ec96fe7c5c14c7c4"
+  },
+  {
+    "source": "reports/design_review_20261004/food_fn_priority_proposal.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/food_fn_priority_proposal.json",
+    "source_sha256": "b846c126f96093955be8e155a5190e9f6aaedd4f71a83918ff4917b1033562ec",
+    "export_sha256": "b846c126f96093955be8e155a5190e9f6aaedd4f71a83918ff4917b1033562ec"
+  },
+  {
+    "source": "reports/design_review_20261004/pretrained_sources.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/pretrained_sources.json",
+    "source_sha256": "3db94e4eb2d814512e6e643ead49f9b60c293dae523334ef5599fe20d52eca7e",
+    "export_sha256": "a92f93b67d0068a59b567c714938e994b030e2ad573817437ab32f19167930fc"
+  },
+  {
+    "source": "reports/design_review_20261004/comparison_policy.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/comparison_policy.json",
+    "source_sha256": "14b4f352ce544b47d5364f0366178f0d6abf5c93a44cb0c47bb2fc62320ad1be",
+    "export_sha256": "358d902a0b6c7945570c05eaa17273f9ffb05914646b07b53edf943fff6aca82"
+  },
+  {
+    "source": "reports/design_review_20261004/submission_package.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/submission_package.json",
+    "source_sha256": "d4be9e8d0c3bff45858b3299d0419006661b1bc06cf924995087423a34c3cc70",
+    "export_sha256": "5baceafb81dba4f81bd53d773f749038d9a76fbf18ffd8196d0df564715bbd18"
+  },
+  {
+    "source": "reports/design_review_20261004/replay_result.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/replay_result.json",
+    "source_sha256": "77aa0c88911c3a25443ad092da11add4e2aa6768119f00e76e645d44a290bc53",
+    "export_sha256": "77aa0c88911c3a25443ad092da11add4e2aa6768119f00e76e645d44a290bc53"
+  },
+  {
+    "source": "reports/design_review_20261004/package_inference_smoke.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/package_inference_smoke.json",
+    "source_sha256": "0a3f4046a85ea824cad01286aad9e15d12a64695462c5b8a5c63112696561dd1",
+    "export_sha256": "0a3f4046a85ea824cad01286aad9e15d12a64695462c5b8a5c63112696561dd1"
+  },
+  {
+    "source": "reports/design_review_20261004/yolo8_faster_all/summary.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/yolo8_faster_all/summary.json",
+    "source_sha256": "3ff1be77f73dac85c6adec4ede8d08273ccf0069e78a93b16d733772dd00758b",
+    "export_sha256": "3ff1be77f73dac85c6adec4ede8d08273ccf0069e78a93b16d733772dd00758b"
+  },
+  {
+    "source": "reports/design_review_20261004/yolo8_faster_all/policy.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/yolo8_faster_all/policy.json",
+    "source_sha256": "27820f7c04887537abc53fac34fe17f10c8999631c15955fe5a1715369addd33",
+    "export_sha256": "27820f7c04887537abc53fac34fe17f10c8999631c15955fe5a1715369addd33"
+  },
+  {
+    "source": "reports/design_review_20261004/yolo11_rfdetr_all/summary.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/yolo11_rfdetr_all/summary.json",
+    "source_sha256": "98e2fb3a7ad4552196a4dcc9d48b37cb3ebd6319cbc6b52aa6ad19d7aa876ca5",
+    "export_sha256": "98e2fb3a7ad4552196a4dcc9d48b37cb3ebd6319cbc6b52aa6ad19d7aa876ca5"
+  },
+  {
+    "source": "reports/design_review_20261004/yolo11_rfdetr_all/policy.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/yolo11_rfdetr_all/policy.json",
+    "source_sha256": "23018090f79f84f89ee382f74b95ef90cb29a605bcfd17a2597ca602b65be632",
+    "export_sha256": "23018090f79f84f89ee382f74b95ef90cb29a605bcfd17a2597ca602b65be632"
+  },
+  {
+    "source": "reports/design_review_20261004/shared_error_audit/summary.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/shared_error_audit/summary.json",
+    "source_sha256": "67f87a69b253248fad77ce2d6c026ebec25091e016fc584e4fdd40acc59ee028",
+    "export_sha256": "67f87a69b253248fad77ce2d6c026ebec25091e016fc584e4fdd40acc59ee028"
+  },
+  {
+    "source": "reports/design_review_20261004/shared_error_audit/visual_review.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/shared_error_audit/visual_review.json",
+    "source_sha256": "9b96be2439ef628f1e92cc9386e971a5abac78d8ce69aeb3d2c5bde63a660e86",
+    "export_sha256": "982f2a660c4fda44fad7fab468a846e54e84667c5a6debdcaa152af89cf0df53"
+  },
+  {
+    "source": "reports/design_review_20261004/latest_visual/review.json",
+    "export": "docs/evidence/common_epoch_20261004/design_review/latest_visual/review.json",
+    "source_sha256": "8e482a82e444f1a15baad74be389f4fcdbb96f56ca1a59741ca8292c115a4982",
+    "export_sha256": "8e482a82e444f1a15baad74be389f4fcdbb96f56ca1a59741ca8292c115a4982"
+  }
+]

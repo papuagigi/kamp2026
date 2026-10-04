@@ -98,3 +98,10 @@
 - `19_EDA_라벨과_박스크기.png`: 원본·라벨 수와 정답 박스 크기 분포.
 - `20_학습곡선과_저장모델_재검토.png`: 과거 학습 이력의 확인 범위. 새 공통 네 모델 결과와 구분한다.
 - `common20_localization_example.png`, `common20_threshold_example.png`, `common20_containment_detail.png`: 공통 선택 저장본의 실제 예측과 공식 TXT를 비교한 사진. 원본 색 네모와 설명용 선을 구분한다.
+
+- `common20_visual_review_examples.png`: AI 보조 시각 평가에서 확인한 표시 누락 두 사례와 중복 한 사례. 기존 IoU 오류 그림과 구분한다.
+- `common20_cascade_validation_examples.png`: 단계적 추론 분석에서 확인한 YOLOv8n의 검증 위치 오류 세 사례. 공식 TXT와 네 모델의 MPS 예측을 표시했다. 세 사례 모두 검은 중심은 표시됐다. `scripts/xray_cascade_figure.py`로 생성한다.
+
+- `common20_live_conflict.png`: 실제 검증 L002의 선 없는 확대·YOLO·RF-DETR 비교. 해당 공식 이물 주변의 예측만 표시했다. 추가 표시는 불확실하여 재검사로 보존했다.
+
+- `20_여섯모델_공통검증F1_학습곡선.png`: 현재 여섯 모델의 20epoch 공통 검증 F1. 검증 임계값 선택·저장 시점 표시, 테스트 곡선과 구분.

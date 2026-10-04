@@ -1,0 +1,46 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "ce8cc95230defd748a06b9229266fffc38b966ed1970c65088e314e204ec2152"
+  },
+  {
+    "file": "common_fn.csv",
+    "sha256": "4503fb4c7e67c51e739de2e19543a2d07b75f24fb4183bb8ec6dc5f622ae319e"
+  },
+  {
+    "file": "comparison_policy.json",
+    "sha256": "14b4f352ce544b47d5364f0366178f0d6abf5c93a44cb0c47bb2fc62320ad1be"
+  },
+  {
+    "file": "data_integrity.json",
+    "sha256": "9b9558a5e02c8a9faf89322e0096e69f211e380d3abdedf75f1cd6bfa2c9fca6"
+  },
+  {
+    "file": "figure.json",
+    "sha256": "0d0b67243b6e7988d44c4f2a518cdb39ca58db9ed21a4683624e87df55fd85cc"
+  },
+  {
+    "file": "latest_validation_comparison.json",
+    "sha256": "98fad533beab3a48f741d088c355598ea49d70ce65c60a29bafbe8ee6191a37f"
+  },
+  {
+    "file": "latest_validation_uncertainty.json",
+    "sha256": "8ff01c25afddc8fc427d2591e9d5a53211b09d00d258eaf04a78d9b35d96a74c"
+  },
+  {
+    "file": "policy.json",
+    "sha256": "13eda2de569b74ce1c6e87026c42157f25adebfff23a1d7c50c6eab3aa1e6ec7"
+  },
+  {
+    "file": "pretrained_sources.json",
+    "sha256": "3db94e4eb2d814512e6e643ead49f9b60c293dae523334ef5599fe20d52eca7e"
+  },
+  {
+    "file": "summary.json",
+    "sha256": "67f87a69b253248fad77ce2d6c026ebec25091e016fc584e4fdd40acc59ee028"
+  },
+  {
+    "file": "visual_review.json",
+    "sha256": "9b96be2439ef628f1e92cc9386e971a5abac78d8ce69aeb3d2c5bde63a660e86"
+  }
+]

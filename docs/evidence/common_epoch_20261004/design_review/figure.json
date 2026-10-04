@@ -1,0 +1,81 @@
+{
+  "case": {
+    "gt_index": 103,
+    "stem": "002_20200623_163032(5)",
+    "cx": 157.5,
+    "cy": 187.0,
+    "w": 7.0,
+    "h": 8.0,
+    "skipped_by_flip_gate": true,
+    "detected_by": {
+      "Faster R-CNN": true,
+      "RF-DETR-S": true,
+      "D-FINE-S": true
+    }
+  },
+  "source": "data/xray_v2/images/val/002_20200623_163032(5).png",
+  "source_sha256": "5518869265c51c0adf100eaebf9f570c8c310ede1a88f8662ae9e450e2e398ef",
+  "figure_sha256": "28e444ca78c21fb7a038928815e6cf6a51067c665a2dc413d55a5a80cae9b23b",
+  "panels": [
+    {
+      "model": "Original YOLO",
+      "predictions": [
+        {
+          "stem": "002_20200623_163032(5)",
+          "cx": 158.08106994628906,
+          "cy": 187.86195373535156,
+          "w": 11.325256,
+          "h": 12.202759,
+          "score": 0.9039183
+        }
+      ],
+      "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/original_val.csv",
+      "sha256": "a1b132052363bc643e0c3e1c18ebc659ffdcdd744971c9e8baac7a547c930e2e"
+    },
+    {
+      "model": "Flipped YOLO restored",
+      "predictions": [
+        {
+          "stem": "002_20200623_163032(5)",
+          "cx": 157.7044677734375,
+          "cy": 187.65426635742188,
+          "w": 10.6175995,
+          "h": 10.7715,
+          "score": 0.92340195
+        }
+      ],
+      "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/hflip_val.csv",
+      "sha256": "e78f164705d5854376d9a8c65bf37c78cf30f97507495783374a31f2f0ee5185"
+    },
+    {
+      "model": "Faster R-CNN",
+      "predictions": [
+        {
+          "stem": "002_20200623_163032(5)",
+          "cx": 157.7937469482422,
+          "cy": 187.38754272460935,
+          "w": 9.509125,
+          "h": 10.519333,
+          "score": 0.9999962
+        }
+      ],
+      "source": "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_faster_cuda_20261004_benchmark_validation.csv",
+      "sha256": "784271acc08fb68c946575f5d87c77112ee7b7cdad16835fa84cce78066f4e66"
+    },
+    {
+      "model": "RF-DETR-S",
+      "predictions": [
+        {
+          "stem": "002_20200623_163032(5)",
+          "cx": 157.7267608642578,
+          "cy": 187.8221435546875,
+          "w": 10.730103,
+          "h": 9.986618,
+          "score": 0.80887544
+        }
+      ],
+      "source": "reports/common_epoch_20261004/evaluation/diagnostics/v2_common20_rfdetr_mps_20261004_benchmark_validation.csv",
+      "sha256": "f571678c89c1b8157e5a8137a68f0d574c1cf18e54e63e991ccefe02544321f5"
+    }
+  ]
+}

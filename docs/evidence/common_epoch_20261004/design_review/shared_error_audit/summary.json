@@ -1,0 +1,203 @@
+{
+  "policy_sha256": "13eda2de569b74ce1c6e87026c42157f25adebfff23a1d7c50c6eab3aa1e6ec7",
+  "images": 107,
+  "official_targets": 243,
+  "stable_images": 99,
+  "referred_images": 8,
+  "baseline": {
+    "tp": 240,
+    "fp": 4,
+    "fn": 3,
+    "f1": 0.9856262833675564,
+    "precision": 0.9836065573770492,
+    "recall": 0.9876543209876543,
+    "thr": 0.68106407,
+    "n_images": 107,
+    "n_gt": 243
+  },
+  "flipped": {
+    "tp": 227,
+    "fp": 11,
+    "fn": 16,
+    "f1": 0.9438669438669439,
+    "precision": 0.9537815126050421,
+    "recall": 0.934156378600823,
+    "thr": 0.68106407,
+    "n_images": 107,
+    "n_gt": 243
+  },
+  "fn_in_both_views": 2,
+  "stable_fn_in_both_views": 1,
+  "corresponding_fp_in_both_views": 1,
+  "stable_corresponding_fp": 1,
+  "common_fn_cases": [
+    {
+      "gt_index": 103,
+      "stem": "002_20200623_163032(5)",
+      "cx": 157.5,
+      "cy": 187.0,
+      "w": 7.0,
+      "h": 8.0,
+      "skipped_by_flip_gate": true,
+      "detected_by": {
+        "Faster R-CNN": true,
+        "RF-DETR-S": true,
+        "D-FINE-S": true
+      }
+    },
+    {
+      "gt_index": 235,
+      "stem": "001_20200814_203442(4)",
+      "cx": 327.5,
+      "cy": 166.0,
+      "w": 9.0,
+      "h": 12.0,
+      "skipped_by_flip_gate": false,
+      "detected_by": {
+        "Faster R-CNN": true,
+        "RF-DETR-S": true,
+        "D-FINE-S": true
+      }
+    }
+  ],
+  "stable_common_fp": [
+    {
+      "stem": "002_20200623_163032(5)",
+      "cx": 158.08106994628906,
+      "cy": 187.86195373535156,
+      "w": 11.325256,
+      "h": 12.202759,
+      "score": 0.9039183
+    }
+  ],
+  "secondary": [
+    {
+      "model": "Faster R-CNN",
+      "metrics": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029,
+        "precision": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "thr": 0.9999857,
+        "n_images": 107,
+        "n_gt": 243
+      },
+      "stable_first_fn_covered": 2,
+      "first_fn_covered": 3,
+      "shared_fn": 0,
+      "first_correct_second_wrong": 2,
+      "all_review_conflict_images": 1,
+      "conflict_images_missed_by_flip_gate": 0,
+      "conflict_stems": [
+        "002_20200625_042957(3)"
+      ],
+      "recall_frontier": [
+        {
+          "target_recall": 0.99,
+          "threshold": 0.9999857,
+          "fp": 2,
+          "recall": 0.9917695473251029,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        },
+        {
+          "target_recall": 1.0,
+          "threshold": null,
+          "fp": null,
+          "recall": null,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        }
+      ]
+    },
+    {
+      "model": "RF-DETR-S",
+      "metrics": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029,
+        "precision": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "thr": 0.70370466,
+        "n_images": 107,
+        "n_gt": 243
+      },
+      "stable_first_fn_covered": 1,
+      "first_fn_covered": 2,
+      "shared_fn": 1,
+      "first_correct_second_wrong": 1,
+      "all_review_conflict_images": 1,
+      "conflict_images_missed_by_flip_gate": 0,
+      "conflict_stems": [
+        "002_20200625_042957(3)"
+      ],
+      "recall_frontier": [
+        {
+          "target_recall": 0.99,
+          "threshold": 0.70370466,
+          "fp": 2,
+          "recall": 0.9917695473251029,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        },
+        {
+          "target_recall": 1.0,
+          "threshold": null,
+          "fp": null,
+          "recall": null,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        }
+      ]
+    },
+    {
+      "model": "D-FINE-S",
+      "metrics": {
+        "tp": 239,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.9835390946502057,
+        "precision": 0.9835390946502057,
+        "recall": 0.9835390946502057,
+        "thr": 0.72014374,
+        "n_images": 107,
+        "n_gt": 243
+      },
+      "stable_first_fn_covered": 2,
+      "first_fn_covered": 3,
+      "shared_fn": 0,
+      "first_correct_second_wrong": 4,
+      "all_review_conflict_images": 3,
+      "conflict_images_missed_by_flip_gate": 1,
+      "conflict_stems": [
+        "001_20200814_203438(9)",
+        "002_20200625_042957(3)",
+        "002_20200629_082639(2)"
+      ],
+      "recall_frontier": [
+        {
+          "target_recall": 0.99,
+          "threshold": 0.018128155,
+          "fp": 812,
+          "recall": 0.9917695473251029,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        },
+        {
+          "target_recall": 1.0,
+          "threshold": null,
+          "fp": null,
+          "recall": null,
+          "role": "diagnostic validation frontier, not selected deployment threshold"
+        }
+      ]
+    }
+  ],
+  "recommendation": "Compare independent full-frame secondary inspection, including Faster R-CNN, on accuracy first. Do not use agreement as correctness or auto-PASS.",
+  "limits": [
+    "All FP/FN here are official IoU50 localization metrics, not independently verified physical absence.",
+    "Shared model failures remain possible even with different architectures.",
+    "Full secondary inspection changes resource use and requires measured latency and queue design.",
+    "No normal products, so product false alarm, production review rate, PASS safety unavailable.",
+    "Validation reused and test previously seen; prospective independent validation still needed.",
+    "Performance alone cannot certify AI visual reviewer reliability."
+  ]
+}

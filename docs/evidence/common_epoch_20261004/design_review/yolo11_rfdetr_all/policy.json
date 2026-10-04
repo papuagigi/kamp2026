@@ -1,0 +1,30 @@
+{
+  "first": {
+    "run": "v2_latest20_yolo11n_guard_mps_20261004",
+    "model": "yolo",
+    "checkpoint": "runs/v2_latest20_yolo11n_guard_mps_20261004/selected/best.pt",
+    "sha256": "241a5decaec30be48b14ed9e69dc3f95a07d4f6854ecdc686422d4419b37fe33",
+    "threshold": 0.48035392
+  },
+  "second": {
+    "run": "v2_common20_rfdetr_mps_20261004",
+    "model": "rfdetr",
+    "checkpoint": "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+    "sha256": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964",
+    "threshold": 0.70370466
+  },
+  "scope": "all",
+  "repeats": 3,
+  "device": "mps",
+  "no_test": true,
+  "no_pass": true,
+  "validation_reused": true,
+  "seed": 0,
+  "resolution": 512,
+  "invalid_geometry": "preserve raw outputs; negative or nonfinite -> reinspection error",
+  "deadline": null,
+  "deadline_reason": "No factory limit supplied; offline accuracy comparison",
+  "on_conflict": "retain both and refer",
+  "agreement_is_truth": false,
+  "split_sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40"
+}

@@ -1,0 +1,78 @@
+{
+  "policy_sha256": "065de8fa9032cbc8cf13740b5ee1d36f36e2f93ce017446c6f32006794f8b8ac",
+  "validation_images": 107,
+  "validation_gt": 243,
+  "baseline": {
+    "tp": 240,
+    "fp": 4,
+    "fn": 3,
+    "f1": 0.9856262833675564
+  },
+  "new_original_regression": {
+    "tp": true,
+    "fp": true,
+    "fn": true,
+    "f1": true
+  },
+  "referred_images": 8,
+  "first_fn_referred": 1,
+  "results": [
+    {
+      "second": "Faster R-CNN",
+      "first_fn_recoverable": 1,
+      "first_tp_lost_if_replaced": 0,
+      "replacement": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029
+      },
+      "oracle_remaining_fn": 2
+    },
+    {
+      "second": "RF-DETR-S",
+      "first_fn_recoverable": 1,
+      "first_tp_lost_if_replaced": 0,
+      "replacement": {
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.9917695473251029
+      },
+      "oracle_remaining_fn": 2
+    },
+    {
+      "second": "D-FINE-S",
+      "first_fn_recoverable": 1,
+      "first_tp_lost_if_replaced": 1,
+      "replacement": {
+        "tp": 240,
+        "fp": 4,
+        "fn": 3,
+        "f1": 0.9856262833675564
+      },
+      "oracle_remaining_fn": 2
+    }
+  ],
+  "first_fn_route": [
+    {
+      "stem": "002_20200623_163032(5)",
+      "referred": false
+    },
+    {
+      "stem": "001_20200629_082834(2)",
+      "referred": false
+    },
+    {
+      "stem": "001_20200814_203442(4)",
+      "referred": true
+    }
+  ],
+  "limits": [
+    "Exploratory reused validation; not independent final performance.",
+    "All FN use IoU50; physical containment and actual misses require separate review.",
+    "Fresh first-model inference, cached second-model predictions; not a live two-model cascade.",
+    "One-to-one prediction agreement does not prove correctness; shared errors can be stable.",
+    "No real normal products; no production referral fraction or PASS safety estimate."
+  ]
+}

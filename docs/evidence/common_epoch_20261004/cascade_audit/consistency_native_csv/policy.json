@@ -1,0 +1,18 @@
+{
+  "version": "flip_consistency_v2_native_csv",
+  "split": "val",
+  "run": "v2_common20_yolo_mps_20261004",
+  "device": "mps",
+  "seed": 0,
+  "checkpoint_sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+  "threshold": 0.68106407,
+  "export_threshold": 0.001,
+  "resolution": 512,
+  "box_correspondence_iou": 0.5,
+  "export_precision": "Preserve NumPy scalars, arithmetic and csv.writer formatting from xray_benchmark_selected.py; no Python float widening before export",
+  "route": "No accepted original box OR unmatched box between original and restored horizontal-flip output. One-to-one xray_eval.match; GT not used to route.",
+  "test_access": false,
+  "new_training": false,
+  "development_validation_reuse": true,
+  "previous_test_exposure": true
+}

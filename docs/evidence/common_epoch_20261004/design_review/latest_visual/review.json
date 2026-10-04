@@ -1,0 +1,165 @@
+{
+  "scope": "All latest models official IoU FN locations, union val 5 and test 12 targets, not full bidirectional dataset audit",
+  "reviewer": "one AI visual inspection, prior results known",
+  "cases": [
+    {
+      "split": "val",
+      "id": 1,
+      "stem": "001_20200814_203442(4)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "val",
+      "id": 2,
+      "stem": "001_20200819_124414(0)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "val",
+      "id": 3,
+      "stem": "001_20200922_163332(2)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "val",
+      "id": 4,
+      "stem": "001_20200624_123322(3)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "val",
+      "id": 5,
+      "stem": "001_20200629_082834(2)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 1,
+      "stem": "002_20200623_043039(3)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 2,
+      "stem": "002_20200623_203040(4)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 3,
+      "stem": "002_20200623_043115(4)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 4,
+      "stem": "001_20200623_003532(5)",
+      "observed": {
+        "YOLO11n": "no accepted local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 5,
+      "stem": "001_20200625_043346(2)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 6,
+      "stem": "001_20200629_123111(6)",
+      "observed": {
+        "YOLO11n": "no accepted local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 7,
+      "stem": "001_20200629_123111(6)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 8,
+      "stem": "001_20200819_003044(1)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 9,
+      "stem": "001_20200826_123714(5)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 10,
+      "stem": "002_20200624_003132(0)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 11,
+      "stem": "002_20200624_162717(9)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    },
+    {
+      "split": "test",
+      "id": 12,
+      "stem": "001_20200625_043346(2)",
+      "observed": {
+        "YOLO11n": "dark target core appears within a local prediction",
+        "YOLO26n": "dark target core appears within a local prediction"
+      }
+    }
+  ],
+  "limits": [
+    "No expert agreement or reviewer sensitivity estimate",
+    "No replacement of official IoU counts",
+    "Not a complete new visual F1"
+  ],
+  "specialist_decision": "Do not train on these validation/test cases; no independently established training-group failure population yet"
+}

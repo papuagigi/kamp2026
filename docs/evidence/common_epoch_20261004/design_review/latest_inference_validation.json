@@ -1,0 +1,33 @@
+{
+  "models": [
+    {
+      "model": "yolo11n",
+      "run": "v2_latest20_yolo11n_guard_mps_20261004",
+      "mean_ms": 9.959368903574866,
+      "p95_ms": 19.297542003187118,
+      "metrics": {
+        "tp": 240,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.9876543209876543
+      },
+      "execution_sha256": "306cdf749a90b6b13c9ba0e15bff38bad51309db8d73d95eafe24e7b4c037969"
+    },
+    {
+      "model": "yolo26n",
+      "run": "v2_latest20_yolo26n_guard_mps_20261004",
+      "mean_ms": 12.552858414311569,
+      "p95_ms": 23.469084000680596,
+      "metrics": {
+        "tp": 240,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.9876543209876543
+      },
+      "execution_sha256": "c4114cdbf7a0d94c77ca1768bc12cb7b2085fec8f1620899b6154c7475bf328b"
+    }
+  ],
+  "device": "mps",
+  "images": 107,
+  "repeats": 3
+}

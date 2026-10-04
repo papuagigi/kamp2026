@@ -1,0 +1,30 @@
+{
+  "version": "live_cascade_v1",
+  "split": "val",
+  "device": "mps",
+  "seed": 0,
+  "repeats": 3,
+  "first": "v2_common20_yolo_mps_20261004",
+  "second": "v2_common20_rfdetr_mps_20261004",
+  "thresholds": {
+    "v2_common20_yolo_mps_20261004": 0.68106407,
+    "v2_common20_rfdetr_mps_20261004": 0.70370466
+  },
+  "checkpoints": {
+    "v2_common20_yolo_mps_20261004": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+    "v2_common20_rfdetr_mps_20261004": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964"
+  },
+  "resolution": 512,
+  "export_threshold": 0.001,
+  "route": "No original box or unmatched original/undo-horizontal-flip predictions, one-to-one IoU50.",
+  "second_input": "Full original image; no ROI-only inference or tiled inference in this prototype.",
+  "conflict": "Retain both outputs and mark for reinspection; never clear first alarm.",
+  "deadline_seconds": 1.0,
+  "deadline_role": "Development soft deadline checked after synchronous calls; NOT a factory requirement or a hard watchdog.",
+  "no_pass": true,
+  "no_training": true,
+  "no_test": true,
+  "validation_reused": true,
+  "precision": "Native NumPy CSV serialization then common pandas float parsing, as existing evaluation.",
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc"
+}

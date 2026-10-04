@@ -1,0 +1,62 @@
+[
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/policy.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/policy.json",
+    "sha256": "f0ae168a87e93b8427538d906359eeacd9e9002a218a32e669d715f30051fc83"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/summary.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/summary.json",
+    "sha256": "290d5a5631f7ffcf213f938a158227f5dedd400da66262f3f501b204668813ed"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/routes.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/routes.json",
+    "sha256": "e6110bca56e065daabcde90c31d58b11904c7843cd3ffb0ea805563041ce793a"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/pairs.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/pairs.csv",
+    "sha256": "3b29b23bd212f6cb374d890e6e0a107e47421a8eed46b511f9f301886acc09bc"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/replay.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/replay.csv",
+    "sha256": "76f75dd4100eb67c324cf9c0d65d947616d93f30c0954462410ef12c97662aa2"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/conditions.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/conditions.csv",
+    "sha256": "150d65971374143b79150bf55a57cf85cbf57243f711d6c1e1c62f02bcc2ac9d"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/validation_complementarity.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/validation_complementarity.csv",
+    "sha256": "1904d18ed91ca93da8fc69debbc8f2987cd7c220b2ae618098f01d49007c8245"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/illustrated_examples.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/illustrated_examples.json",
+    "sha256": "0fb21ca18b78b2c0521210b68bc5cff2d832b666604e75d556598496d196f993"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/policy.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/consistency_native_csv/policy.json",
+    "sha256": "065de8fa9032cbc8cf13740b5ee1d36f36e2f93ce017446c6f32006794f8b8ac"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/summary.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/consistency_native_csv/summary.json",
+    "sha256": "f611a54b1bb41f728fede9347b25c2ee1b67a8e15f4474cb70b9e18175cdaa2d"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/routes.csv",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/consistency_native_csv/routes.csv",
+    "sha256": "7b7bcb7a76fd1d2bf1a0776026abe4efefde5c24ad78a7152db42f17f5e180e4"
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/cascade_audit/consistency_native_csv/execution.json",
+    "copy": "docs/evidence/common_epoch_20261004/cascade_audit/consistency_native_csv/execution.json",
+    "sha256": "956be9e5c78fcd598c12836ea0f8f1b0172d69d69b8576035943edbca708755e"
+  }
+]
