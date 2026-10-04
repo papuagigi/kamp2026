@@ -1,0 +1,30 @@
+{
+  "run": "v2_common20_dfine_cuda_20261004",
+  "threshold_unchanged": true,
+  "changes": [
+    {
+      "stem": "001_20200814_203438(9)",
+      "gt_index": 234,
+      "old_detected": true,
+      "mps_detected": false,
+      "threshold": 0.72014374,
+      "cuda": {
+        "score": 0.72014374,
+        "iou": 0.6288160636260773,
+        "cx": 321.73101806640625,
+        "cy": 130.89813232421875,
+        "w": 8.923096,
+        "h": 12.026871
+      },
+      "mps": {
+        "score": 0.7201233,
+        "iou": 0.6288145564660401,
+        "cx": 321.7310485839844,
+        "cy": 130.89810180664062,
+        "w": 8.923096,
+        "h": 12.026985
+      }
+    }
+  ],
+  "candidate_rule": "highest score among predictions with IoU>=0.5 for the changed GT"
+}

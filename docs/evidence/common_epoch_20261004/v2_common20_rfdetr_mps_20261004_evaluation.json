@@ -1,0 +1,884 @@
+{
+  "run": "v2_common20_rfdetr_mps_20261004",
+  "execution": {
+    "model": "rfdetr",
+    "data": "data/xray_combined_20261003",
+    "name": "v2_common20_rfdetr_mps_20261004",
+    "epochs": 20,
+    "batch": 4,
+    "resolution": 512,
+    "device": "mps",
+    "resume": true,
+    "epoch_validation": true,
+    "stop_after_epoch": 0,
+    "device_used": "mps",
+    "seed": 0,
+    "dataset": "data/xray_combined_20261003",
+    "dataset_sha256": "0dbfb2a6b8e84dfeeda279dfbe49c9cd69077b050741047d64c813c81f6f2bf1",
+    "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+    "status": "complete",
+    "started_unix": 1791047029.562429,
+    "train_images": 2453,
+    "augmentation": "precomputed only; automatic random transforms disabled",
+    "checkpoint_selection": {
+      "primary": "iou50_f1",
+      "ties": [
+        "iou50_recall",
+        "iou75_ap",
+        "earlier_epoch"
+      ],
+      "tolerance": 1e-09,
+      "threshold": "validation_best_f1_frozen_for_test",
+      "epoch_budget": 20,
+      "test_used_for_selection": false
+    },
+    "attempt_started_unix": 1791047029.562429,
+    "recovery_schema": 1,
+    "recovery_fingerprint": "dbd3f76facc4a9385c70b87d8616e17ad62e3866a506cb5d987d358e8ec80b5a",
+    "recovery_epoch": 0,
+    "loss_window": "unfinished epoch since last verified commit",
+    "target_classes": [
+      "defect"
+    ],
+    "resume_semantics": "Lightning full checkpoint resume; last.ckpt each epoch",
+    "checkpoint": "runs/v2_common20_rfdetr_mps_20261004/last.ckpt",
+    "completed_epochs": 20,
+    "seconds": 11155.662897109985
+  },
+  "selected_epoch": 8,
+  "selected_checkpoint": "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+  "checkpoint_sha256": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964",
+  "metrics": {
+    "iou50": {
+      "val": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_val.csv",
+        "split": "val",
+        "n_images": 107,
+        "n_gt": 243,
+        "thr": 0.70370466,
+        "precision": 0.9917695473251029,
+        "recall": 0.9917695473251029,
+        "f1": 0.9917695473251029,
+        "fp_per_image": 0.018691588785046728,
+        "ap": 0.9897009655577452,
+        "best_f1": 0.9917695473251029,
+        "thr_recall99": 0.70370466,
+        "fp_at_recall99": 2,
+        "images_fully_detected": 0.9813084112149533,
+        "metric_version": "iou50_v1",
+        "ap_definition": "all_points_interpolated_iou_matching_not_coco",
+        "matching": {
+          "center_distance_px": null,
+          "iou": 0.5,
+          "operator": "iou_only"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 241,
+        "fp": 2,
+        "fn": 2,
+        "n_predictions": 30993,
+        "n_selected_predictions": 243,
+        "n_zero_area_predictions": 37,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              0.974,
+              39
+            ],
+            "막대3": [
+              0.995,
+              204
+            ]
+          },
+          "machine": {
+            "1호기": [
+              1.0,
+              90
+            ],
+            "2호기": [
+              1.0,
+              71
+            ],
+            "3호기": [
+              0.976,
+              82
+            ]
+          },
+          "width": {
+            "316": [
+              1.0,
+              80
+            ],
+            "352": [
+              1.0,
+              81
+            ],
+            "576": [
+              0.976,
+              82
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              0.974,
+              39
+            ],
+            "3": [
+              0.995,
+              204
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              1.0,
+              10
+            ],
+            "8~11px": [
+              0.993,
+              137
+            ],
+            "11~14px": [
+              1.0,
+              53
+            ],
+            "14px~": [
+              0.977,
+              43
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              1.0,
+              3
+            ],
+            "40~60px": [
+              0.989,
+              179
+            ],
+            "60px~": [
+              1.0,
+              61
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              0.75,
+              4
+            ],
+            "35~45": [
+              1.0,
+              83
+            ],
+            "45~55": [
+              0.988,
+              81
+            ],
+            "55~": [
+              1.0,
+              75
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      },
+      "test": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_test.csv",
+        "split": "test",
+        "n_images": 97,
+        "n_gt": 225,
+        "thr": 0.70370466,
+        "precision": 0.9821428571428571,
+        "recall": 0.9777777777777777,
+        "f1": 0.9799554565701559,
+        "fp_per_image": 0.041237113402061855,
+        "ap": 0.9708676075342975,
+        "best_f1": 0.9799554565701559,
+        "thr_recall99": 0.005065217,
+        "fp_at_recall99": 1314,
+        "images_fully_detected": 0.9484536082474226,
+        "metric_version": "iou50_v1",
+        "ap_definition": "all_points_interpolated_iou_matching_not_coco",
+        "matching": {
+          "center_distance_px": null,
+          "iou": 0.5,
+          "operator": "iou_only"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 220,
+        "fp": 4,
+        "fn": 5,
+        "n_predictions": 27983,
+        "n_selected_predictions": 224,
+        "n_zero_area_predictions": 38,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              0.97,
+              33
+            ],
+            "막대3": [
+              0.979,
+              192
+            ]
+          },
+          "machine": {
+            "1호기": [
+              0.975,
+              80
+            ],
+            "2호기": [
+              0.988,
+              81
+            ],
+            "3호기": [
+              0.969,
+              64
+            ]
+          },
+          "width": {
+            "316": [
+              0.988,
+              86
+            ],
+            "352": [
+              0.973,
+              75
+            ],
+            "576": [
+              0.969,
+              64
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              0.97,
+              33
+            ],
+            "3": [
+              0.979,
+              192
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              0.923,
+              13
+            ],
+            "8~11px": [
+              0.981,
+              103
+            ],
+            "11~14px": [
+              0.989,
+              94
+            ],
+            "14px~": [
+              0.933,
+              15
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              1.0,
+              2
+            ],
+            "40~60px": [
+              0.971,
+              173
+            ],
+            "60px~": [
+              1.0,
+              50
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              1.0,
+              7
+            ],
+            "35~45": [
+              0.988,
+              82
+            ],
+            "45~55": [
+              0.971,
+              69
+            ],
+            "55~": [
+              0.97,
+              67
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      }
+    },
+    "iou75": {
+      "val": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_val.csv",
+        "split": "val",
+        "n_images": 107,
+        "n_gt": 243,
+        "thr": 0.74182564,
+        "precision": 0.44537815126050423,
+        "recall": 0.43621399176954734,
+        "f1": 0.4407484407484408,
+        "fp_per_image": 1.233644859813084,
+        "ap": 0.25007741429677366,
+        "best_f1": 0.4407484407484408,
+        "thr_recall99": null,
+        "fp_at_recall99": null,
+        "images_fully_detected": 0.22429906542056074,
+        "metric_version": "iou75_v1",
+        "ap_definition": "all_points_interpolated_iou_matching_not_coco",
+        "matching": {
+          "center_distance_px": null,
+          "iou": 0.75,
+          "operator": "iou_only"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 106,
+        "fp": 132,
+        "fn": 137,
+        "n_predictions": 30993,
+        "n_selected_predictions": 238,
+        "n_zero_area_predictions": 37,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              0.462,
+              39
+            ],
+            "막대3": [
+              0.431,
+              204
+            ]
+          },
+          "machine": {
+            "1호기": [
+              0.444,
+              90
+            ],
+            "2호기": [
+              0.549,
+              71
+            ],
+            "3호기": [
+              0.329,
+              82
+            ]
+          },
+          "width": {
+            "316": [
+              0.537,
+              80
+            ],
+            "352": [
+              0.444,
+              81
+            ],
+            "576": [
+              0.329,
+              82
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              0.462,
+              39
+            ],
+            "3": [
+              0.431,
+              204
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              0.0,
+              10
+            ],
+            "8~11px": [
+              0.569,
+              137
+            ],
+            "11~14px": [
+              0.377,
+              53
+            ],
+            "14px~": [
+              0.186,
+              43
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              0.667,
+              3
+            ],
+            "40~60px": [
+              0.475,
+              179
+            ],
+            "60px~": [
+              0.311,
+              61
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              0.0,
+              4
+            ],
+            "35~45": [
+              0.506,
+              83
+            ],
+            "45~55": [
+              0.37,
+              81
+            ],
+            "55~": [
+              0.453,
+              75
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      },
+      "test": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_test.csv",
+        "split": "test",
+        "n_images": 97,
+        "n_gt": 225,
+        "thr": 0.74182564,
+        "precision": 0.32589285714285715,
+        "recall": 0.3244444444444444,
+        "f1": 0.32516703786191536,
+        "fp_per_image": 1.556701030927835,
+        "ap": 0.13821475790638102,
+        "best_f1": 0.32589285714285715,
+        "thr_recall99": null,
+        "fp_at_recall99": null,
+        "images_fully_detected": 0.16494845360824742,
+        "metric_version": "iou75_v1",
+        "ap_definition": "all_points_interpolated_iou_matching_not_coco",
+        "matching": {
+          "center_distance_px": null,
+          "iou": 0.75,
+          "operator": "iou_only"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 73,
+        "fp": 151,
+        "fn": 152,
+        "n_predictions": 27983,
+        "n_selected_predictions": 224,
+        "n_zero_area_predictions": 38,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              0.394,
+              33
+            ],
+            "막대3": [
+              0.312,
+              192
+            ]
+          },
+          "machine": {
+            "1호기": [
+              0.35,
+              80
+            ],
+            "2호기": [
+              0.383,
+              81
+            ],
+            "3호기": [
+              0.219,
+              64
+            ]
+          },
+          "width": {
+            "316": [
+              0.384,
+              86
+            ],
+            "352": [
+              0.347,
+              75
+            ],
+            "576": [
+              0.219,
+              64
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              0.394,
+              33
+            ],
+            "3": [
+              0.312,
+              192
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              0.0,
+              13
+            ],
+            "8~11px": [
+              0.417,
+              103
+            ],
+            "11~14px": [
+              0.287,
+              94
+            ],
+            "14px~": [
+              0.2,
+              15
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              0.0,
+              2
+            ],
+            "40~60px": [
+              0.335,
+              173
+            ],
+            "60px~": [
+              0.3,
+              50
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              0.286,
+              7
+            ],
+            "35~45": [
+              0.341,
+              82
+            ],
+            "45~55": [
+              0.304,
+              69
+            ],
+            "55~": [
+              0.328,
+              67
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      }
+    },
+    "legacy": {
+      "val": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_val.csv",
+        "split": "val",
+        "n_images": 107,
+        "n_gt": 243,
+        "thr": 0.70370466,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp_per_image": 0.0,
+        "ap": 1.0,
+        "best_f1": 1.0,
+        "thr_recall99": 0.7347625,
+        "fp_at_recall99": 0,
+        "images_fully_detected": 1.0,
+        "metric_version": "custom_ap_v2",
+        "ap_definition": "all_points_interpolated_custom_matching",
+        "matching": {
+          "center_distance_px": 8.0,
+          "iou": 0.3,
+          "operator": "or"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 243,
+        "fp": 0,
+        "fn": 0,
+        "n_predictions": 30993,
+        "n_selected_predictions": 243,
+        "n_zero_area_predictions": 37,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              1.0,
+              39
+            ],
+            "막대3": [
+              1.0,
+              204
+            ]
+          },
+          "machine": {
+            "1호기": [
+              1.0,
+              90
+            ],
+            "2호기": [
+              1.0,
+              71
+            ],
+            "3호기": [
+              1.0,
+              82
+            ]
+          },
+          "width": {
+            "316": [
+              1.0,
+              80
+            ],
+            "352": [
+              1.0,
+              81
+            ],
+            "576": [
+              1.0,
+              82
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              1.0,
+              39
+            ],
+            "3": [
+              1.0,
+              204
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              1.0,
+              10
+            ],
+            "8~11px": [
+              1.0,
+              137
+            ],
+            "11~14px": [
+              1.0,
+              53
+            ],
+            "14px~": [
+              1.0,
+              43
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              1.0,
+              3
+            ],
+            "40~60px": [
+              1.0,
+              179
+            ],
+            "60px~": [
+              1.0,
+              61
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              1.0,
+              4
+            ],
+            "35~45": [
+              1.0,
+              83
+            ],
+            "45~55": [
+              1.0,
+              81
+            ],
+            "55~": [
+              1.0,
+              75
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      },
+      "test": {
+        "pred_csv": "reports/preds_v2_common20_rfdetr_mps_20261004_test.csv",
+        "split": "test",
+        "n_images": 97,
+        "n_gt": 225,
+        "thr": 0.70370466,
+        "precision": 1.0,
+        "recall": 0.9955555555555555,
+        "f1": 0.9977728285077951,
+        "fp_per_image": 0.0,
+        "ap": 1.0,
+        "best_f1": 1.0,
+        "thr_recall99": 0.7520735,
+        "fp_at_recall99": 0,
+        "images_fully_detected": 0.9896907216494846,
+        "metric_version": "custom_ap_v2",
+        "ap_definition": "all_points_interpolated_custom_matching",
+        "matching": {
+          "center_distance_px": 8.0,
+          "iou": 0.3,
+          "operator": "or"
+        },
+        "data_version": "xray_v2",
+        "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+        "threshold_source": "provided",
+        "tp": 224,
+        "fp": 0,
+        "fn": 1,
+        "n_predictions": 27983,
+        "n_selected_predictions": 224,
+        "n_zero_area_predictions": 38,
+        "n_negative_images": 0,
+        "negative_images_with_fp": 0,
+        "image_false_alarm_rate": null,
+        "evaluation_status": "ok",
+        "recall_by_condition": {
+          "card_type": {
+            "막대1": [
+              0.97,
+              33
+            ],
+            "막대3": [
+              1.0,
+              192
+            ]
+          },
+          "machine": {
+            "1호기": [
+              1.0,
+              80
+            ],
+            "2호기": [
+              1.0,
+              81
+            ],
+            "3호기": [
+              0.984,
+              64
+            ]
+          },
+          "width": {
+            "316": [
+              1.0,
+              86
+            ],
+            "352": [
+              1.0,
+              75
+            ],
+            "576": [
+              0.984,
+              64
+            ]
+          },
+          "n_boxes": {
+            "1": [
+              0.97,
+              33
+            ],
+            "3": [
+              1.0,
+              192
+            ]
+          },
+          "size_bin": {
+            "~8px": [
+              1.0,
+              13
+            ],
+            "8~11px": [
+              0.99,
+              103
+            ],
+            "11~14px": [
+              1.0,
+              94
+            ],
+            "14px~": [
+              1.0,
+              15
+            ]
+          },
+          "edge_bin": {
+            "20~40px": [
+              1.0,
+              2
+            ],
+            "40~60px": [
+              0.994,
+              173
+            ],
+            "60px~": [
+              1.0,
+              50
+            ]
+          },
+          "contrast_bin": {
+            "대비~35": [
+              1.0,
+              7
+            ],
+            "35~45": [
+              1.0,
+              82
+            ],
+            "45~55": [
+              0.986,
+              69
+            ],
+            "55~": [
+              1.0,
+              67
+            ]
+          }
+        },
+        "threshold_policy": "selected_epoch_validation_best_f1_frozen_for_test"
+      }
+    }
+  },
+  "normal_real_product_images": 0,
+  "test_used_for_selection": false,
+  "previous_test_exposure": true
+}

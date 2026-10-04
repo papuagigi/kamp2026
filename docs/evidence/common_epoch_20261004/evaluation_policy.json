@@ -1,0 +1,26 @@
+{
+  "primary": "iou50_f1",
+  "ties": [
+    "iou50_recall",
+    "iou75_ap",
+    "earlier_epoch"
+  ],
+  "tolerance": 1e-09,
+  "threshold": "validation_best_f1_frozen_for_test",
+  "epoch_budget": 20,
+  "test_used_for_selection": false,
+  "dataset": "data/xray_combined_20261003",
+  "train_images": 2453,
+  "val_images": 107,
+  "test_images": 97,
+  "models": [
+    "yolo",
+    "faster",
+    "rfdetr",
+    "dfine"
+  ],
+  "resolution": 512,
+  "seed": 0,
+  "prior_test_seen": true,
+  "normal_real_products": 0
+}

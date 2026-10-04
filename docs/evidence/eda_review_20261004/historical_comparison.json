@@ -1,0 +1,8 @@
+{
+  "raw": true,
+  "marks": true,
+  "labels": true,
+  "objects": true,
+  "time": true,
+  "extra": true
+}

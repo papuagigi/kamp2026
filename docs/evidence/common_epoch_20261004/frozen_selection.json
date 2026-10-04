@@ -1,0 +1,59 @@
+{
+  "runs": {
+    "v2_common20_yolo_mps_20261004": {
+      "model": "yolo",
+      "epoch": 20,
+      "checkpoint": "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+      "checkpoint_sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+      "thresholds": {
+        "iou50": 0.68106407,
+        "iou75": 0.7807988,
+        "legacy": 0.68106407
+      },
+      "selection_sha256": "a50c16de64754ab4b5ab6bb870fa8ba13058f76af270a87c30eded0729408380"
+    },
+    "v2_common20_faster_cuda_20261004": {
+      "model": "faster",
+      "epoch": 17,
+      "checkpoint": "runs/v2_common20_faster_cuda_20261004/selected/best.pt",
+      "checkpoint_sha256": "926f1347018c66c281476ca16c22dda7b37a48e03b60cf8b8e7d2ea58ff664fc",
+      "thresholds": {
+        "iou50": 0.9999857,
+        "iou75": 0.99998844,
+        "legacy": 0.9999857
+      },
+      "selection_sha256": "41f9f9eb377067533317b3da5225e988a6016bc5882b8a4203a3ad85a0a78fa9"
+    },
+    "v2_common20_rfdetr_mps_20261004": {
+      "model": "rfdetr",
+      "epoch": 8,
+      "checkpoint": "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+      "checkpoint_sha256": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964",
+      "thresholds": {
+        "iou50": 0.70370466,
+        "iou75": 0.74182564,
+        "legacy": 0.70370466
+      },
+      "selection_sha256": "8674f5d84c304fbefc8dec31303de5477b904206ff751c493a188dc7e8555007"
+    },
+    "v2_common20_dfine_cuda_20261004": {
+      "model": "dfine",
+      "epoch": 11,
+      "checkpoint": "runs/v2_common20_dfine_cuda_20261004/selected/best.pth",
+      "checkpoint_sha256": "7a07cd0cecf7fe105d000148eec2c62c09f37972389d8046d2737d26bd0e7e35",
+      "thresholds": {
+        "iou50": 0.72014374,
+        "iou75": 0.82042766,
+        "legacy": 0.72014374
+      },
+      "selection_sha256": "c5a4a4bb2f1cfa386952f2a1a4651249a5acfaee857451959b554af5c8278a08"
+    }
+  },
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+  "selection_source": "validation only",
+  "test_used_for_selection": false,
+  "previous_test_exposure": true,
+  "real_normal_product_images": 0,
+  "resolution": 512,
+  "export_threshold": 0.001
+}

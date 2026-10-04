@@ -1,0 +1,34 @@
+{
+  "model": "dfine",
+  "epochs": 20,
+  "batch": 4,
+  "resolution": 512,
+  "seed": 0,
+  "dataset": "data/xray_combined_20261003",
+  "device_used": "cuda",
+  "status": "complete",
+  "completed_epochs": 20,
+  "checkpoint_selection": {
+    "primary": "iou50_f1",
+    "ties": [
+      "iou50_recall",
+      "iou75_ap",
+      "earlier_epoch"
+    ],
+    "tolerance": 1e-09,
+    "threshold": "validation_best_f1_frozen_for_test",
+    "epoch_budget": 20,
+    "test_used_for_selection": false
+  },
+  "pretrained_matching_tensors": 783,
+  "train_images": 2453,
+  "optimizer": "AdamW",
+  "lr": 0.0001,
+  "lr_backbone": 5e-05,
+  "weight_decay": 0.0001,
+  "augmentation": "precomputed only",
+  "pretrained_sha256": "48a6c8cc43eb57186843f752e2e8461ddd3326e0d3c575e71e6e960844683e89",
+  "recovery_fingerprint": "62090ca72eb0464787b679c1ced5bd1c01ccf5b44de6dc7f06ff9465390fc6de",
+  "checkpoint": "runs/v2_common20_dfine_cuda_20261004/epochs/epoch_020.pth",
+  "seconds": 4636.603414058685
+}

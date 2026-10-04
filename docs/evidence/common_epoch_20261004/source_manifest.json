@@ -1,0 +1,198 @@
+[
+  {
+    "source": "reports/common_epoch_20261004/evaluation/comparison.csv",
+    "shared": "docs/evidence/common_epoch_20261004/comparison.csv",
+    "source_sha256": "0b46955b2106ee0c4d12617db423c027f7aa46ea4b0757946f661ae1992795ef",
+    "shared_sha256": "0b46955b2106ee0c4d12617db423c027f7aa46ea4b0757946f661ae1992795ef",
+    "path_normalization": false
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/frozen_selection.json",
+    "shared": "docs/evidence/common_epoch_20261004/frozen_selection.json",
+    "source_sha256": "11810e5837cac1e9b6eb0f8f936740c0e74f285b0276aee39e867407543c0130",
+    "shared_sha256": "628c71b08e039a14f738ce08d22a470c86bf893c366e0773ce7a87d9b3553c15",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/stage123_qa.json",
+    "shared": "docs/evidence/common_epoch_20261004/stage123_qa.json",
+    "source_sha256": "75e94fea9944791648a2c63c0c04a0d44ece401bc318f9b2968f613447d28743",
+    "shared_sha256": "01efe321d4a632009effa44e853a6f5c603fda9eec049365a36bbdaaf4cb7e3d",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/v2_common20_faster_cuda_20261004_evaluation.json",
+    "shared": "docs/evidence/common_epoch_20261004/v2_common20_faster_cuda_20261004_evaluation.json",
+    "source_sha256": "df855a51970ce8634ca2ffbaad4c10ffea531a382639c9b2258ac4878eec45e0",
+    "shared_sha256": "3625fbf1f846ff0cd7159e111853d7ad208e0a0b6d812ee465cdb0058ca7a169",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/v2_common20_rfdetr_mps_20261004_evaluation.json",
+    "shared": "docs/evidence/common_epoch_20261004/v2_common20_rfdetr_mps_20261004_evaluation.json",
+    "source_sha256": "66ef76a210f8ec0651b1004cba8478c4a3e39e93923878e3c8e18f5c591fc23a",
+    "shared_sha256": "8f4ee3d155372337e59256600b188206b86e7561615e6dd5da82b7808e7d0b88",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/v2_common20_yolo_mps_20261004_evaluation.json",
+    "shared": "docs/evidence/common_epoch_20261004/v2_common20_yolo_mps_20261004_evaluation.json",
+    "source_sha256": "b6b32aa2dfa76dc856f265523f15754c9f52475c8d6963f7474be4c916acc8fd",
+    "shared_sha256": "0d3b4b43f901be20cefa34b84e707b2183f083009a47035ba4f7dbb898e598d6",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/v2_common20_dfine_cuda_20261004_evaluation.json",
+    "shared": "docs/evidence/common_epoch_20261004/v2_common20_dfine_cuda_20261004_evaluation.json",
+    "source_sha256": "27e6436cb114f0319d38fd404b8709cb32d5cbedd5c092d1c6a5102c8915f1c9",
+    "shared_sha256": "df46534feb4b10f536a8e58215d89813f22385c2e47a54548ec1fe4e90cbee85",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/condition_summary.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/condition_summary.json",
+    "source_sha256": "cbfda7710fdbfc650fd080fbcac019c81ebdc378fef3a13044cf97efb3e9aef6",
+    "shared_sha256": "6e58b4a38dcfc9d8f93d1cdc6aa4a0972e83068e0b6b26e5e82370998ab4ca3b",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/conditions.csv",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/conditions.csv",
+    "source_sha256": "1049b3ae25df9695767664bc0aa59cda8156bc381052c617377bb77e6f3253ec",
+    "shared_sha256": "1049b3ae25df9695767664bc0aa59cda8156bc381052c617377bb77e6f3253ec",
+    "path_normalization": false
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/dfine_device_difference.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/dfine_device_difference.json",
+    "source_sha256": "71412e0192c1c793eae2d62d2eac7c6b7b8df49076d616a3561a45acf09acd9c",
+    "shared_sha256": "823ee9b82992f54e26b792cec500d7e5077c92ff52cfe3c9b374b2586d624d09",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/benchmark_mps.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/benchmark_mps.json",
+    "source_sha256": "f5b2846592da49f5ed52047119831f2251ab3b03e77e2b3c3d9993b7b1c14bf0",
+    "shared_sha256": "92db9c6610c4d66bf07a3971ee6b427ad3ea965a5b989b76a6498d3271014b27",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/error_audit.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/error_audit.json",
+    "source_sha256": "74dba2e0e7cb25320b1288469bb51c807ef529be7dc618ed7d0729783a6dc6d5",
+    "shared_sha256": "2b856a2bce9e450b3dd896166906a8f1247de7ee6facb3831f4e1d29653351c0",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/containment_review.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/containment_review.json",
+    "source_sha256": "9bca59cbc203ac77b0fec452764ce9c8c504d74d85502a0d1b7ad0aca4bee541",
+    "shared_sha256": "6ea13dcfdc761de96b618c43a6e252c534ac50c5a7949c35262f1bb9409b30d6",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/containment_review.csv",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/containment_review.csv",
+    "source_sha256": "c0a3fd4b4e27221aac9e60a798d7733b2c4f61bcf9ef69050c3aa453b3546bab",
+    "shared_sha256": "c0a3fd4b4e27221aac9e60a798d7733b2c4f61bcf9ef69050c3aa453b3546bab",
+    "path_normalization": false
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/containment_visual_review.json",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/containment_visual_review.json",
+    "source_sha256": "d6e65c1242fbfd9f867569e237aa8bfefef886521fae658d864be9817b37e6cb",
+    "shared_sha256": "a10d79ca14ec1cba33b168ea385d4ef0852d475a55680f42577c12c5ad9d9078",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation/diagnostics/errors.csv",
+    "shared": "docs/evidence/common_epoch_20261004/diagnostics/errors.csv",
+    "source_sha256": "afef2996c1f888c0f48d1f24e577d35067753f2c7cf46a3af0c516fea5f5923d",
+    "shared_sha256": "afef2996c1f888c0f48d1f24e577d35067753f2c7cf46a3af0c516fea5f5923d",
+    "path_normalization": false
+  },
+  {
+    "source": "reports/eda_review_20261004/summary.json",
+    "shared": "docs/evidence/eda_review_20261004/summary.json",
+    "source_sha256": "fe203171183bb3eee525b9b1ad96845d0fa9a761badab7b5797af62839f43427",
+    "shared_sha256": "cb51b296102198e4a87f3033450641f4b68d81528833ec2f4cebbb45309a83f4",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/eda_review_20261004/historical_comparison.json",
+    "shared": "docs/evidence/eda_review_20261004/historical_comparison.json",
+    "source_sha256": "0821cfc057ab9c6b3e2116376b95ef66c7f8b41bd02442eefca51904a1a5011c",
+    "shared_sha256": "880d1f1cb1a88c224d96ff70d08163113d83d411124ddcfd9e6876b680b23d42",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/eda_review_20261004/review_qa.json",
+    "shared": "docs/evidence/eda_review_20261004/review_qa.json",
+    "source_sha256": "5985db0e03ae26b5331b4b2da457dc18cbe46441b44c436fb0f6036a99e669f0",
+    "shared_sha256": "2fbe02d84ea21c6da021f7946552008636e34a079654ec615e2b4f83749fdeb3",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_dfine_cuda_20261004/execution.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_dfine_cuda_20261004/execution.json",
+    "source_sha256": "2bd7dd482902205a63e9ecd3f395ec4c6628aaf12401dce3cb376f21cb0c23f6",
+    "shared_sha256": "11502981d9c2f4fec89e24889c46d959d4316a753e0a95ae3f3e5128b46c6226",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_dfine_cuda_20261004/selection.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_dfine_cuda_20261004/selection.json",
+    "source_sha256": "c5a4a4bb2f1cfa386952f2a1a4651249a5acfaee857451959b554af5c8278a08",
+    "shared_sha256": "825d26eed54073fbf79feb8d792bdf98beabaebddbd4afc2ae65c4a870065ccf",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_faster_cuda_20261004/execution.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_faster_cuda_20261004/execution.json",
+    "source_sha256": "36ca224f3a4226c19bf37b2d319b934012816cea99403cc4b93b79e5c954a78c",
+    "shared_sha256": "f2290fb8547ec90e7d72d89daa76ab5b4ce865e11e664f19c6638af07c072d05",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_faster_cuda_20261004/selection.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_faster_cuda_20261004/selection.json",
+    "source_sha256": "41f9f9eb377067533317b3da5225e988a6016bc5882b8a4203a3ad85a0a78fa9",
+    "shared_sha256": "b3fbef57b24437f42baa91fa7a372cc00ecd95168cb67f93954d36314820e32b",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_rfdetr_mps_20261004/execution.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_rfdetr_mps_20261004/execution.json",
+    "source_sha256": "709f3e4883696e31eb17e467581d2fd6b3bf27caeb4cf7fcf06c2f33d027882e",
+    "shared_sha256": "85cff411cec646474001f01387cd78a696805d043eb4d439586a1af154a69e9b",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_rfdetr_mps_20261004/selection.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_rfdetr_mps_20261004/selection.json",
+    "source_sha256": "8674f5d84c304fbefc8dec31303de5477b904206ff751c493a188dc7e8555007",
+    "shared_sha256": "ec4d6b6c3994d7f78e4a53fab4fde9f6ba78be8e2b7eb9eb3a05fbc5c457da86",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_yolo_mps_20261004/execution.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_yolo_mps_20261004/execution.json",
+    "source_sha256": "7dd7c9c3833f4fb1b377253b36e5adb898ddd9188966f756ec9c1512f6327892",
+    "shared_sha256": "31e82eb410ac546402f2738546eb5d1c194d5cb17b8b4ab81dfb2a634539105d",
+    "path_normalization": true
+  },
+  {
+    "source": "runs/v2_common20_yolo_mps_20261004/selection.json",
+    "shared": "docs/evidence/common_epoch_20261004/training/v2_common20_yolo_mps_20261004/selection.json",
+    "source_sha256": "a50c16de64754ab4b5ab6bb870fa8ba13058f76af270a87c30eded0729408380",
+    "shared_sha256": "e47167e4abd971b9da0c0b400482e36bcd340a520610883a3957dcc95017ff78",
+    "path_normalization": true
+  },
+  {
+    "source": "reports/common_epoch_20261004/evaluation_policy.json",
+    "shared": "docs/evidence/common_epoch_20261004/evaluation_policy.json",
+    "source_sha256": "7148e60638e6230e67b8ef43933fd341ca6fb98bac73bdf7da8ba587fbf2c2b2",
+    "shared_sha256": "49a06dccbc7db002feecebdf9ca6a7e7f8a1c774ffea04a2b5ab81de25612b3a",
+    "path_normalization": true
+  }
+]

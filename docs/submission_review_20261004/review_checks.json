@@ -1,0 +1,20 @@
+{
+  "Xray_발표자료_EDA보완.pdf": {
+    "pages": 17
+  },
+  "Xray_결과보고서_EDA보완.pdf": {
+    "pages": 20
+  },
+  "artifact_identity_scan": "pass",
+  "shared_hashes": "pass",
+  "source_evidence_files": 28,
+  "original_metrics_preserved": true,
+  "report_visual_pages_checked": 20,
+  "presentation_visual_slides_checked": 17,
+  "presentation_pdf_pages_checked": 17,
+  "python_syntax_files": 20,
+  "previous_epoch_validation_tests_passed": 5,
+  "previous_recovery_tests_passed": 12,
+  "new_training_or_inference": false,
+  "clean_environment_reproduction": "pending"
+}

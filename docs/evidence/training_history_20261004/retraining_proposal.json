@@ -1,0 +1,92 @@
+{
+  "status": "proposal_not_executed",
+  "scope": "three-model comparison with equal epochwise checkpoint-selection opportunity",
+  "data": "data/xray_combined_20261003",
+  "train_images": 2453,
+  "val_images": 107,
+  "test_images": 97,
+  "epochs": 20,
+  "seed": 0,
+  "resolution": 512,
+  "selection": {
+    "scorer": "scripts/xray_eval.py",
+    "matching": "iou50",
+    "primary": "validation maximum F1 with threshold fitted on validation only",
+    "tie_breaks": [
+      "higher validation recall",
+      "higher validation AP at IoU 0.75",
+      "earlier epoch"
+    ],
+    "numerical_tolerance": 1e-09,
+    "early_stopping": false,
+    "candidate_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "preserve": [
+    "per-epoch model weights",
+    "per-epoch validation predictions and scoring JSON",
+    "full last checkpoint for resume",
+    "selected best checkpoint and selected threshold",
+    "configuration, hashes, elapsed time"
+  ],
+  "same_model_hyperparameters_as_previous_run": true,
+  "test_policy": "No test in training loop; settings fixed before any reporting test. Prior test access remains disclosed.",
+  "previous_measured_training_times": [
+    {
+      "model": "YOLOv8n",
+      "source": "runs/v2_mix2453_yolo_mps/execution.json",
+      "epochs": 20,
+      "batch": 8,
+      "device": "Mac MPS",
+      "previous_training_seconds": 761.4843859672546,
+      "previous_training_minutes": 12.69
+    },
+    {
+      "model": "Faster R-CNN",
+      "source": "runs/v2_mix2453_faster_cuda/execution.json",
+      "epochs": 20,
+      "batch": 4,
+      "device": "Colab Tesla T4",
+      "previous_training_seconds": 5793.186787605286,
+      "previous_training_minutes": 96.55
+    },
+    {
+      "model": "RF-DETR-S",
+      "source": "runs/v2_mix2453_rfdetr_mps/execution.json",
+      "epochs": 20,
+      "batch": 4,
+      "device": "Mac MPS",
+      "previous_training_seconds": 10206.257158756256,
+      "previous_training_minutes": 170.1
+    }
+  ],
+  "timing_reference": {
+    "sequential_training_minutes": 279.35,
+    "parallel_wall_clock_minutes_if_mac_queue_and_t4_run_concurrently": 182.8,
+    "caveats": [
+      "Historical training times, not a forecast for a new run.",
+      "New common per-epoch validation, checkpoint writes, setup and cloud wait are additional.",
+      "T4 access and equivalent throughput are unverified for a future session."
+    ]
+  }
+}

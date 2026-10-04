@@ -14,9 +14,13 @@ bash setup.sh
 
 uv가 설치되어 있어야 합니다(`uv --version`으로 확인). `setup.sh`는 `.python-version`에 고정한 Python 3.12.14로 `.venv`를 만들고, 직접 의존성과 잠금 목록을 함께 적용합니다. 기존 환경의 Python 버전이 다르면 덮어쓰지 않고 중단합니다.
 
-현재 환경은 Python 3.12.14, PyTorch 2.8.0, torchvision 0.23.0, RF-DETR 1.11.1입니다. 2026-10-03 전체 혼합 2,453장으로 세 모델의 20epoch 학습·검증·테스트를 마쳤습니다. YOLOv8n·RF-DETR-S는 Mac MPS, Faster R-CNN은 Colab T4에서 학습했습니다. 조건별 실패 분석과 3단계 판정 계획은 모델 문서 17절에 있습니다. RF-DETR 7번째 저장 모델의 새 추론과 D-FINE-S 학습은 아직 하지 않았습니다.
+현재 환경은 Python 3.12.14, PyTorch 2.8.0, torchvision 0.23.0, RF-DETR 1.11.1입니다. 2026-10-04 네 모델의 공통 20epoch 학습과 검증 선택 저장본 테스트를 완료했습니다. 학습 사진 2,453장·검증 107장·테스트 97장을 사용했습니다. 선택 epoch는 YOLOv8n 20, Faster R-CNN 17, RF-DETR-S 8, D-FINE-S 11입니다. 결과표·전체 epoch 선택 기록·실패 조건·같은 MPS 속도는 [공유용 근거](docs/evidence/common_epoch_20261004/README.md)에 있습니다. 최종 모델과 운영 임계값은 미확정입니다. 실제 정상 제품 0장과 기존 테스트 열람 이력을 함께 기록했습니다.
 
-`requirements.txt`는 직접 의존성, `requirements.lock.txt`는 Mac 설치 환경의 잠금 목록입니다. 다른 OS·CUDA 환경은 별도 호환성 검사가 필요합니다. Colab 예제는 `notebooks/xray_colab_t4.ipynb`, 재개 가능한 학습 코드는 `scripts/xray_train_resumable.py`입니다. 원본 자료·모델·전체 예측 CSV는 Git에 포함하지 않습니다. 아래 명령만으로 이미 완료된 세 모델 결과가 자동 복원되는 것은 아닙니다.
+중단 복구 기능은 CPU와 실제 MPS·T4·Drive의 작은 실행에서 확인했습니다. 최근 정상 전체 학습 상태 2개와 epoch별 모델을 보관합니다. 데이터·설정·코드가 달라지면 재개를 거부합니다. 같은 실행 명령에 `--resume`을 사용합니다. Colab GPU 자동 재연결 기능은 아닙니다. 재개할 때는 학습에 사용한 코드·설정·환경을 유지합니다.
+
+새 Colab 동반 노트북은 `notebooks/xray_common_epoch_colab.ipynb`입니다. 저장된 셀의 JSON·구문은 검사했으며, 같은 설치·복구 절차를 현재 T4 세션에서 확인했습니다. 이 노트북 전체를 새 VM에서 처음부터 재현한 검사는 아직 하지 않았습니다. 과거 ZIP·노트북은 새 실험용으로 바로 실행하지 않습니다.
+
+`requirements.txt`는 직접 의존성, `requirements.lock.txt`는 Mac 설치 환경의 잠금 목록입니다. 다른 OS·CUDA 환경은 별도 호환성 검사가 필요합니다. 이전 Colab 예제는 `notebooks/xray_colab_t4.ipynb`, 재개 가능한 학습 코드는 `scripts/xray_train_resumable.py`입니다. 원본 자료·모델·전체 예측 CSV는 Git에 포함하지 않습니다. 아래 명령만으로 이미 완료된 모델 결과가 자동 복원되는 것은 아닙니다.
 
 데이터는 저장소에 없습니다. KAMP 포털 공지(제6회 경진대회 과제공개)에서 `4. X-ray 검사장비 AI 데이터셋.zip`을 내려받아 압축을 풀고, 프로젝트 루트에 `제조AI데이터셋/4. X-ray 검사장비 AI 데이터셋/dataset/` 구조가 되도록 두면 됩니다. 코드는 이 폴더를 읽기만 합니다.
 
@@ -82,3 +86,5 @@ NAME=v2_yolov8n_640_new bash run.sh
 - 예측 CSV: `stem, cx, cy, w, h, score`. 픽셀 단위이고 한 줄이 박스 하나입니다.
 - 데이터 목록 `data/xray_v2/manifest.csv`: 사진 경로·원본 MD5·호기·촬영 시각·시험편 종류·촬영 묶음·분할·마스킹 픽셀 수 등. 고정 분할은 `split.csv`입니다.
 - 채점 JSON: 기존 지표와 `metric_version, data_version, split_csv_md5, threshold_source, tp, fp, fn`. `ap`는 자체 매칭의 보간 PR 면적이며 COCO AP와 다릅니다. 정답 없는 세트의 AP·재현율·F1과 검출 없는 경우의 정밀도는 `null`입니다. 정상 사진의 오탐은 `image_false_alarm_rate`로 따로 봅니다.
+
+[EDA와 네 모델 결과를 반영한 제출 검토본](docs/submission_review_20261004/README.md)을 확인할 수 있습니다. 최종 제출본과 구분합니다.

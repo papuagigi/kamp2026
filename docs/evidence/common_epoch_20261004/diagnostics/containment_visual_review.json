@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-04T14:04:38.049398+09:00",
+  "reviewer": "Codex",
+  "method": "Viewed the full-image context, unmarked input zoom, official TXT box and frozen accepted prediction overlays for all 9 test cases with nearby-localization FN.",
+  "cases": [
+    {
+      "case": 10,
+      "split": "test",
+      "stem": "001_20200623_003532(5)",
+      "source": "data/xray_v2/images/test/001_20200623_003532(5).png",
+      "source_sha256": "2a8f47f9d6bd35bede770c5dae2e32b1b99d6b7c1c71ee00f8e96776d5391bd7",
+      "crop_xyxy": [
+        327.2379760742187,
+        193.5596923828125,
+        397.2379760742187,
+        263.5596923828125
+      ],
+      "page": 4,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 12,
+      "split": "test",
+      "stem": "001_20200625_043346(2)",
+      "source": "data/xray_v2/images/test/001_20200625_043346(2).png",
+      "source_sha256": "7b1eeadfb27d36a7cb56b53ebc2469ec341677da7fc22f6dff5f7d788f4edd5e",
+      "crop_xyxy": [
+        311.9123153457031,
+        162.6771240234375,
+        381.9123153457031,
+        232.6771240234375
+      ],
+      "page": 4,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 13,
+      "split": "test",
+      "stem": "001_20200629_123107(1)",
+      "source": "data/xray_v2/images/test/001_20200629_123107(1).png",
+      "source_sha256": "6450a6ea11dc7712ce1d90737caf98b6b7cdb2a6bf50594f10975536a829a5f6",
+      "crop_xyxy": [
+        315.66078183691405,
+        212.22510154980466,
+        385.66078183691405,
+        282.22510154980466
+      ],
+      "page": 5,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 14,
+      "split": "test",
+      "stem": "001_20200629_123111(6)",
+      "source": "data/xray_v2/images/test/001_20200629_123111(6).png",
+      "source_sha256": "7bc21afb687297cd24a6ca50c758c26953ed9834a1f568a4b4b6756033aadc92",
+      "crop_xyxy": [
+        319.9249267578125,
+        165.8532867431641,
+        389.9249267578125,
+        235.8532867431641
+      ],
+      "page": 5,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 15,
+      "split": "test",
+      "stem": "001_20200826_023328(3)",
+      "source": "data/xray_v2/images/test/001_20200826_023328(3).png",
+      "source_sha256": "933098c47edf11538804f3be13692dfc3b4f44b7138ed6af4894e8761c68dae3",
+      "crop_xyxy": [
+        287.4600907011719,
+        172.45209496386718,
+        357.4600907011719,
+        242.45209496386718
+      ],
+      "page": 5,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 17,
+      "split": "test",
+      "stem": "002_20200623_043039(3)",
+      "source": "data/xray_v2/images/test/002_20200623_043039(3).png",
+      "source_sha256": "6d058cae8cf8ecaebf1ba47813d2b60681d65d4bce057469feb04575682a6afc",
+      "crop_xyxy": [
+        170.2057647705078,
+        170.5984573354492,
+        240.2057647705078,
+        240.5984573354492
+      ],
+      "page": 6,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 18,
+      "split": "test",
+      "stem": "002_20200623_043109(4)",
+      "source": "data/xray_v2/images/test/002_20200623_043109(4).png",
+      "source_sha256": "10fe0be6f2f21d12ce62b631a020ebfa57dd28f7f39dbf018341e766570c67a3",
+      "crop_xyxy": [
+        122.39646145605468,
+        170.0,
+        192.39646145605468,
+        240.0
+      ],
+      "page": 6,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 19,
+      "split": "test",
+      "stem": "002_20200623_043115(4)",
+      "source": "data/xray_v2/images/test/002_20200623_043115(4).png",
+      "source_sha256": "6d8511c96911a69665269a3389b2dcbdd95fc145c2fab5f1c16ecc244f1bb9ec",
+      "crop_xyxy": [
+        118.80271147363283,
+        170.0,
+        188.80271147363283,
+        240.0
+      ],
+      "page": 7,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    },
+    {
+      "case": 20,
+      "split": "test",
+      "stem": "002_20200623_203040(4)",
+      "source": "data/xray_v2/images/test/002_20200623_203040(4).png",
+      "source_sha256": "d3317dc4427817b1a68df7e8209693fda8f0cb7434c86dec4488617adc1036af",
+      "crop_xyxy": [
+        166.67569728808593,
+        171.29355987353517,
+        236.67569728808593,
+        241.29355987353517
+      ],
+      "page": 7,
+      "observation": "Visible dark target is inside each relevant nearby accepted prediction; no pixel segmentation reference is available."
+    }
+  ],
+  "scope": "14 model-specific FN events, 9 unique GT; visual interpretation and geometry audit only. No metric or annotation changes."
+}

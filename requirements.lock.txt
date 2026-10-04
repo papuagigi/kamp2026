@@ -1,3 +1,4 @@
+absl-py==2.5.0
 accelerate==1.15.0
 aiohappyeyeballs==2.7.1
 aiohttp==3.14.3
@@ -7,6 +8,7 @@ annotated-types==0.8.0
 anyio==4.15.1
 attrs==26.1.0
 av==19.0.0
+calflops==0.3.2
 certifi==2026.7.22
 charset-normalizer==3.5.2
 click==8.5.0
@@ -21,6 +23,7 @@ filetype==1.2.0
 fonttools==4.66.1
 frozenlist==1.8.0
 fsspec==2026.9.0
+grpcio==1.84.0
 h11==0.16.0
 hf-xet==1.6.0
 hotcoco==1.0.1
@@ -32,6 +35,8 @@ Jinja2==3.1.6
 joblib==1.6.0
 kiwisolver==1.5.1
 lightning-utilities==0.15.3
+loguru==0.7.3
+Markdown==3.11
 markdown-it-py==4.2.0
 MarkupSafe==3.0.3
 matplotlib==3.9.4
@@ -52,6 +57,7 @@ pillow-avif-plugin==1.6.0
 polars==1.44.2
 polars-runtime-32==1.44.2
 propcache==0.5.4
+protobuf==7.36.2
 psutil==7.2.2
 pyarrow==25.0.1
 pycocotools==2.0.11
@@ -81,6 +87,8 @@ simplejpeg==1.9.0
 six==1.17.0
 supervision==0.30.6
 sympy==1.14.0
+tensorboard==2.21.0
+tensorboard-data-server==0.7.2
 threadpoolctl==3.7.0
 tokenizers==0.23.2
 torch==2.8.0
@@ -99,4 +107,5 @@ ultralytics-platform==0.1.75
 ultralytics-thop==2.2.2
 urllib3==2.8.0
 vernier==0.5.4
+Werkzeug==3.1.9
 yarl==1.25.1

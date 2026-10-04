@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-04T14:06:22.028859+09:00",
+  "eda_recomputed": true,
+  "historical_eda_sections_equal": 6,
+  "python_syntax": "passed",
+  "local_document_links_missing": 0,
+  "figure_visual_review": "both passed after caption spacing repair",
+  "source_hashes": "verified",
+  "official_scoring_modified": false,
+  "training_or_inference_rerun": false,
+  "submission_documents_edited": false,
+  "git_push_performed": false
+}

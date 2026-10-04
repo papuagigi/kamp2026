@@ -1,0 +1,25 @@
+{
+  "scope": "Exploratory geometry diagnosis. Not a replacement scorer or new TP labels.",
+  "test_fn_events": 16,
+  "nearby_localization_events": 14,
+  "unique_localization_gt": 9,
+  "gt_center_inside_prediction": 14,
+  "center_distance_range": {
+    "min": 0.5526067972804292,
+    "max": 2.8057344677101734
+  },
+  "area_ratio_range": {
+    "min": 0.5466763907902726,
+    "max": 2.24488857282868
+  },
+  "yolo_minus_faster_f1": 0.002197475872308785,
+  "sources": {
+    "reports/common_epoch_20261004/evaluation/comparison.csv": "0b46955b2106ee0c4d12617db423c027f7aa46ea4b0757946f661ae1992795ef",
+    "reports/common_epoch_20261004/evaluation/diagnostics/errors.csv": "afef2996c1f888c0f48d1f24e577d35067753f2c7cf46a3af0c516fea5f5923d",
+    "reports/preds_v2_common20_dfine_cuda_20261004_test.csv": "fe027bc5e4f60468ea869ce3a3f2a64373c7423078ac9eedddb8b1fefa35cebc",
+    "reports/preds_v2_common20_faster_cuda_20261004_test.csv": "49078da53cca53e025110b5893f34ad08dd500e2616872d50b802b471ad774c6",
+    "reports/preds_v2_common20_rfdetr_mps_20261004_test.csv": "01503392fa646939959527be09b9efe4498dbda00885e454ffbbf98b29b04b1a",
+    "reports/preds_v2_common20_yolo_mps_20261004_test.csv": "90c1a6e67dd7d68d3421447953c5a52acaeb52dd66ca403c9e758f6afed20020"
+  },
+  "limitation": "A TXT box center is not a pixel-level segmentation of the actual defect. Visual inspection is recorded separately and cannot be automated by this calculation."
+}

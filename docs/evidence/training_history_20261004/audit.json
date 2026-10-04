@@ -1,0 +1,140 @@
+{
+  "scope": "Read saved full-mixture training histories; no new predictions, threshold search, scoring or training",
+  "models": {
+    "yolo": {
+      "run": "v2_mix2453_yolo_mps",
+      "loss_definition": "Ultralytics box_loss component, not total model loss",
+      "first": {
+        "epoch": 1,
+        "train_loss": 2.02014,
+        "val_loss": 2.07275,
+        "native_map_50_95": 0.37868,
+        "native_map_50": 0.96036
+      },
+      "last": {
+        "epoch": 20,
+        "train_loss": 0.61612,
+        "val_loss": 1.99945,
+        "native_map_50_95": 0.39264,
+        "native_map_50": 0.97178
+      },
+      "native_best": {
+        "epoch": 7,
+        "train_loss": 1.4908,
+        "val_loss": 1.94187,
+        "native_map_50_95": 0.41654,
+        "native_map_50": 0.9667
+      },
+      "per_epoch_validation": true,
+      "checkpoint_selection_used": "fixed final epoch; no test-based selection",
+      "best_checkpoint": {
+        "path": "runs/v2_mix2453_yolo_mps/weights/best.pt",
+        "saved_epoch_field": -1,
+        "epoch_inferred_from_unique_metrics": 7,
+        "note": "Ultralytics stripped epoch to -1; unique stored metric tuple identifies epoch."
+      }
+    },
+    "faster": {
+      "run": "v2_mix2453_faster_cuda",
+      "loss_definition": "Mean training total loss per epoch; validation was not run per epoch",
+      "first": {
+        "epoch": 1,
+        "train_loss": 0.48011850174941145,
+        "val_loss": null,
+        "native_map_50_95": null,
+        "native_map_50": null
+      },
+      "last": {
+        "epoch": 20,
+        "train_loss": 0.02278155596139583,
+        "val_loss": null,
+        "native_map_50_95": null,
+        "native_map_50": null
+      },
+      "native_best": null,
+      "per_epoch_validation": false,
+      "checkpoint_selection_used": "fixed final epoch; no test-based selection",
+      "saved_checkpoints": [
+        "last.pt"
+      ],
+      "last_checkpoint_epoch": 20,
+      "best_checkpoint": null
+    },
+    "rfdetr": {
+      "run": "v2_mix2453_rfdetr_mps",
+      "loss_definition": "RF-DETR logged train/loss; compute_val_loss=False",
+      "first": {
+        "epoch": 1,
+        "train_loss": 5.457107067108154,
+        "val_loss": null,
+        "native_map_50_95": 0.4009058177471161,
+        "native_map_50": 0.962671995162964
+      },
+      "last": {
+        "epoch": 20,
+        "train_loss": 3.5670504570007324,
+        "val_loss": null,
+        "native_map_50_95": 0.4077247381210327,
+        "native_map_50": 0.9787959456443788
+      },
+      "native_best": {
+        "epoch": 7,
+        "train_loss": 4.181107521057129,
+        "val_loss": null,
+        "native_map_50_95": 0.4311193823814392,
+        "native_map_50": 0.9703980684280396
+      },
+      "per_epoch_validation": true,
+      "checkpoint_selection_used": "fixed final epoch; no test-based selection",
+      "best_checkpoint": {
+        "path": "runs/v2_mix2453_rfdetr_mps/checkpoint_best_regular.pth",
+        "epoch_one_based": 7
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "runs/v2_mix2453_yolo_mps/results.csv",
+      "sha256": "5f314330d3ffdc6a04f367384a66a132b679b9c5de6c25838dfd604a49628f35"
+    },
+    {
+      "path": "runs/v2_mix2453_yolo_mps/execution.json",
+      "sha256": "0f4fba1b65681ac7fd194d17de0b84fcd5fb74ba101aa85316db0d25e83281f7"
+    },
+    {
+      "path": "runs/v2_mix2453_yolo_mps/weights/best.pt",
+      "sha256": "0a1d9e9e5c287064f7312c85d4481052496c329f1a00912f120d04c5761b62bb"
+    },
+    {
+      "path": "runs/v2_mix2453_faster_cuda/history.json",
+      "sha256": "1744e0d5aaf3032343699fe189e987496c26fd29711cfdf10209df0a70c5c216"
+    },
+    {
+      "path": "runs/v2_mix2453_faster_cuda/execution.json",
+      "sha256": "99fc9df3561932db5ee8d53d148ab0377ccb6e82518315f0452e9e3f61d7dd4b"
+    },
+    {
+      "path": "runs/v2_mix2453_faster_cuda/last.pt",
+      "sha256": "c35bbd6bb7214bafb7981750b5e1cf44ca9cecdd70356dec49f90e6d724ec8d9"
+    },
+    {
+      "path": "runs/v2_mix2453_rfdetr_mps/metrics.csv",
+      "sha256": "689ffb98f911798207f8a9f3bf744d9188b545e5bd915619a055302f0bd6303b"
+    },
+    {
+      "path": "runs/v2_mix2453_rfdetr_mps/execution.json",
+      "sha256": "8c77c62ec8f1ad1b7fb0064af160842b096826683c0ebcbe8e33d71430d16f5a"
+    },
+    {
+      "path": "runs/v2_mix2453_rfdetr_mps/checkpoint_best_regular.pth",
+      "sha256": "d900da18524d22e768a0982db5d999bd6c1cc29e36c9747c4fdb7ce87985fb07"
+    }
+  ],
+  "limitations": [
+    "Native metrics from different libraries are not the project common scorer.",
+    "A lower late validation metric is compatible with overfitting but does not prove its cause.",
+    "Faster R-CNN has no epochwise validation record or earlier local checkpoint.",
+    "Loss definitions differ across models; compare time trends within each model only.",
+    "Best-checkpoint review is post hoc after earlier test access; no new test was used here."
+  ]
+}

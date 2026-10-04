@@ -1,0 +1,30 @@
+{
+  "time_kst": "2026-10-04T13:12:17+09:00",
+  "requested_steps_completed": [
+    1,
+    2,
+    3
+  ],
+  "training_performed_this_stage": false,
+  "final_model_selected_this_stage": false,
+  "backup_files": 148,
+  "backup_bytes": 8085339976,
+  "colab_epoch_weight_prediction_hash_pairs": 40,
+  "recovery_manifests": 4,
+  "test_models": 4,
+  "test_images_per_model": 97,
+  "test_gt_boxes_per_model": 225,
+  "benchmark_images_per_model": 107,
+  "benchmark_repeats": 3,
+  "benchmark_device": "Apple M5 Pro MPS",
+  "document_links_missing": 0,
+  "figure_cases": 20,
+  "figures_visually_reviewed": [
+    "error_case_20.png",
+    "error_case_16.png"
+  ],
+  "dfine_validation_environment_difference_recorded": true,
+  "git_diff_check": "passed for docs20/21",
+  "python_compile": "passed 7 new scripts",
+  "scope_limit": "Not a clean-environment submission-package reproduction check."
+}

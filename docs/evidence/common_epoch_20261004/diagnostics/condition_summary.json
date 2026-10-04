@@ -1,0 +1,164 @@
+{
+  "cuts_source": "official training boxes only",
+  "cuts": {
+    "size": [
+      10.0,
+      13.0
+    ],
+    "edge": [
+      45.840087890625,
+      60.16511535644531
+    ],
+    "contrast": [
+      42.5,
+      57.0
+    ],
+    "box_aspect_ratio": [
+      1.0833333333333333,
+      1.2613636363636362
+    ],
+    "background_gray": [
+      98.0,
+      127.0
+    ],
+    "background_std": [
+      12.818238071519072,
+      14.234942825634754
+    ]
+  },
+  "train_distribution": {
+    "size": {
+      "0": 6.0,
+      "0.25": 10.0,
+      "0.5": 11.0,
+      "0.75": 13.0,
+      "1": 21.0
+    },
+    "edge": {
+      "0": 38.07365417480469,
+      "0.25": 45.840087890625,
+      "0.5": 51.570098876953125,
+      "0.75": 60.16511535644531,
+      "1": 87.86016845703125
+    },
+    "contrast": {
+      "0": 24.0,
+      "0.25": 42.5,
+      "0.5": 48.0,
+      "0.75": 57.0,
+      "1": 74.0
+    },
+    "box_aspect_ratio": {
+      "0": 1.0,
+      "0.25": 1.0833333333333333,
+      "0.5": 1.125,
+      "0.75": 1.2613636363636362,
+      "1": 1.8571428571428572
+    },
+    "background_gray": {
+      "0": 78.0,
+      "0.25": 98.0,
+      "0.5": 106.0,
+      "0.75": 127.0,
+      "1": 143.0
+    },
+    "background_std": {
+      "0": 10.878036184084586,
+      "0.25": 12.818238071519072,
+      "0.5": 13.502099287944509,
+      "0.75": 14.234942825634754,
+      "1": 15.745342347330178
+    }
+  },
+  "image_outcomes": [
+    {
+      "run": "v2_common20_yolo_mps_20261004",
+      "split": "val",
+      "images": 107,
+      "boxes": 243,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 104,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_yolo_mps_20261004",
+      "split": "test",
+      "images": 97,
+      "boxes": 225,
+      "positive_images_without_any_alarm": 1,
+      "positive_images_with_any_correct_localization": 95,
+      "positive_images_with_all_boxes_found": 94,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_faster_cuda_20261004",
+      "split": "val",
+      "images": 107,
+      "boxes": 243,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 105,
+      "positive_images_with_all_boxes_found": 105,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_faster_cuda_20261004",
+      "split": "test",
+      "images": 97,
+      "boxes": 225,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 97,
+      "positive_images_with_all_boxes_found": 94,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_rfdetr_mps_20261004",
+      "split": "val",
+      "images": 107,
+      "boxes": 243,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 105,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_rfdetr_mps_20261004",
+      "split": "test",
+      "images": 97,
+      "boxes": 225,
+      "positive_images_without_any_alarm": 1,
+      "positive_images_with_any_correct_localization": 96,
+      "positive_images_with_all_boxes_found": 92,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_dfine_cuda_20261004",
+      "split": "val",
+      "images": 107,
+      "boxes": 243,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 106,
+      "positive_images_with_all_boxes_found": 104,
+      "real_normal_images": 0
+    },
+    {
+      "run": "v2_common20_dfine_cuda_20261004",
+      "split": "test",
+      "images": 97,
+      "boxes": 225,
+      "positive_images_without_any_alarm": 0,
+      "positive_images_with_any_correct_localization": 97,
+      "positive_images_with_all_boxes_found": 92,
+      "real_normal_images": 0
+    }
+  ],
+  "caveats": [
+    "Exploratory associations, not causal effects or model-selection evidence.",
+    "Boxes within a capture group are correlated; tiny subsets do not establish general superiority.",
+    "Edge is an approximate product-mask distance; aspect ratio describes TXT boxes, not segmented shape.",
+    "Local grayscale/contrast/texture are image proxies; GT-derived conditions cannot themselves trigger live review.",
+    "No real normal product images: no normal-product false-alarm rate or factory reinspection capacity estimate.",
+    "A product with an unmatched prediction can still alarm; any alarm does not imply correct localization.",
+    "The test split has been viewed in earlier experiments. No new threshold or checkpoint selection uses these test results."
+  ]
+}

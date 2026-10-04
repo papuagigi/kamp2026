@@ -86,3 +86,15 @@
 파랑은 공식 TXT, 주황은 채택 예측, 보라 점선은 임계값 미달 후보다. 실제 입력을 확대하고 설명용 선만 덧그렸다. 가상 예측이나 학습 증강 사진이 아니다. 생성: `scripts/xray_error_figures.py`. 전체 15장과 원본 해시: `reports/overnight_20261003/diagnostics/{figure_manifest,visual_review}.json`.
 
 - `19_전달자료와_현재자료_동일원본비교.png`: 같은 원본의 전달 합성본과 현재 전체 자르기·회전본. 스크립트 `scripts/xray_preprocessing_comparison_figure.py`, 출처 `reports/preprocessing_comparison_20261003/figure_sources.json`. PNG에는 없는 TXT 설명선을 덧그린 도식이다.
+
+## 2026-10-04 학습 기록 재검토
+
+- [학습 곡선과 저장 모델](20_학습곡선과_저장모델_재검토.png): 전체 혼합 2,453장·20epoch의 실제 저장 로그를 그렸다. YOLO·RF-DETR의 자체 검증 mAP 최고 시점과 마지막 시점을 비교한다. Faster R-CNN은 epoch별 검증 기록이 없어 학습 손실만 표시한다. 모델 사이의 손실 정의가 다르며 자체 mAP는 공통 F1과 다르다. 과적합 확정이나 새 추론 결과가 아니다.
+- 생성: `scripts/xray_training_history_figure.py`. 기록 점검: `scripts/xray_training_history_audit.py`. 공유 근거: `docs/evidence/training_history_20261004/`.
+
+
+## 2026-10-04 EDA와 실제 위치 오류 보완
+
+- `19_EDA_라벨과_박스크기.png`: 원본·라벨 수와 정답 박스 크기 분포.
+- `20_학습곡선과_저장모델_재검토.png`: 과거 학습 이력의 확인 범위. 새 공통 네 모델 결과와 구분한다.
+- `common20_localization_example.png`, `common20_threshold_example.png`, `common20_containment_detail.png`: 공통 선택 저장본의 실제 예측과 공식 TXT를 비교한 사진. 원본 색 네모와 설명용 선을 구분한다.

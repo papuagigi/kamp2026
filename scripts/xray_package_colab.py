@@ -15,7 +15,7 @@ def main():
         for kind in ['images','labels']:files.extend(p for p in (ROOT/'data/xray_v2'/kind/split).iterdir() if p.suffix in {'.png','.txt'})
     files.extend(ROOT/p for p in ['data/xray_v2/manifest.csv','data/xray_v2/split.csv',
         'weights/fasterrcnn_resnet50_fpn_v2_coco-dd69338a.pth',
-        'scripts/xray_config.py','scripts/xray_model_io.py','scripts/xray_train_resumable.py',
+        'scripts/xray_config.py','scripts/xray_model_io.py','scripts/xray_train_resumable.py','scripts/xray_recovery.py',
         'scripts/xray_predict_controlled.py','scripts/xray_eval.py','scripts/xray_evaluate_run.py',
         'scripts/xray_colab_run.py','reports/overnight_20261003/evaluation_policy.json',
         'reports/overnight_20261003/data_audit.json'])

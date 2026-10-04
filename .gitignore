@@ -40,3 +40,10 @@ tmp/
 *.safetensors
 .env
 .env.*
+
+# 2026-10-04 검토 승인 자료만 공유
+!docs/figures/common20_containment_detail.png
+!docs/figures/common20_localization_example.png
+!docs/figures/common20_threshold_example.png
+!docs/submission_review_20261004/Xray_결과보고서_EDA보완.pdf
+!docs/submission_review_20261004/Xray_발표자료_EDA보완.pdf
