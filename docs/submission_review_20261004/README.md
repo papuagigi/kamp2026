@@ -32,4 +32,4 @@
 
 실제 정상·이상 제품 확보, 새 날짜의 독립 평가, 허용 미탐률·처리 시간 결정, PLC·배출기 검증은 **현장 도입 전의 별도 작업**이다. 현재 Goal은 이 현장 검증을 완료했다는 뜻이 아니다.
 
-[실험 근거](../evidence/common_epoch_20261004/design_review/README.md) · [모델 설명](../20_모델선정과_평가_정리본.md) · [작업 이력](../21_진행계획과_작업이력.md). 파일 해시는 manifest.json, 점검 범위는 fn_priority_review_checks.json에 있다. 이번 수정본은 로컬에 보관했으며 GitHub push나 포털 제출은 하지 않았다.
+[실험 근거](../evidence/common_epoch_20261004/design_review/README.md) · [모델 설명](../20_모델선정과_평가_정리본.md) · [작업 이력](../21_진행계획과_작업이력.md). 파일 해시는 manifest.json, 점검 범위는 fn_priority_review_checks.json에 있다. 이번 수정본과 작은 실험 근거·코드는 `3f8c885`로 `papuagigi`에 push했다. 대용량 재현 ZIP은 로컬에 보관한다. 포털 제출은 하지 않았다.
