@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "parents": 294,
+  "heldout_parent_overlap": 0,
+  "counts": {
+    "candidate": {
+      "images": 805,
+      "boxes": 1078,
+      "empty": 294
+    },
+    "miss": {
+      "images": 1247,
+      "boxes": 2327,
+      "empty": 236
+    }
+  },
+  "validation_unchanged": true,
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc"
+}

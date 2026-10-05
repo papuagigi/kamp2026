@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "role": "candidate",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 7.661558628082275,
+      "native_fullframe_ap50": 0.934903919696808,
+      "native_fullframe_ap5095": 0.339050143957138
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.51287317276001,
+      "native_fullframe_ap50": 0.9402875900268556,
+      "native_fullframe_ap5095": 0.3382799029350281
+    },
+    {
+      "epoch": 3,
+      "train_loss": 6.240396499633789,
+      "native_fullframe_ap50": 0.9374940991401672,
+      "native_fullframe_ap5095": 0.3375496864318847
+    }
+  ],
+  "seconds": 398.36334896087646,
+  "recovery_epoch": 3,
+  "native_fullstate_epoch": 3,
+  "resume_execution_tested": false
+}

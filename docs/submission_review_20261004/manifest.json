@@ -58,5 +58,22 @@
     "file": "Xray_발표자료_FN위험보완_최종검토.pdf",
     "bytes": 1385951,
     "sha256": "7d844de9cd2b692015ad17c300aff6dbe0de9c046623a72688441ad5ea9acca1"
+  },
+  {
+    "version": "approved_pair_20261005",
+    "files": [
+      {
+        "file": "Xray_결과보고서_이중검사보완.docx",
+        "bytes": 1451106,
+        "sha256": "811deb8584ba1740565eb2e6d16b21a77831d3cf30dffdb6e83abd05f91e94d4"
+      },
+      {
+        "file": "Xray_결과보고서_이중검사보완.pdf",
+        "bytes": 1654397,
+        "sha256": "d87e7216755bfb3712932184159b5c8f9b801e356387cfc729e14ad972e4f43f"
+      }
+    ],
+    "checks": "approved_pair_review_checks.json",
+    "previous_slides_and_zip_not_updated": true
   }
 ]

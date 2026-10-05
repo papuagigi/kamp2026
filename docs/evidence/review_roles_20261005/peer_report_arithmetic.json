@@ -1,0 +1,90 @@
+{
+  "scope": "manual transcription from peer PDF Table 3, arithmetic audit only, no independent experiment reproduction",
+  "augmentation_table": [
+    {
+      "name": "A",
+      "images": 2220,
+      "epochs": 30,
+      "image_exposures": 66600,
+      "fn": 5,
+      "fp": 5,
+      "recall": 0.9726775956284153
+    },
+    {
+      "name": "A_seed1",
+      "images": 2220,
+      "epochs": 30,
+      "image_exposures": 66600,
+      "fn": 7,
+      "fp": 5,
+      "recall": 0.9617486338797814
+    },
+    {
+      "name": "B",
+      "images": 3580,
+      "epochs": 30,
+      "image_exposures": 107400,
+      "fn": 5,
+      "fp": 6,
+      "recall": 0.9726775956284153
+    },
+    {
+      "name": "C",
+      "images": 3012,
+      "epochs": 30,
+      "image_exposures": 90360,
+      "fn": 5,
+      "fp": 6,
+      "recall": 0.9726775956284153
+    },
+    {
+      "name": "D",
+      "images": 4372,
+      "epochs": 30,
+      "image_exposures": 131160,
+      "fn": 9,
+      "fp": 6,
+      "recall": 0.9508196721311475
+    },
+    {
+      "name": "D_seed1",
+      "images": 4372,
+      "epochs": 30,
+      "image_exposures": 131160,
+      "fn": 8,
+      "fp": 9,
+      "recall": 0.9562841530054644
+    },
+    {
+      "name": "E",
+      "images": 3580,
+      "epochs": 30,
+      "image_exposures": 107400,
+      "fn": 9,
+      "fp": 10,
+      "recall": 0.9508196721311475
+    },
+    {
+      "name": "F",
+      "images": 5134,
+      "epochs": 30,
+      "image_exposures": 154020,
+      "fn": 9,
+      "fp": 7,
+      "recall": 0.9508196721311475
+    }
+  ],
+  "full_minus_real_mean_fn": 2.5,
+  "full_over_real_exposure_ratio": 1.9693693693693695,
+  "cp_sample_size_check": {
+    "0.9_0": 29,
+    "0.9_1": 46,
+    "0.9_2": 61,
+    "0.95_0": 59,
+    "0.95_1": 93,
+    "0.95_2": 124,
+    "0.99_0": 299,
+    "0.99_1": 473,
+    "0.99_2": 628
+  }
+}

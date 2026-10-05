@@ -14,7 +14,7 @@ bash setup.sh
 
 uv가 설치되어 있어야 합니다(`uv --version`으로 확인). `setup.sh`는 `.python-version`에 고정한 Python 3.12.14로 `.venv`를 만들고, 직접 의존성과 잠금 목록을 함께 적용합니다. 기존 환경의 Python 버전이 다르면 덮어쓰지 않고 중단합니다.
 
-현재 환경은 Python 3.12.14, PyTorch 2.8.0, torchvision 0.23.0, RF-DETR 1.11.1입니다. 2026-10-04 네 모델의 공통 20epoch 학습과 검증 선택 저장본 테스트를 완료했습니다. 학습 사진 2,453장·검증 107장·테스트 97장을 사용했습니다. 선택 epoch는 YOLOv8n 20, Faster R-CNN 17, RF-DETR-S 8, D-FINE-S 11입니다. 결과표·전체 epoch 선택 기록·실패 조건·같은 MPS 속도는 [공유용 근거](docs/evidence/common_epoch_20261004/README.md)에 있습니다. 최종 모델과 운영 임계값은 미확정입니다. 실제 정상 제품 0장과 기존 테스트 열람 이력을 함께 기록했습니다.
+현재 환경은 Python 3.12.14, PyTorch 2.8.0, torchvision 0.23.0, RF-DETR 1.11.1입니다. 2026-10-04 네 모델의 공통 20epoch 학습과 검증 선택 저장본 테스트를 완료했습니다. 학습 사진 2,453장·검증 107장·테스트 97장을 사용했습니다. 선택 epoch는 YOLOv8n 20, Faster R-CNN 17, RF-DETR-S 8, D-FINE-S 11입니다. 결과표·전체 epoch 선택 기록·실패 조건·같은 MPS 속도는 [공유용 근거](docs/evidence/common_epoch_20261004/README.md)에 있습니다. 현재 개발 조합은 YOLOv8n + RF-DETR-S이며 판단 충돌 시 제품을 보류합니다. 입력 방식과 현장 운영 임계값은 별도 확인 대상입니다. 실제 정상 제품 0장과 기존 테스트 열람 이력을 함께 기록했습니다.
 
 중단 복구 기능은 CPU와 실제 MPS·T4·Drive의 작은 실행에서 확인했습니다. 최근 정상 전체 학습 상태 2개와 epoch별 모델을 보관합니다. 데이터·설정·코드가 달라지면 재개를 거부합니다. 같은 실행 명령에 `--resume`을 사용합니다. Colab GPU 자동 재연결 기능은 아닙니다. 재개할 때는 학습에 사용한 코드·설정·환경을 유지합니다.
 

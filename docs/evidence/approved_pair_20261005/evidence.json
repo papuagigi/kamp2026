@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-05",
+  "models_approved": [
+    "YOLOv8n",
+    "RF-DETR-S"
+  ],
+  "approved_conflict_action": "preserve both predictions and hold for reinspection",
+  "input_route_status": "crop/tiles concept approved; full-frame alternative awaiting user choice",
+  "measurement_route": "both models independently infer every full validation image",
+  "validation_images": 107,
+  "validation_gt_boxes": 243,
+  "repeats": 3,
+  "unique_validation_images": 107,
+  "pair_no_alarm_images_first_repeat": 0,
+  "pair_with_any_alarm_first_repeat": 107,
+  "photo_alarm_note": "alarm presence does not establish correct localization or product safety",
+  "metrics": {
+    "policy": {
+      "first": {
+        "run": "v2_common20_yolo_mps_20261004",
+        "model": "yolo",
+        "checkpoint": "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+        "sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+        "threshold": 0.68106407
+      },
+      "second": {
+        "run": "v2_common20_rfdetr_mps_20261004",
+        "model": "rfdetr",
+        "checkpoint": "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+        "sha256": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964",
+        "threshold": 0.70370466
+      },
+      "scope": "all",
+      "repeats": 3,
+      "device": "mps",
+      "no_test": true,
+      "no_pass": true,
+      "validation_reused": true,
+      "seed": 0,
+      "resolution": 512,
+      "invalid_geometry": "preserve raw outputs; negative or nonfinite -> reinspection error",
+      "deadline": null,
+      "deadline_reason": "No factory limit supplied; offline accuracy comparison",
+      "on_conflict": "retain both and refer",
+      "agreement_is_truth": false,
+      "split_sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40"
+    },
+    "execution_sha256": "ef82774da4d5edafc71cdbc578271e5b6233384ecd7c8f6a1e254ee2723e5b68",
+    "repeats": [
+      {
+        "repeat": 0,
+        "first": {
+          "tp": 240,
+          "fp": 4,
+          "fn": 3,
+          "f1": 0.9856262833675564,
+          "recall": 0.9876543209876543,
+          "precision": 0.9836065573770492
+        },
+        "second": {
+          "tp": 241,
+          "fp": 2,
+          "fn": 2,
+          "f1": 0.9917695473251029,
+          "recall": 0.9917695473251029,
+          "precision": 0.9917695473251029
+        },
+        "pair": {
+          "first_fn_covered": 2,
+          "shared_fn": 1,
+          "first_correct_second_wrong": 1
+        },
+        "states": {
+          "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+          "REINSPECTION_DISAGREEMENT": 1
+        },
+        "conflicts": [
+          "002_20200625_042957(3)"
+        ],
+        "referred": 107,
+        "errors": 0
+      },
+      {
+        "repeat": 1,
+        "first": {
+          "tp": 240,
+          "fp": 4,
+          "fn": 3,
+          "f1": 0.9856262833675564,
+          "recall": 0.9876543209876543,
+          "precision": 0.9836065573770492
+        },
+        "second": {
+          "tp": 241,
+          "fp": 2,
+          "fn": 2,
+          "f1": 0.9917695473251029,
+          "recall": 0.9917695473251029,
+          "precision": 0.9917695473251029
+        },
+        "pair": {
+          "first_fn_covered": 2,
+          "shared_fn": 1,
+          "first_correct_second_wrong": 1
+        },
+        "states": {
+          "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+          "REINSPECTION_DISAGREEMENT": 1
+        },
+        "conflicts": [
+          "002_20200625_042957(3)"
+        ],
+        "referred": 107,
+        "errors": 0
+      },
+      {
+        "repeat": 2,
+        "first": {
+          "tp": 240,
+          "fp": 4,
+          "fn": 3,
+          "f1": 0.9856262833675564,
+          "recall": 0.9876543209876543,
+          "precision": 0.9836065573770492
+        },
+        "second": {
+          "tp": 241,
+          "fp": 2,
+          "fn": 2,
+          "f1": 0.9917695473251029,
+          "recall": 0.9917695473251029,
+          "precision": 0.9917695473251029
+        },
+        "pair": {
+          "first_fn_covered": 2,
+          "shared_fn": 1,
+          "first_correct_second_wrong": 1
+        },
+        "states": {
+          "TWO_MODELS_CORRESPOND_NOT_TRUTH_CONFIRMED": 106,
+          "REINSPECTION_DISAGREEMENT": 1
+        },
+        "conflicts": [
+          "002_20200625_042957(3)"
+        ],
+        "referred": 107,
+        "errors": 0
+      }
+    ],
+    "mean_ms": 36.55338736759498,
+    "p95_ms": 44.48870900159818,
+    "latency_scope": "warm resident PNG read, inference, correspondence, synchronization; excludes masking, camera, equipment, queue, telemetry I/O",
+    "operational_f1": null,
+    "shared_fn_is_iou_not_physical": true,
+    "agreement_does_not_prove_correctness": true,
+    "normal_product_false_alarm_rate": null
+  },
+  "historical_individual_test": {
+    "images": 97,
+    "gt_boxes": 225,
+    "rows": [
+      {
+        "model": "YOLOv8n",
+        "run": "v2_common20_yolo_mps_20261004",
+        "epoch": "20",
+        "threshold": "0.68106407",
+        "validation_f1": "0.9856262833675564",
+        "precision": "0.9910714285714286",
+        "recall": "0.9866666666666667",
+        "f1": "0.9888641425389755",
+        "tp": "222",
+        "fp": "2",
+        "fn": "3",
+        "ap": "0.9880395061728396",
+        "ap_iou75": "0.1334844084987767",
+        "f1_iou75": "0.33109619686800895",
+        "f1_legacy": "0.9977728285077951",
+        "no_alarm_images": "1",
+        "mean_ms": "11.707379283561014",
+        "p95_ms": "18.845999999030028"
+      },
+      {
+        "model": "Faster R-CNN",
+        "run": "v2_common20_faster_cuda_20261004",
+        "epoch": "17",
+        "threshold": "0.9999857",
+        "validation_f1": "0.9917695473251029",
+        "precision": "0.9866666666666667",
+        "recall": "0.9866666666666667",
+        "f1": "0.9866666666666667",
+        "tp": "222",
+        "fp": "3",
+        "fn": "3",
+        "ap": "0.9793272438082254",
+        "ap_iou75": "0.10913801694070753",
+        "f1_iou75": "0.33035714285714285",
+        "f1_legacy": "1.0",
+        "no_alarm_images": "0",
+        "mean_ms": "1396.6537654329652",
+        "p95_ms": "1456.7180420053774"
+      },
+      {
+        "model": "RF-DETR-S",
+        "run": "v2_common20_rfdetr_mps_20261004",
+        "epoch": "8",
+        "threshold": "0.70370466",
+        "validation_f1": "0.9917695473251029",
+        "precision": "0.9821428571428571",
+        "recall": "0.9777777777777777",
+        "f1": "0.9799554565701559",
+        "tp": "220",
+        "fp": "4",
+        "fn": "5",
+        "ap": "0.9708676075342975",
+        "ap_iou75": "0.13821475790638102",
+        "f1_iou75": "0.32516703786191536",
+        "f1_legacy": "0.9977728285077951",
+        "no_alarm_images": "1",
+        "mean_ms": "38.28619616501003",
+        "p95_ms": "41.267249995144084"
+      },
+      {
+        "model": "D-FINE-S",
+        "run": "v2_common20_dfine_cuda_20261004",
+        "epoch": "11",
+        "threshold": "0.72014374",
+        "validation_f1": "0.9856262833675564",
+        "precision": "0.9734513274336283",
+        "recall": "0.9777777777777777",
+        "f1": "0.975609756097561",
+        "tp": "220",
+        "fp": "6",
+        "fn": "5",
+        "ap": "0.9690276217650412",
+        "ap_iou75": "0.15966070557843504",
+        "f1_iou75": "0.34841628959276016",
+        "f1_legacy": "0.9977827050997783",
+        "no_alarm_images": "0",
+        "mean_ms": "24.744196922086378",
+        "p95_ms": "26.129333004064392"
+      }
+    ]
+  },
+  "normal_product_images": 0,
+  "production_accuracy": null,
+  "operational_f1": null,
+  "referred_field_meaning": "second model called; not a measured factory hold rate",
+  "training_this_export": false,
+  "new_test_this_export": false,
+  "source_hashes": {
+    "reports/design_review_20261004/yolo8_rfdetr_all_20261005/summary.json": "6c26907cbc9c5650982a1ba55b626db456c78faccba8833bbc3ce3224b600e5a",
+    "reports/design_review_20261004/yolo8_rfdetr_all_20261005/execution.json": "ef82774da4d5edafc71cdbc578271e5b6233384ecd7c8f6a1e254ee2723e5b68",
+    "reports/design_review_20261004/yolo8_rfdetr_all_20261005/policy.json": "66e266d083eecb72170c9dfc1b5e9d2070c22c2e4befe8363ce681734a89f7c7",
+    "docs/evidence/common_epoch_20261004/comparison.csv": "0b46955b2106ee0c4d12617db423c027f7aa46ea4b0757946f661ae1992795ef",
+    "reports/review_roles_20261005/summary.json": "c9a37d5f6cbd197799399b1feac6caddaaf64a952d0ceda18d40c5abd23d8ad7"
+  }
+}

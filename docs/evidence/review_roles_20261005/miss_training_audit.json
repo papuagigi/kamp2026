@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "role": "miss",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 5.033343315124512,
+      "native_fullframe_ap50": 0.959131956100464,
+      "native_fullframe_ap5095": 0.4107015430927276
+    },
+    {
+      "epoch": 2,
+      "train_loss": 4.956723690032959,
+      "native_fullframe_ap50": 0.9631147980690002,
+      "native_fullframe_ap5095": 0.4131340086460113
+    },
+    {
+      "epoch": 3,
+      "train_loss": 4.942287445068359,
+      "native_fullframe_ap50": 0.9267196655273438,
+      "native_fullframe_ap5095": 0.3753987550735473
+    }
+  ],
+  "seconds": 614.1022579669952,
+  "recovery_epoch": 3,
+  "native_fullstate_epoch": 3,
+  "resume_execution_tested": false
+}
