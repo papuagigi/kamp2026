@@ -1,0 +1,105 @@
+{
+  "status": "passed",
+  "policy_sha256": "7e556dcb6c0eb97d2f2086d60367e80135f07b892e13f2e46cfde4d33df3fbfb",
+  "splits": {
+    "val": {
+      "images": 107,
+      "gt_boxes": 243,
+      "real_normal_images": 0,
+      "metrics": {
+        "first": {
+          "tp": 240,
+          "fp": 4,
+          "fn": 3,
+          "precision": 0.9836065573770492,
+          "recall": 0.9876543209876543,
+          "f1": 0.9856262833675564
+        },
+        "second": {
+          "tp": 241,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.9917695473251029,
+          "recall": 0.9917695473251029,
+          "f1": 0.9917695473251029
+        }
+      },
+      "alarm_patterns": {
+        "first_True_second_True": 107
+      },
+      "states": {
+        "HOLD_DETECTED_OBJECT": 106,
+        "HOLD_REINSPECTION": 1
+      },
+      "both_empty_images": [],
+      "first_empty_second_alarm_images": [],
+      "oracle_localization_diagnostic": {
+        "first_fn_covered": 2,
+        "second_fn_covered": 1,
+        "shared_iou_fn": 1,
+        "note": "uses official labels after inference; not a deployable merged detector or physical escape rate"
+      },
+      "agreement_is_truth": false,
+      "normal_false_alarm_rate": null,
+      "production_recall": null
+    },
+    "test": {
+      "images": 97,
+      "gt_boxes": 225,
+      "real_normal_images": 0,
+      "metrics": {
+        "first": {
+          "tp": 222,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.9910714285714286,
+          "recall": 0.9866666666666667,
+          "f1": 0.9888641425389755
+        },
+        "second": {
+          "tp": 220,
+          "fp": 4,
+          "fn": 5,
+          "precision": 0.9821428571428571,
+          "recall": 0.9777777777777777,
+          "f1": 0.9799554565701559
+        }
+      },
+      "alarm_patterns": {
+        "first_True_second_True": 95,
+        "first_True_second_False": 1,
+        "first_False_second_True": 1
+      },
+      "states": {
+        "HOLD_DETECTED_OBJECT": 95,
+        "HOLD_REINSPECTION": 2
+      },
+      "both_empty_images": [],
+      "first_empty_second_alarm_images": [
+        "001_20200831_123316(5)"
+      ],
+      "oracle_localization_diagnostic": {
+        "first_fn_covered": 1,
+        "second_fn_covered": 3,
+        "shared_iou_fn": 2,
+        "note": "uses official labels after inference; not a deployable merged detector or physical escape rate"
+      },
+      "agreement_is_truth": false,
+      "normal_false_alarm_rate": null,
+      "production_recall": null
+    }
+  },
+  "new_training": false,
+  "new_inference": false,
+  "retuned_thresholds": false,
+  "scope": "saved prediction rescore and deterministic state replay; not factory safety validation",
+  "previous_test_exposure": true,
+  "fresh_environment": false,
+  "limitations": [
+    "No real normal products",
+    "Validation repeatedly reused",
+    "No new held-out production sample",
+    "Shared IoU errors may still contain the physical object",
+    "No measured reinspection capacity or equipment deadline"
+  ]
+}

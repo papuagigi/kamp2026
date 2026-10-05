@@ -1,0 +1,18 @@
+{
+  "package": {
+    "path": "outputs/submission_review_20261004/Xray_재현자료_전체사진이중검사.zip",
+    "sha256": "1a9e17046d891adbe79b66959e6fccaecffda3a2835cf992eb48c9cf6f80abcd",
+    "bytes": 1434056638,
+    "files": 7458,
+    "hashed_files": 7457,
+    "crc_check": "passed",
+    "base_zip_preserved": true
+  },
+  "hashed_files": 7457,
+  "model_rescores": 6,
+  "policy_replay": "val107 and test97 match originals",
+  "fresh_extraction": true,
+  "fresh_environment": false,
+  "new_training": false,
+  "new_inference": false
+}

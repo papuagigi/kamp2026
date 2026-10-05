@@ -75,5 +75,43 @@
     ],
     "checks": "approved_pair_review_checks.json",
     "previous_slides_and_zip_not_updated": true
+  },
+  {
+    "version": "fullframe_policy_20261005",
+    "files": [
+      {
+        "file": "Xray_결과보고서_전체사진이중검사.docx",
+        "bytes": 1578302,
+        "sha256": "275d6047215553d59119891577505a33b9c173272a3c44b3cfc5b05ab3883618"
+      },
+      {
+        "file": "Xray_결과보고서_전체사진이중검사.pdf",
+        "bytes": 1656429,
+        "sha256": "aead762c07edb455070258991c55ab1ad99f95c92cf1a1b1f5cca3225e2acb36"
+      },
+      {
+        "file": "Xray_발표자료_전체사진이중검사.pdf",
+        "bytes": 1430003,
+        "sha256": "a21ab1e58c420da80a142f49510495a8536bebf7350c9a03318ab9f2ef8cabf3"
+      },
+      {
+        "file": "Xray_발표자료_전체사진이중검사.pptx",
+        "bytes": 1403829,
+        "sha256": "795fdc0f2d5ab3bcd521a6f0001f8cd0d814ae4b80dffca75ff41aaeaea27281"
+      }
+    ],
+    "checks": "fullframe_review_checks.json",
+    "report_pages": 29,
+    "slides": 26,
+    "previous_versions_preserved": true,
+    "reproduction_package": {
+      "path": "outputs/submission_review_20261004/Xray_재현자료_전체사진이중검사.zip",
+      "sha256": "1a9e17046d891adbe79b66959e6fccaecffda3a2835cf992eb48c9cf6f80abcd",
+      "bytes": 1434056638,
+      "files": 7458,
+      "hashed_files": 7457,
+      "crc_check": "passed",
+      "base_zip_preserved": true
+    }
   }
 ]

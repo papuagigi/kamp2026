@@ -25,7 +25,7 @@ def main():
     evidence = {
         'date': '2026-10-05', 'models_approved': ['YOLOv8n', 'RF-DETR-S'],
         'approved_conflict_action': 'preserve both predictions and hold for reinspection',
-        'input_route_status': 'crop/tiles concept approved; full-frame alternative awaiting user choice',
+        'input_route_status': 'approved: both models inspect every full image; crops/tiles remain exploratory',
         'measurement_route': 'both models independently infer every full validation image',
         'validation_images': 107, 'validation_gt_boxes': 243, 'repeats': 3,
         'unique_validation_images': 107, 'pair_no_alarm_images_first_repeat': no_alarm,

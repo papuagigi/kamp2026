@@ -1,0 +1,57 @@
+{
+  "version": "approved_fullframe_20261005",
+  "user_approved_date": "2026-10-05",
+  "first": {
+    "run": "v2_common20_yolo_mps_20261004",
+    "model": "yolo",
+    "checkpoint": "runs/v2_common20_yolo_mps_20261004/selected/best.pt",
+    "sha256": "4214cb1f515ddd3f87c4e0f6cdca4f09ca858e2111f2cfae803983b82bcd94da",
+    "threshold": 0.68106407,
+    "selected_epoch": 20,
+    "predictions": {
+      "val": "reports/design_review_20261004/yolo8_rfdetr_all_20261005/first_repeat0_val.csv",
+      "test": "reports/preds_v2_common20_yolo_mps_20261004_test.csv"
+    },
+    "prediction_sha256": {
+      "val": "3ff4023b3674833da17e2ca4f4d2a43785b27c9fea5b379aa1db995668a8993e",
+      "test": "90c1a6e67dd7d68d3421447953c5a52acaeb52dd66ca403c9e758f6afed20020"
+    }
+  },
+  "second": {
+    "run": "v2_common20_rfdetr_mps_20261004",
+    "model": "rfdetr",
+    "checkpoint": "runs/v2_common20_rfdetr_mps_20261004/selected/best.ckpt",
+    "sha256": "1124353b21a08c43682e0bff5ff56c9930a3f1d61ba44b7b60e770d469300964",
+    "threshold": 0.70370466,
+    "selected_epoch": 8,
+    "predictions": {
+      "val": "reports/design_review_20261004/yolo8_rfdetr_all_20261005/second_repeat0_val.csv",
+      "test": "reports/preds_v2_common20_rfdetr_mps_20261004_test.csv"
+    },
+    "prediction_sha256": {
+      "val": "f81ecffed6b4214c81450f3842df29849b76970a62b72e219dce31d394a1d93e",
+      "test": "01503392fa646939959527be09b9efe4498dbda00885e454ffbbf98b29b04b1a"
+    }
+  },
+  "input": "both models independently inspect every full masked image",
+  "resolution": 512,
+  "seed": 0,
+  "flip": false,
+  "crop_or_tile": false,
+  "split_sha256": "3ff752c949d3a5e3511c312606771d4ca3c78264aad947fcd6b97b9f268b5b40",
+  "matching": "iou50",
+  "agreement_iou": 0.5,
+  "threshold_source": "existing validation selection; no retuning",
+  "on_disagreement": "preserve both predictions; hold and request reinspection",
+  "on_any_detection": "preserve warning; hold for confirmation even if predictions agree",
+  "on_both_empty": "normality unverified; retain existing inspection; no AI-only release",
+  "on_error_or_missing_result": "hold; preserve existing warning",
+  "automatic_pass": false,
+  "automatic_reject": false,
+  "factory_deadline_ms": null,
+  "deadline_note": "no factory requirement supplied; state tests use simulated time",
+  "real_normal_images": 0,
+  "role_experiments": "preserved separately; not deployed",
+  "previous_test_exposure": true,
+  "original_labels_unchanged": true
+}
