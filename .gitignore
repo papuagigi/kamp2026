@@ -66,3 +66,8 @@ tmp/
 # 2026-10-05 전체 사진 이중 검사 확정 검토본
 !docs/submission_review_20261004/Xray_결과보고서_전체사진이중검사.pdf
 !docs/submission_review_20261004/Xray_발표자료_전체사진이중검사.pdf
+
+# 2026-10-06 사용자 요청 main 공유: 최신 검토본과 회의용 비교 자료
+!docs/submission_review_20261004/Xray_결과보고서_연구구성보완.pdf
+!docs/submission_review_20261004/Xray_발표자료_연구구성보완.pdf
+!docs/team_compare_20261006/두_프로젝트_비교_회의자료.pdf

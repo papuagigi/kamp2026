@@ -1,0 +1,437 @@
+{
+  "scope": "Source audit and F1 arithmetic from aggregate counts only; no training, inference, or prediction rescore",
+  "reference_url": "https://github.com/kyungrae2002/kampai",
+  "reference_commit": "3e51056561fcd23ea319e3eb7e097fbeda174e7f",
+  "reference_tracked_files": 291,
+  "reference_pdf_sha256": "337df7e42f9db0724c874a8faa3e3e88751c46d2f0314c9d35011a67868ce4bc",
+  "reference_pdf_name": "KAMP_Xray_경진대회_보고서_v7.pdf",
+  "source_sha256": {
+    "X-ray_실험/preds/yolov8n_eval.json": "8159114ca9e38d8788566b99fa087e60ee00f52a1bad692f425a9a9edd22bcfd",
+    "X-ray_실험/preds/yolo11s_eval.json": "0832862d2d0d8f5e92dcdc69d19a7a8ea24e1850f75a131cb25ae3afacf1881d",
+    "X-ray_실험/preds/rfdetr_s_eval.json": "ce65bf2547bc0c071b77a3eb8b006911a73897d16377fbb86cca906d196e0761",
+    "X-ray_실험/preds/qwen25vl3b_lora_eval.json": "96265bc9dee4797139ef8a03fc5e2cb48786c207aed3d4fb144edefeb7d1055d",
+    "report/a_vs_d.json": "13b73bbd898c2e931a1762749c9177a1a9c945a4a70285d07d2bac0cb2a35423",
+    "scripts/report_analysis.py": "d27e4f274493e01b6b1d9e54061d9f1fb65e6a7be3cd1b7ef79508f1a5bfeaf7"
+  },
+  "reference_metrics": [
+    {
+      "model": "yolov8n",
+      "split": "val",
+      "images": 80,
+      "gt": 183,
+      "tp": 175,
+      "fp": 9,
+      "fn": 8,
+      "f1": 0.9536784741144414,
+      "recall": 0.9562841530054644,
+      "normal_false_alarm_rate_synthetic_only": 0.0125
+    },
+    {
+      "model": "yolov8n",
+      "split": "test",
+      "images": 80,
+      "gt": 172,
+      "tp": 165,
+      "fp": 8,
+      "fn": 7,
+      "f1": 0.9565217391304348,
+      "recall": 0.9593023255813954,
+      "normal_false_alarm_rate_synthetic_only": 0.0125
+    },
+    {
+      "model": "yolo11s",
+      "split": "val",
+      "images": 80,
+      "gt": 183,
+      "tp": 176,
+      "fp": 8,
+      "fn": 7,
+      "f1": 0.9591280653950953,
+      "recall": 0.9617486338797814,
+      "normal_false_alarm_rate_synthetic_only": 0.0125
+    },
+    {
+      "model": "yolo11s",
+      "split": "test",
+      "images": 80,
+      "gt": 172,
+      "tp": 169,
+      "fp": 3,
+      "fn": 3,
+      "f1": 0.9825581395348837,
+      "recall": 0.9825581395348837,
+      "normal_false_alarm_rate_synthetic_only": 0.0
+    },
+    {
+      "model": "rfdetr_s",
+      "split": "val",
+      "images": 80,
+      "gt": 183,
+      "tp": 178,
+      "fp": 6,
+      "fn": 5,
+      "f1": 0.9700272479564033,
+      "recall": 0.9726775956284153,
+      "normal_false_alarm_rate_synthetic_only": 0.05
+    },
+    {
+      "model": "rfdetr_s",
+      "split": "test",
+      "images": 80,
+      "gt": 172,
+      "tp": 170,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.9883720930232558,
+      "recall": 0.9883720930232558,
+      "normal_false_alarm_rate_synthetic_only": 0.0
+    },
+    {
+      "model": "qwen25vl3b_lora",
+      "split": "val",
+      "images": 80,
+      "gt": 183,
+      "tp": 147,
+      "fp": 35,
+      "fn": 36,
+      "f1": 0.8054794520547945,
+      "recall": 0.8032786885245902,
+      "normal_false_alarm_rate_synthetic_only": 0.025
+    },
+    {
+      "model": "qwen25vl3b_lora",
+      "split": "test",
+      "images": 80,
+      "gt": 172,
+      "tp": 134,
+      "fp": 31,
+      "fn": 38,
+      "f1": 0.7952522255192879,
+      "recall": 0.7790697674418605,
+      "normal_false_alarm_rate_synthetic_only": 0.0
+    }
+  ],
+  "reference_A_D": {
+    "YOLO11s (D)": {
+      "thr": 0.54914,
+      "val": {
+        "TP": 176,
+        "FP": 8,
+        "FN": 7,
+        "recall": 0.9617486338797814,
+        "center": 1.0,
+        "normal_FA": 0.0125,
+        "k050": 0.7158469945355191,
+        "k035": 0.4098360655737705
+      },
+      "test": {
+        "TP": 169,
+        "FP": 3,
+        "FN": 3,
+        "recall": 0.9825581395348837,
+        "center": 1.0,
+        "normal_FA": 0.0,
+        "k050": 0.9011627906976745,
+        "k035": 0.45930232558139533
+      }
+    },
+    "YOLO11s (A)": {
+      "thr": 0.36154,
+      "val": {
+        "TP": 177,
+        "FP": 6,
+        "FN": 6,
+        "recall": 0.9672131147540983,
+        "center": 0.994535519125683,
+        "normal_FA": 0.0125,
+        "k050": 0.8797814207650273,
+        "k035": 0.5737704918032787
+      },
+      "test": {
+        "TP": 161,
+        "FP": 11,
+        "FN": 11,
+        "recall": 0.936046511627907,
+        "center": 1.0,
+        "normal_FA": 0.0375,
+        "k050": 0.9302325581395349,
+        "k035": 0.7732558139534884
+      }
+    },
+    "RF-DETR-S (D)": {
+      "thr": 0.53493,
+      "val": {
+        "TP": 178,
+        "FP": 6,
+        "FN": 5,
+        "recall": 0.9726775956284153,
+        "center": 1.0,
+        "normal_FA": 0.05,
+        "k050": 0.6502732240437158,
+        "k035": 0.3442622950819672
+      },
+      "test": {
+        "TP": 170,
+        "FP": 2,
+        "FN": 2,
+        "recall": 0.9883720930232558,
+        "center": 1.0,
+        "normal_FA": 0.0,
+        "k050": 0.8430232558139535,
+        "k035": 0.48255813953488375
+      }
+    },
+    "RF-DETR-S (A)": {
+      "thr": 0.46356,
+      "val": {
+        "TP": 175,
+        "FP": 9,
+        "FN": 8,
+        "recall": 0.9562841530054644,
+        "center": 1.0,
+        "normal_FA": 0.4625,
+        "k050": 0.9453551912568307,
+        "k035": 0.6557377049180327
+      },
+      "test": {
+        "TP": 166,
+        "FP": 6,
+        "FN": 6,
+        "recall": 0.9651162790697675,
+        "center": 1.0,
+        "normal_FA": 0.4375,
+        "k050": 0.9825581395348837,
+        "k035": 0.7616279069767442
+      }
+    },
+    "S1: RF-DETR-S(D)+YOLO11s(D) [최종]": {
+      "thr": 0.53493,
+      "val": {
+        "TP": 178,
+        "FP": 6,
+        "FN": 5,
+        "recall": 0.9726775956284153,
+        "center": 1.0,
+        "normal_FA": 0.05,
+        "k050": 0.7377049180327869,
+        "k035": 0.45901639344262296
+      },
+      "test": {
+        "TP": 170,
+        "FP": 2,
+        "FN": 2,
+        "recall": 0.9883720930232558,
+        "center": 1.0,
+        "normal_FA": 0.0,
+        "k050": 0.9011627906976745,
+        "k035": 0.5697674418604651
+      }
+    },
+    "S1: RF-DETR-S(D)+YOLO11s(A)": {
+      "thr": 0.36154,
+      "val": {
+        "TP": 177,
+        "FP": 6,
+        "FN": 6,
+        "recall": 0.9672131147540983,
+        "center": 0.994535519125683,
+        "normal_FA": 0.05,
+        "k050": 0.8797814207650273,
+        "k035": 0.5956284153005464
+      },
+      "test": {
+        "TP": 163,
+        "FP": 9,
+        "FN": 9,
+        "recall": 0.9476744186046512,
+        "center": 1.0,
+        "normal_FA": 0.0375,
+        "k050": 0.9593023255813954,
+        "k035": 0.7848837209302325
+      }
+    },
+    "S1: RF-DETR-S(A)+YOLO11s(A)": {
+      "thr": 0.36154,
+      "val": {
+        "TP": 177,
+        "FP": 6,
+        "FN": 6,
+        "recall": 0.9672131147540983,
+        "center": 0.994535519125683,
+        "normal_FA": 0.5875,
+        "k050": 0.9508196721311475,
+        "k035": 0.7595628415300546
+      },
+      "test": {
+        "TP": 166,
+        "FP": 6,
+        "FN": 6,
+        "recall": 0.9651162790697675,
+        "center": 1.0,
+        "normal_FA": 0.5375,
+        "k050": 0.9709302325581395,
+        "k035": 0.8953488372093024
+      }
+    }
+  },
+  "our_test_metrics": [
+    {
+      "model": "YOLOv8n",
+      "epoch": "20",
+      "tp": "222",
+      "fp": "2",
+      "fn": "3",
+      "f1": "0.9888641425389755",
+      "recall": "0.9866666666666667"
+    },
+    {
+      "model": "Faster R-CNN",
+      "epoch": "17",
+      "tp": "222",
+      "fp": "3",
+      "fn": "3",
+      "f1": "0.9866666666666667",
+      "recall": "0.9866666666666667"
+    },
+    {
+      "model": "RF-DETR-S",
+      "epoch": "8",
+      "tp": "220",
+      "fp": "4",
+      "fn": "5",
+      "f1": "0.9799554565701559",
+      "recall": "0.9777777777777777"
+    },
+    {
+      "model": "D-FINE-S",
+      "epoch": "11",
+      "tp": "220",
+      "fp": "6",
+      "fn": "5",
+      "f1": "0.975609756097561",
+      "recall": "0.9777777777777777"
+    }
+  ],
+  "our_sources_sha256": {
+    "docs/evidence/common_epoch_20261004/comparison.csv": "0b46955b2106ee0c4d12617db423c027f7aa46ea4b0757946f661ae1992795ef"
+  },
+  "our_pair_audit": {
+    "status": "passed",
+    "policy_sha256": "7e556dcb6c0eb97d2f2086d60367e80135f07b892e13f2e46cfde4d33df3fbfb",
+    "splits": {
+      "val": {
+        "images": 107,
+        "gt_boxes": 243,
+        "real_normal_images": 0,
+        "metrics": {
+          "first": {
+            "tp": 240,
+            "fp": 4,
+            "fn": 3,
+            "precision": 0.9836065573770492,
+            "recall": 0.9876543209876543,
+            "f1": 0.9856262833675564
+          },
+          "second": {
+            "tp": 241,
+            "fp": 2,
+            "fn": 2,
+            "precision": 0.9917695473251029,
+            "recall": 0.9917695473251029,
+            "f1": 0.9917695473251029
+          }
+        },
+        "alarm_patterns": {
+          "first_True_second_True": 107
+        },
+        "states": {
+          "HOLD_DETECTED_OBJECT": 106,
+          "HOLD_REINSPECTION": 1
+        },
+        "both_empty_images": [],
+        "first_empty_second_alarm_images": [],
+        "oracle_localization_diagnostic": {
+          "first_fn_covered": 2,
+          "second_fn_covered": 1,
+          "shared_iou_fn": 1,
+          "note": "uses official labels after inference; not a deployable merged detector or physical escape rate"
+        },
+        "agreement_is_truth": false,
+        "normal_false_alarm_rate": null,
+        "production_recall": null
+      },
+      "test": {
+        "images": 97,
+        "gt_boxes": 225,
+        "real_normal_images": 0,
+        "metrics": {
+          "first": {
+            "tp": 222,
+            "fp": 2,
+            "fn": 3,
+            "precision": 0.9910714285714286,
+            "recall": 0.9866666666666667,
+            "f1": 0.9888641425389755
+          },
+          "second": {
+            "tp": 220,
+            "fp": 4,
+            "fn": 5,
+            "precision": 0.9821428571428571,
+            "recall": 0.9777777777777777,
+            "f1": 0.9799554565701559
+          }
+        },
+        "alarm_patterns": {
+          "first_True_second_True": 95,
+          "first_True_second_False": 1,
+          "first_False_second_True": 1
+        },
+        "states": {
+          "HOLD_DETECTED_OBJECT": 95,
+          "HOLD_REINSPECTION": 2
+        },
+        "both_empty_images": [],
+        "first_empty_second_alarm_images": [
+          "001_20200831_123316(5)"
+        ],
+        "oracle_localization_diagnostic": {
+          "first_fn_covered": 1,
+          "second_fn_covered": 3,
+          "shared_iou_fn": 2,
+          "note": "uses official labels after inference; not a deployable merged detector or physical escape rate"
+        },
+        "agreement_is_truth": false,
+        "normal_false_alarm_rate": null,
+        "production_recall": null
+      }
+    },
+    "new_training": false,
+    "new_inference": false,
+    "retuned_thresholds": false,
+    "scope": "saved prediction rescore and deterministic state replay; not factory safety validation",
+    "previous_test_exposure": true,
+    "fresh_environment": false,
+    "limitations": [
+      "No real normal products",
+      "Validation repeatedly reused",
+      "No new held-out production sample",
+      "Shared IoU errors may still contain the physical object",
+      "No measured reinspection capacity or equipment deadline"
+    ]
+  },
+  "our_live_mean_ms": 36.55338736759498,
+  "our_live_p95_ms": 44.48870900159818,
+  "our_live_latency_scope": "warm resident PNG read, inference, correspondence, synchronization; excludes masking, camera, equipment, queue, telemetry I/O",
+  "confirmed_code_rules": {
+    "center_hit_margin_pixels_per_side": 2,
+    "product_reject_rule": "both model maxima >= respective high thresholds"
+  },
+  "limitations": [
+    "Different splits and preprocessing prohibit cross-project ranking",
+    "Reference per-box prediction CSVs, images, labels and weights absent from this snapshot",
+    "No actual normal production evaluation in either current comparison",
+    "Both-center and image alarms do not prove every physical foreign object was found",
+    "No model, threshold or split change"
+  ]
+}

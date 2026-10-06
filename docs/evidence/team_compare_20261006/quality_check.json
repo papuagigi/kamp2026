@@ -1,0 +1,10 @@
+{
+  "comparison_pdf": "docs/team_compare_20261006/두_프로젝트_비교_회의자료.pdf",
+  "pages": 5,
+  "sha256": "8e6b9d128d1b964057e1029fd86b5bc2795fd12c57e35f9f538bb594432314fd",
+  "all_pages_rendered_and_visually_checked": true,
+  "aggregate_f1_checks": 12,
+  "editorial_artifacts_hash_matched": 4,
+  "training_or_inference_performed": false,
+  "other_project_prediction_rescore_performed": false
+}

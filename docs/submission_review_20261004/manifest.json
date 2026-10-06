@@ -113,5 +113,43 @@
       "crc_check": "passed",
       "base_zip_preserved": true
     }
+  },
+  {
+    "version": "editorial_review_20261005",
+    "files": [
+      {
+        "file": "Xray_결과보고서_연구구성보완.docx",
+        "bytes": 1581694,
+        "sha256": "6cea6fc050d428aac5bb0a92ca3613ad92a0aa578c497054e2338b5d84c87d69"
+      },
+      {
+        "file": "Xray_결과보고서_연구구성보완.pdf",
+        "bytes": 1729732,
+        "sha256": "cb7694ef5ab59ec5e11273e58d937ae502c9026299190c820b199a789ff24950"
+      },
+      {
+        "file": "Xray_발표자료_연구구성보완.pdf",
+        "bytes": 1509067,
+        "sha256": "96dbf74af0f810e5d3ba884e4eaa644fff69d3fef4e98c098106d9af2882c32c"
+      },
+      {
+        "file": "Xray_발표자료_연구구성보완.pptx",
+        "bytes": 1415235,
+        "sha256": "dc6e49bf156642883d624ff776e20494057ed8b2a2e27720cb8dde92d72539a6"
+      }
+    ],
+    "checks": "editorial_review_checks.json",
+    "report_pages": 32,
+    "slides": 29,
+    "previous_versions_preserved": true,
+    "reproduction_package": {
+      "path": "outputs/submission_review_20261004/Xray_재현자료_연구구성보완.zip",
+      "sha256": "ee17db88904bd246c08e1a58367e7a73a9f576e2a37d608c30e23f54f24e35e6",
+      "bytes": 1439618922,
+      "files": 7466,
+      "hashed_files": 7465,
+      "crc_check": "passed",
+      "base_zip_preserved": true
+    }
   }
 ]
