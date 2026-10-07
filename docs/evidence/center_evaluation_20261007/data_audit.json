@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "official_dataset": {
+    "data_version": "xray_v2",
+    "images": 500,
+    "split_images": {
+      "train": 296,
+      "val": 107,
+      "test": 97
+    },
+    "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc"
+  },
+  "files_hashed": 24730,
+  "images": 12365,
+  "split_counts": {
+    "train": 12161,
+    "val": 107,
+    "test": 97
+  },
+  "train_kinds": {
+    "crop": 2171,
+    "rotate_m": 2171,
+    "rotate_p": 2171,
+    "offbar": 2171,
+    "direct_visual": 1876,
+    "remove_all": 777,
+    "remove_partial": 528,
+    "official": 296
+  },
+  "parent_count": 2172,
+  "group_overlap": 0,
+  "pixel_duplicates": 0,
+  "excluded_ambiguous_included": 0,
+  "all_inputs_grayscale": true,
+  "all_label_coordinates_valid": true,
+  "geometry_rows": {
+    "official": 296,
+    "crop": 2171,
+    "rotate_m": 2171,
+    "rotate_p": 2171,
+    "offbar": 2171,
+    "remove_partial": 528,
+    "remove_all": 777,
+    "direct_visual": 1876,
+    "official_val": 107,
+    "official_test": 97
+  },
+  "max_coordinate_reconstruction_error_px": 4.253593033354264e-10,
+  "pixel_reconstruction_sample": {
+    "crop": 3,
+    "rotate_m": 3,
+    "rotate_p": 3
+  },
+  "label_long_side_summary": [
+    {
+      "split": "test",
+      "origin": "official",
+      "count": 225,
+      "median": 11.0,
+      "min": 6.999999999999999,
+      "max": 18.0
+    },
+    {
+      "split": "train",
+      "origin": "direct_visual",
+      "count": 3268,
+      "median": 8.00000148,
+      "min": 8.00000088,
+      "max": 14.99999904
+    },
+    {
+      "split": "train",
+      "origin": "official",
+      "count": 679,
+      "median": 11.0,
+      "min": 6.0,
+      "max": 21.0
+    },
+    {
+      "split": "val",
+      "origin": "official",
+      "count": 243,
+      "median": 11.0,
+      "min": 7.0,
+      "max": 20.0
+    }
+  ],
+  "provenance_sha256": "5a8519d4c293720fa5debe015767b7a26bc3377dc9921e073d31dd00b7ad2c81",
+  "limitation": "Geometry and lineage audit, not independently measured annotation accuracy or physical realism of synthesis."
+}

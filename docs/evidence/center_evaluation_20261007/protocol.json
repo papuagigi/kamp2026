@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-10-07T23:05:56.538409+09:00",
+  "radii_px": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "matching": "score-descending stable order, nearest unmatched target within radius on same image, one-to-one",
+  "coordinate_system": "original image pixels; no physical mm equivalence asserted",
+  "thresholds": "previous validation-derived confidence thresholds frozen; no new tuning",
+  "scope": "post-hoc sensitivity analysis after prior test inspection",
+  "models": [
+    {
+      "model": "YOLOv8n",
+      "role": "baseline_previous_training",
+      "thr": 0.68106407,
+      "prefix": "reports/preds_v2_common20_yolo_mps_20261004_",
+      "suffix": ".csv",
+      "files": {
+        "val": {
+          "path": "reports/preds_v2_common20_yolo_mps_20261004_val.csv",
+          "sha256": "a1b132052363bc643e0c3e1c18ebc659ffdcdd744971c9e8baac7a547c930e2e"
+        },
+        "test": {
+          "path": "reports/preds_v2_common20_yolo_mps_20261004_test.csv",
+          "sha256": "90c1a6e67dd7d68d3421447953c5a52acaeb52dd66ca403c9e758f6afed20020"
+        }
+      }
+    },
+    {
+      "model": "YOLO11s",
+      "role": "current",
+      "thr": 0.6884128,
+      "prefix": "runs/v2_direct20_yolo11s_mps_20261006/predictions_",
+      "suffix": ".csv",
+      "files": {
+        "val": {
+          "path": "runs/v2_direct20_yolo11s_mps_20261006/predictions_val.csv",
+          "sha256": "b0d89cf250a65f27b7aef7ffe031b354cc7c540ffdd5d6c1cb961c941ada1283"
+        },
+        "test": {
+          "path": "runs/v2_direct20_yolo11s_mps_20261006/predictions_test.csv",
+          "sha256": "9d6b9ccb4e13b0b52f6650b2957db4153a85eb50bf21ee6d02cc1920514876e5"
+        }
+      }
+    },
+    {
+      "model": "RF-DETR-S",
+      "role": "current",
+      "thr": 0.71692747,
+      "prefix": "runs/v2_direct20_rfdetr_cuda_20261006/predictions_",
+      "suffix": ".csv",
+      "files": {
+        "val": {
+          "path": "runs/v2_direct20_rfdetr_cuda_20261006/predictions_val.csv",
+          "sha256": "3b567802316c5b246f28eeeb9adb806c5c1121447c84311c432f02d7dd0b67b0"
+        },
+        "test": {
+          "path": "runs/v2_direct20_rfdetr_cuda_20261006/predictions_test.csv",
+          "sha256": "ae96944f22bb3446da696b1e04242a45e2500122b05a9afa8d214dadc82ab0e4"
+        }
+      }
+    }
+  ],
+  "baseline_limitation": "different training dataset and YOLO architecture; not isolated preprocessing effect",
+  "test_ground_truths": 225,
+  "val_ground_truths": 243,
+  "excluded_targets": 0,
+  "reference": "official TXT box centers unchanged",
+  "normal_images": 0
+}

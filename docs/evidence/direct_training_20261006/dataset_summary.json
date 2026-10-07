@@ -1,0 +1,32 @@
+{
+  "dataset": "data/xray_direct_training_20261006",
+  "counts": {
+    "train": 12161,
+    "val": 107,
+    "test": 97
+  },
+  "train_kinds": {
+    "official": 296,
+    "crop": 2171,
+    "rotate_m": 2171,
+    "rotate_p": 2171,
+    "offbar": 2171,
+    "remove_partial": 528,
+    "remove_all": 777,
+    "direct_visual": 1876
+  },
+  "train_parents": 2172,
+  "direct_photos": 1876,
+  "official_train": 296,
+  "excluded_uncertain": 24,
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+  "heldout_group_overlap": 0,
+  "duplicate_images": 0,
+  "seed": 0,
+  "synthetic_negatives_are_not_real_normal": true,
+  "rejected_augmentations": {
+    "residual_dark_peak_over_6": 1753,
+    "known_missing_official_label": 1
+  },
+  "provenance_sha256": "5a8519d4c293720fa5debe015767b7a26bc3377dc9921e073d31dd00b7ad2c81"
+}

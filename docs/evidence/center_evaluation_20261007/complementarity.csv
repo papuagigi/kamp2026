@@ -1,0 +1,9 @@
+split,radius_px,n_gt,both,yolo_only,rf_only,neither,either,scope
+val,2,243,225,6,7,5,238,GT-based coverage only; not operational fused F1
+val,4,243,242,0,1,0,243,GT-based coverage only; not operational fused F1
+val,6,243,242,0,1,0,243,GT-based coverage only; not operational fused F1
+val,8,243,242,0,1,0,243,GT-based coverage only; not operational fused F1
+test,2,225,203,6,7,9,216,GT-based coverage only; not operational fused F1
+test,4,225,224,1,0,0,225,GT-based coverage only; not operational fused F1
+test,6,225,224,1,0,0,225,GT-based coverage only; not operational fused F1
+test,8,225,224,1,0,0,225,GT-based coverage only; not operational fused F1

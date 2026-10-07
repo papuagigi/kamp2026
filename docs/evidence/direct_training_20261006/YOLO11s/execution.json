@@ -1,0 +1,43 @@
+{
+  "model": "yolo",
+  "data": "data/xray_direct_training_20261006",
+  "name": "v2_direct20_yolo11s_mps_20261006",
+  "epochs": 20,
+  "batch": 8,
+  "resolution": 512,
+  "device": "mps",
+  "yolo_weights": "weights/yolo11s.pt",
+  "resume": false,
+  "epoch_validation": true,
+  "stop_after_epoch": 0,
+  "device_used": "mps",
+  "seed": 0,
+  "dataset": "data/xray_direct_training_20261006",
+  "dataset_sha256": "5a8519d4c293720fa5debe015767b7a26bc3377dc9921e073d31dd00b7ad2c81",
+  "split_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+  "status": "complete",
+  "started_unix": 1791294741.118437,
+  "train_images": 12161,
+  "augmentation": "precomputed only; automatic random transforms disabled",
+  "checkpoint_selection": {
+    "primary": "iou50_f1",
+    "ties": [
+      "iou50_recall",
+      "iou75_ap",
+      "earlier_epoch"
+    ],
+    "tolerance": 1e-09,
+    "threshold": "validation_best_f1_frozen_for_test",
+    "epoch_budget": 20,
+    "test_used_for_selection": false
+  },
+  "attempt_started_unix": 1791294741.118437,
+  "recovery_schema": 1,
+  "recovery_fingerprint": "677261897099335e2aef18566167ce5f2855603541241e65451ca59b7fcb6889",
+  "recovery_epoch": 0,
+  "loss_window": "unfinished epoch since last verified commit",
+  "resume_semantics": "Ultralytics native epoch resume; final full state retained in weights/resume.pt",
+  "checkpoint": "runs/v2_direct20_yolo11s_mps_20261006/weights/last.pt",
+  "completed_epochs": 20,
+  "seconds": 8075.284678936005
+}

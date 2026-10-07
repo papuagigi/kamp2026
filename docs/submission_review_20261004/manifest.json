@@ -1,155 +1,40 @@
 [
   {
-    "file": "Xray_결과보고서_EDA보완.docx",
-    "bytes": 1292431,
-    "sha256": "e590f8d3ff9df04d12f31b29a205a9b9e2ba0c5a75fc1cd403393d5afb04ee7e"
-  },
-  {
-    "file": "Xray_결과보고서_EDA보완.pdf",
-    "bytes": 1353094,
-    "sha256": "ac27e0e4973294aa37a3da8e86bfc4f65d9d5083f031cb5a3c0dd27992d4b24f"
-  },
-  {
-    "file": "Xray_발표자료_EDA보완.pptx",
-    "bytes": 1358091,
-    "sha256": "6cf072f3c963cd5076e6ef45a6187ba10c3f92bb7a64d378cc55b8bd15ac91b6"
-  },
-  {
-    "file": "Xray_발표자료_EDA보완.pdf",
-    "bytes": 1228267,
-    "sha256": "f63d2c32b22bbe849c5c1e1968a37a400ab3184525f333d7551f6b87bdb06dbb"
-  },
-  {
-    "file": "Xray_결과보고서_단계적검사보완.docx",
-    "bytes": 1307031,
-    "sha256": "bbd75bbeee41f315188f6e32ed161d41e27cae71dd0b3972a7b9575274348182"
-  },
-  {
-    "file": "Xray_결과보고서_단계적검사보완.pdf",
-    "bytes": 1426806,
-    "sha256": "6f14dca81586ff098ab9f40bb23061dc5430c08fde32867d4db3c56e7c4e9b03"
-  },
-  {
-    "file": "Xray_발표자료_단계적검사보완.pptx",
-    "bytes": 1381579,
-    "sha256": "4a03616b5f6151cb16821423da937af6325f408cd508738df04fa2ff20aff153"
-  },
-  {
-    "file": "Xray_발표자료_단계적검사보완.pdf",
-    "bytes": 1282739,
-    "sha256": "bd6bc3bc8915d21ecb97dd030ffb87c7d1a558cb6bcd409e0e1172b02509a62c"
-  },
-  {
-    "file": "Xray_결과보고서_FN위험보완.docx",
-    "bytes": 1321553,
-    "sha256": "5b0b83661e62a14f229db6483247c1ade47f9733b18d3b0e360feb88180398b1"
-  },
-  {
-    "file": "Xray_결과보고서_FN위험보완.pdf",
-    "bytes": 1512969,
-    "sha256": "7ab04e1e75f3fb0e67aa0238daa6c82c8c0267ab0f859bcc32a7f92b90df38a4"
-  },
-  {
-    "file": "Xray_발표자료_FN위험보완_최종검토.pptx",
-    "bytes": 1392912,
-    "sha256": "6f025bc9d9cecea32bbe2c9b66c5a07d1c38af1c0daffbbf3f601768a0b0afe8"
-  },
-  {
-    "file": "Xray_발표자료_FN위험보완_최종검토.pdf",
-    "bytes": 1385951,
-    "sha256": "7d844de9cd2b692015ad17c300aff6dbe0de9c046623a72688441ad5ea9acca1"
-  },
-  {
-    "version": "approved_pair_20261005",
+    "version": "center_evaluation_20261007",
+    "updated_at": "2026-10-07T23:31:08.050440+09:00",
     "files": [
       {
-        "file": "Xray_결과보고서_이중검사보완.docx",
-        "bytes": 1451106,
-        "sha256": "811deb8584ba1740565eb2e6d16b21a77831d3cf30dffdb6e83abd05f91e94d4"
+        "file": "docs/submission_review_20261004/Xray_결과보고서_연구구성보완.docx",
+        "bytes": 1969315,
+        "sha256": "28187c2211f41be0231dca4b3efe37bd5b82b22d5eff5a23e10e42d7546ec13e"
       },
       {
-        "file": "Xray_결과보고서_이중검사보완.pdf",
-        "bytes": 1654397,
-        "sha256": "d87e7216755bfb3712932184159b5c8f9b801e356387cfc729e14ad972e4f43f"
+        "file": "docs/submission_review_20261004/Xray_결과보고서_연구구성보완.pdf",
+        "bytes": 1837507,
+        "sha256": "8eeaf01d53e97f37ebee8af422ebc3993a9cdb31ae50a6b103051d0e6af668b5"
       }
     ],
-    "checks": "approved_pair_review_checks.json",
-    "previous_slides_and_zip_not_updated": true
-  },
-  {
-    "version": "fullframe_policy_20261005",
-    "files": [
-      {
-        "file": "Xray_결과보고서_전체사진이중검사.docx",
-        "bytes": 1578302,
-        "sha256": "275d6047215553d59119891577505a33b9c173272a3c44b3cfc5b05ab3883618"
-      },
-      {
-        "file": "Xray_결과보고서_전체사진이중검사.pdf",
-        "bytes": 1656429,
-        "sha256": "aead762c07edb455070258991c55ab1ad99f95c92cf1a1b1f5cca3225e2acb36"
-      },
-      {
-        "file": "Xray_발표자료_전체사진이중검사.pdf",
-        "bytes": 1430003,
-        "sha256": "a21ab1e58c420da80a142f49510495a8536bebf7350c9a03318ab9f2ef8cabf3"
-      },
-      {
-        "file": "Xray_발표자료_전체사진이중검사.pptx",
-        "bytes": 1403829,
-        "sha256": "795fdc0f2d5ab3bcd521a6f0001f8cd0d814ae4b80dffca75ff41aaeaea27281"
-      }
-    ],
-    "checks": "fullframe_review_checks.json",
-    "report_pages": 29,
-    "slides": 26,
-    "previous_versions_preserved": true,
-    "reproduction_package": {
-      "path": "outputs/submission_review_20261004/Xray_재현자료_전체사진이중검사.zip",
-      "sha256": "1a9e17046d891adbe79b66959e6fccaecffda3a2835cf992eb48c9cf6f80abcd",
-      "bytes": 1434056638,
-      "files": 7458,
-      "hashed_files": 7457,
-      "crc_check": "passed",
-      "base_zip_preserved": true
-    }
-  },
-  {
-    "version": "editorial_review_20261005",
-    "files": [
-      {
-        "file": "Xray_결과보고서_연구구성보완.docx",
-        "bytes": 1581694,
-        "sha256": "6cea6fc050d428aac5bb0a92ca3613ad92a0aa578c497054e2338b5d84c87d69"
-      },
-      {
-        "file": "Xray_결과보고서_연구구성보완.pdf",
-        "bytes": 1729732,
-        "sha256": "cb7694ef5ab59ec5e11273e58d937ae502c9026299190c820b199a789ff24950"
-      },
-      {
-        "file": "Xray_발표자료_연구구성보완.pdf",
-        "bytes": 1509067,
-        "sha256": "96dbf74af0f810e5d3ba884e4eaa644fff69d3fef4e98c098106d9af2882c32c"
-      },
-      {
-        "file": "Xray_발표자료_연구구성보완.pptx",
-        "bytes": 1415235,
-        "sha256": "dc6e49bf156642883d624ff776e20494057ed8b2a2e27720cb8dde92d72539a6"
-      }
-    ],
-    "checks": "editorial_review_checks.json",
-    "report_pages": 32,
-    "slides": 29,
-    "previous_versions_preserved": true,
-    "reproduction_package": {
-      "path": "outputs/submission_review_20261004/Xray_재현자료_연구구성보완.zip",
-      "sha256": "ee17db88904bd246c08e1a58367e7a73a9f576e2a37d608c30e23f54f24e35e6",
-      "bytes": 1439618922,
-      "files": 7466,
-      "hashed_files": 7465,
-      "crc_check": "passed",
-      "base_zip_preserved": true
+    "report_pages": 27,
+    "checks": "reports/center_evaluation_20261007/report_edit_checks.json",
+    "previous_files_backup": "reports/center_evaluation_20261007/before",
+    "team_and_survey_fields_unchanged": true,
+    "visual_check": "passed",
+    "font_limitation": {
+      "actual_body": "AppleMyungjo 14pt; original 160 percent line spacing",
+      "required_HumanMyeongjo_available": false
+    },
+    "new_training_or_inference": false,
+    "slides_unchanged": true,
+    "reproduction_zip_unchanged": true,
+    "evaluation_scope": "post-hoc sensitivity analysis after prior test inspection",
+    "repository_cleanup": {
+      "date": "2026-10-07",
+      "old_artifacts_removed": 20,
+      "old_check_records_removed": 6,
+      "local_archive": "archive/github_cleanup_20261007",
+      "older_manifest_in_archive": true,
+      "historical_slides_in_archive": true,
+      "new_slides_not_yet_created": true
     }
   }
 ]

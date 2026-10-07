@@ -1,0 +1,52 @@
+{
+  "source": "reports/center_evaluation_20261007/before/Xray_결과보고서_연구구성보완.docx",
+  "output": "docs/submission_review_20261004/Xray_결과보고서_연구구성보완.docx",
+  "original_report_backed_up": true,
+  "team_and_signature_fields_not_edited": true,
+  "survey_block_preserved_sha256": "7eeef41499a912c857a87e1f46fafc2c447607b11be92f8a577bebc2266341ac",
+  "iou_removed_from_submission_text": true,
+  "new_training": false,
+  "old_scores_preserved": true,
+  "scope": "location evaluation after prior test inspection; frozen checkpoints and thresholds",
+  "figures": [
+    "20_중심위치_채점설명.png",
+    "20_새라벨_손실곡선.png",
+    "20_중심위치_임계값누락.png",
+    "20_중심위치_공통오차.png"
+  ],
+  "visual_render_check": "All 27 pages inspected; final text adjustment changed only page 18, re-inspected",
+  "status": "passed_with_font_limitation",
+  "verified_at": "2026-10-07T23:31:08.050440+09:00",
+  "report_pages": 27,
+  "rendered_pages": "reports/center_evaluation_20261007/render_verified",
+  "tables_match_csv": true,
+  "test_table_rows_checked": 12,
+  "pair_table_rows_checked": 4,
+  "survey_block_equals_backup": true,
+  "cover_except_project_abstract_equals_backup": true,
+  "source_prediction_hashes_unchanged": 6,
+  "split_md5_unchanged": true,
+  "pdf_text_extraction_korean": true,
+  "scorer_unit_checks_previously_completed_in_this_task": 23,
+  "original_scoring_regressions_passed": 12,
+  "fonts": {
+    "actual_body": "AppleMyungjo 14pt; original 160 percent line spacing",
+    "required_HumanMyeongjo_available": false
+  },
+  "slides_updated": false,
+  "reproduction_zip_updated": false,
+  "github_pushed": false,
+  "portal_submitted": false,
+  "outputs": [
+    {
+      "file": "docs/submission_review_20261004/Xray_결과보고서_연구구성보완.docx",
+      "bytes": 1969315,
+      "sha256": "28187c2211f41be0231dca4b3efe37bd5b82b22d5eff5a23e10e42d7546ec13e"
+    },
+    {
+      "file": "docs/submission_review_20261004/Xray_결과보고서_연구구성보완.pdf",
+      "bytes": 1837507,
+      "sha256": "8eeaf01d53e97f37ebee8af422ebc3993a9cdb31ae50a6b103051d0e6af668b5"
+    }
+  ]
+}

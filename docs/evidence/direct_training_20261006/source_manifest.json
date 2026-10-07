@@ -1,0 +1,390 @@
+{
+  "sources": [
+    {
+      "source": "data/xray_direct_training_20261006/summary.json",
+      "shared_file": "dataset_summary.json",
+      "source_sha256": "3b8e35fa45b666e997552033f7ffe2e3fab2272963c5138a2d1d18194ce1f1cc",
+      "shared_sha256": "3b8e35fa45b666e997552033f7ffe2e3fab2272963c5138a2d1d18194ce1f1cc",
+      "path_normalization_only": true
+    },
+    {
+      "source": "reports/direct_labeling_20261006/final_checks.json",
+      "shared_file": "labeling_final_checks.json",
+      "source_sha256": "f9da4b2e0eff1aed85a4489fb3ba45837787e9bc63ee836080a486e77a8c2db0",
+      "shared_sha256": "f9da4b2e0eff1aed85a4489fb3ba45837787e9bc63ee836080a486e77a8c2db0",
+      "path_normalization_only": true
+    },
+    {
+      "source": "reports/direct_labeling_20261006/geometry_visual_qa.json",
+      "shared_file": "labeling_geometry_visual_qa.json",
+      "source_sha256": "e2fca1560cbf3febe02f1df1fd2b39107eb28f5a03daac9810e4c62c634dc3d9",
+      "shared_sha256": "e2fca1560cbf3febe02f1df1fd2b39107eb28f5a03daac9810e4c62c634dc3d9",
+      "path_normalization_only": true
+    },
+    {
+      "source": "reports/direct_analysis_20261007/rescore_audit.json",
+      "shared_file": "rescore_audit.json",
+      "source_sha256": "21ea23f26641dd7c6eca2480b0d910ebca63ee7edb0dfd85fa6ac7b0bcc15173",
+      "shared_sha256": "c0de85149bf3632b2355c52c743eba2e265a0b4a8e22a1ed9564fa8b1cf8f71c",
+      "path_normalization_only": true
+    },
+    {
+      "source": "reports/direct_analysis_20261007/consistency_checks.json",
+      "shared_file": "consistency_checks.json",
+      "source_sha256": "d5b113cd3968e94df8b5f1a3dead93292b40cd88cff9bbed60d9867638415647",
+      "shared_sha256": "d5b113cd3968e94df8b5f1a3dead93292b40cd88cff9bbed60d9867638415647",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/execution.json",
+      "shared_file": "YOLO11s/execution.json",
+      "source_sha256": "d6560dfdb628452d71d016f3c6b07427d5f9c9ac31ab915c7655734ee194cd07",
+      "shared_sha256": "4c2570ed111d9ff66ee022c9a6a417e02bd356b1bdd5c1a429e470f13f7c8340",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/selection.json",
+      "shared_file": "YOLO11s/selection.json",
+      "source_sha256": "63b73cd8eaa60888ca65f5fa337d6c0bad5ac9c67cb2d08970562c6906ee6330",
+      "shared_sha256": "2b8ef005b8a49b7b269e0cbfa2c2a2cff07e130f67e17971c0e224cfe81edd57",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/evaluation_frozen.json",
+      "shared_file": "YOLO11s/evaluation_frozen.json",
+      "source_sha256": "1000f7338e82d18cfc014d2c07ef241f3fe46bb3b354e99ba0bb2ca0c8b6defc",
+      "shared_sha256": "315f00cd8bdeec902c832b63f9cfa266040483f89e9882fa1d8c66c122162520",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/evaluation.json",
+      "shared_file": "YOLO11s/evaluation.json",
+      "source_sha256": "68586f944a3d6dad831d4645a2904aed3977d9d7d4adbec02964ddc63475620c",
+      "shared_sha256": "fd6f91442c9e6e9101d90ee4ed2240ddefc1b530dbdf2deae260f2419c3a6e04",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_001.json",
+      "shared_file": "YOLO11s/validation/epoch_001.json",
+      "source_sha256": "4666e1fbf9c81b8f3b90ee9762567b6211106fdd04816f7f7d8cf66ed9146bba",
+      "shared_sha256": "43e4a04f66f6ca0fc929d72b9bc1a3202de920b91b3b126729bb981cd77fe394",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_002.json",
+      "shared_file": "YOLO11s/validation/epoch_002.json",
+      "source_sha256": "5eb526feb13ac2b07947a6c589ec19f5341f8950908dc21b6fd301d68bf293d9",
+      "shared_sha256": "93101f275d7c55e9af35b39aac14e8d716741bf4c09c0cb926c9da7d47ae4cff",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_003.json",
+      "shared_file": "YOLO11s/validation/epoch_003.json",
+      "source_sha256": "023ee6080313002bf0b07aca08bdebc33074d0a1b8e4f26fb9f469bf46c907e4",
+      "shared_sha256": "03010c43bd861174afae78eb65bc11b06e9b08bbd6e6da44f126ca2fd663b051",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_004.json",
+      "shared_file": "YOLO11s/validation/epoch_004.json",
+      "source_sha256": "3d377eab0c5c8dbd73a13ae739719a2f544f9dc02bbf13a1f0cba3b3442881bd",
+      "shared_sha256": "41e7256c20910f693a84fb84e22a03c64a33294ea344f7dac0641af1330797f9",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_005.json",
+      "shared_file": "YOLO11s/validation/epoch_005.json",
+      "source_sha256": "cd0a6fe75ea1e6f996e7903defd151d0e409aaca67c2fe3f526c546aa95d2ccc",
+      "shared_sha256": "b7657aa75b533d51cb9a8a63c121b2cda67fbad7d9f9f250ff89069522b3f88e",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_006.json",
+      "shared_file": "YOLO11s/validation/epoch_006.json",
+      "source_sha256": "a18b69791b4b4819d736672e7b5dfe1aef4840e23943256c543fbf0e183685e2",
+      "shared_sha256": "0ed9c92e9806a92a1c538d6ae7555f576e630dc0873c82c5aa57df3ea59e2e9f",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_007.json",
+      "shared_file": "YOLO11s/validation/epoch_007.json",
+      "source_sha256": "95b6ce04ecbbcae41d8ce7f1d19ef9b00748e3835076dc63664fe4f56cbbec09",
+      "shared_sha256": "bbe04609df6c28ea47ed0796c53aa8e4e78ecd8e1722875731bcce9d065f6756",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_008.json",
+      "shared_file": "YOLO11s/validation/epoch_008.json",
+      "source_sha256": "1f4ec1c9908c263bd37b21b42094cd653bbee86836f7b081155f62ac49aa9c1a",
+      "shared_sha256": "18e0bfc9457f5ae7c8aa0d33857733f81a1e83060ad1839f9229ab8ffec9f656",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_009.json",
+      "shared_file": "YOLO11s/validation/epoch_009.json",
+      "source_sha256": "64f6fd7f10b138f08c314cb298232ea612f83798e5bbe3512685e612c04d8d30",
+      "shared_sha256": "33c98af4019a5a405635e85ac039da59600351d2cecf4eb322b9c63b789c7857",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_010.json",
+      "shared_file": "YOLO11s/validation/epoch_010.json",
+      "source_sha256": "6fff7fa23fdc4b9521dad6bae3bc85d8d386307454513817fc445e3617bd1a5b",
+      "shared_sha256": "51d6ea2609fbb7e35b09639792dd9776667a4d19e40adcff3994a46570c982e1",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_011.json",
+      "shared_file": "YOLO11s/validation/epoch_011.json",
+      "source_sha256": "a20c7a52f5f09f669063d580f0c1acb180da6b7854ee84f19837c52cccd279ac",
+      "shared_sha256": "2cf545718d9f55fe1408ace398b76fac9d7aa0cd792cc5076ea83d89254df4b8",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_012.json",
+      "shared_file": "YOLO11s/validation/epoch_012.json",
+      "source_sha256": "a3470b4e6d3d6f86690068e36b2d7406073c59ccee87108f3599df4174b78f25",
+      "shared_sha256": "b54b662a3805fc8128af586032efe096b8b8b43a36be4769e03c2c0613e69a0f",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_013.json",
+      "shared_file": "YOLO11s/validation/epoch_013.json",
+      "source_sha256": "e37fb108918c4a9551c91f3a00090d46459fe2def7bef07f4c384a30f17e0e90",
+      "shared_sha256": "d2cec032b5452228b82123368973db7755007b857278fc36c86f1984965fb138",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_014.json",
+      "shared_file": "YOLO11s/validation/epoch_014.json",
+      "source_sha256": "3d029a2a45280f939d29b5350e74431edfbdb5b86905d7bc918539b60ed221c2",
+      "shared_sha256": "abd239569f074c1c76a8470d060224705e1787b8326e03363dcf0d228e8f6a1b",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_015.json",
+      "shared_file": "YOLO11s/validation/epoch_015.json",
+      "source_sha256": "b086fa1a1f9096ac6f1fc4a5cff08c2453ad372a5a6fa41ad97db36eb39241ee",
+      "shared_sha256": "c3a8bcc6164945a07704864d6213052d29ca53c4dbcac24e46ebddfe3257e703",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_016.json",
+      "shared_file": "YOLO11s/validation/epoch_016.json",
+      "source_sha256": "8c50b6431423678b477cb1abcbfefcfdfb96caf70c563adf08796e340e3e04cd",
+      "shared_sha256": "90fa8813b32e8a0c7251c763abdbb0a13777e237d81a2143e536f0917fd14ab3",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_017.json",
+      "shared_file": "YOLO11s/validation/epoch_017.json",
+      "source_sha256": "0edad76cb7826987335b5dcd087161e7ad485c7357b6de7297e490d048c13c69",
+      "shared_sha256": "3b6b60b12b3d5fa970392b1eb05c7a8a2edba94f872e645f3f9d7c6b31136c02",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_018.json",
+      "shared_file": "YOLO11s/validation/epoch_018.json",
+      "source_sha256": "5f23dc4b0ef1d67aa295276882d1c3e97cb5ae006437b5d878dc70370f081f54",
+      "shared_sha256": "474b9a96a588da168fd741f4e3a97734994773c5aba2b35793cde438ee6867ad",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_019.json",
+      "shared_file": "YOLO11s/validation/epoch_019.json",
+      "source_sha256": "b53cdd8f9f7b1ac291134c0b93b0d044ce8d37351b8493896da7d8131248d50d",
+      "shared_sha256": "00b5c929c29c325a959f9754380644be58ceb12062ec9291a7e440c49e1d74e9",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/validation/epoch_020.json",
+      "shared_file": "YOLO11s/validation/epoch_020.json",
+      "source_sha256": "b5b22a230af6af58969839e92f4fe12bf29e1b57d078d32bd7c4112bf954af63",
+      "shared_sha256": "2624c5d76e4150ade217b2cb386293eae134f6518d3a1581df2dbd3d635bf0b7",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/execution.json",
+      "shared_file": "RF-DETR-S/execution.json",
+      "source_sha256": "b506cd201181187ff53d91d30b4d719c1d6cd7b9a8de4a4bf9790d341e2a70d9",
+      "shared_sha256": "c6fea98eb82dcc4ba8da3b1cd444dce260737b126888854e4b42147849a72a8d",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/selection.json",
+      "shared_file": "RF-DETR-S/selection.json",
+      "source_sha256": "88803e2c4077aba510d359b7c3b3b5409deaf30cd027d615525e65f13fe446b7",
+      "shared_sha256": "f1b4de988dd45b535e9b34a75aff80d125349f4266ab5e88db1201ad72327734",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/evaluation_frozen.json",
+      "shared_file": "RF-DETR-S/evaluation_frozen.json",
+      "source_sha256": "0a5083528fc365e3237fad27ab0b5225c6aec2e0eb7dcb6057b37f2b6e482441",
+      "shared_sha256": "fa6172464c1f46b2b039168a82a630a5075c4ae6a8c8af229523e3fe4269a757",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/evaluation.json",
+      "shared_file": "RF-DETR-S/evaluation.json",
+      "source_sha256": "3e74633e138a7de43929e877aa058a736f29843fcc3ce28cecddea2eca484595",
+      "shared_sha256": "cbe6ddb815de965689030883e5dbf65c5b4b7b67dc95e67441c48a6fb144d8cf",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_001.json",
+      "shared_file": "RF-DETR-S/validation/epoch_001.json",
+      "source_sha256": "c7f512f62b42c9a450f18fc5124dbe8800f67a0bc81eb06ecfc126698a4fdf3b",
+      "shared_sha256": "d162478289b24c629b038f65ec7bbba95551fc922adb90f60ecf9c9c8e54d5fa",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_002.json",
+      "shared_file": "RF-DETR-S/validation/epoch_002.json",
+      "source_sha256": "4f17a471c8bc79bdc2958522e84fbe7696ecdbae64acd8f1a30cc59c391b1ba9",
+      "shared_sha256": "4da917c1657f97519bf1b6453d5cabfd78c1e3abbb7b9cb14937901cc26d343f",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_003.json",
+      "shared_file": "RF-DETR-S/validation/epoch_003.json",
+      "source_sha256": "fb3842bdda8d34092d662d60d7c28db095687263f2e435bdec6e59ac1555c360",
+      "shared_sha256": "462e4ec153bb04129c9f58e019e97f82c36680b52ed37b756863661e91f38f89",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_004.json",
+      "shared_file": "RF-DETR-S/validation/epoch_004.json",
+      "source_sha256": "8b424ffd16385d54bd853cf70a9165a4da2a025d73e7137b0ae81cba1c04f383",
+      "shared_sha256": "d842c000ae014adec7322e58b004fb8e22339169366f3d18e8117a24c5a955cb",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_005.json",
+      "shared_file": "RF-DETR-S/validation/epoch_005.json",
+      "source_sha256": "00d6847acfba0963e243ade4ff491f14721c2c90559825ccf021950c908c4305",
+      "shared_sha256": "8a4c4fe5e32be2d28815d730cbfc6a70fe6fffa600a1c677983d00e12e7cac4c",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_006.json",
+      "shared_file": "RF-DETR-S/validation/epoch_006.json",
+      "source_sha256": "b2d521bd0a9a49164611019eb9ad24181df40631b93d5912d02e883cbb334279",
+      "shared_sha256": "48b90ab785ae8d641ad622476805db4d5575967adbf970753c7e3b766d44a72d",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_007.json",
+      "shared_file": "RF-DETR-S/validation/epoch_007.json",
+      "source_sha256": "b2838d80b9e53277bb902e305c2523d940b59046b340202e2a8f0ab39e66265b",
+      "shared_sha256": "a995ef5adea6df238c23199a62d61dd14df99245979e6bb015a334a57156c5d7",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_008.json",
+      "shared_file": "RF-DETR-S/validation/epoch_008.json",
+      "source_sha256": "5722740e68eb0beff3ffd2b6a5a902959a6befc686838cc9b9607c6e6b2cf548",
+      "shared_sha256": "7851998cddb5ce72eaf4685fe53d931a088ffd75c132b61b31f988be4734b551",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_009.json",
+      "shared_file": "RF-DETR-S/validation/epoch_009.json",
+      "source_sha256": "5d506dc93e0f707c470402d7c6e9a489d07f988032a81d72c17c844a700469b1",
+      "shared_sha256": "b9ca8407e777f2d976d0c9670afde91f0cbe356163f02fe06b9eb422031e0722",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_010.json",
+      "shared_file": "RF-DETR-S/validation/epoch_010.json",
+      "source_sha256": "99e9f9740aaab9b58f1fb961bac35b28e2f6b548e487f1777873699e51fc2133",
+      "shared_sha256": "2ca7086f35f3425416dda1817b3833dfa0245fb059703f7c07d41839f695686a",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_011.json",
+      "shared_file": "RF-DETR-S/validation/epoch_011.json",
+      "source_sha256": "387cc422629a2bd57aaa4db55876a5566c16919e2092da5e4aad72bec8a08f36",
+      "shared_sha256": "21d8513cb953700515e45696e6174db35633d0bb25088dea905ac743d9ea5176",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_012.json",
+      "shared_file": "RF-DETR-S/validation/epoch_012.json",
+      "source_sha256": "8d34d5bf32c8a6aa58d82c1d921b2dec8e7b5203125e20d2296382895409f11c",
+      "shared_sha256": "6f002e469c0f67e636d16900d4e3171d32bc4b42be49abb6e3c5b3ff169735ec",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_013.json",
+      "shared_file": "RF-DETR-S/validation/epoch_013.json",
+      "source_sha256": "7020163e87a1b17273fb8aedad6c47d71b151e0697a76a98caad94f894e3dc4a",
+      "shared_sha256": "1749fb711ac89d49fdce90a89c0222e75ed377b320da18cbbd93999ff8d2e42f",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_014.json",
+      "shared_file": "RF-DETR-S/validation/epoch_014.json",
+      "source_sha256": "c4ec467591dae0d25d6217d8a1938256207d3192ecc7891ef3394f0aeab32090",
+      "shared_sha256": "d3144db04137dbb415211f70200c4c95e3346c71157e51ad9474bf5102c4acaf",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_015.json",
+      "shared_file": "RF-DETR-S/validation/epoch_015.json",
+      "source_sha256": "24c519b786bb097464b578b1c1803bd70afde4029ed962b6ecc96fc610809913",
+      "shared_sha256": "37c6ca2320fbfb504a8a906b4c498d00f462cea430fb3a6908d019cf5da185c1",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_016.json",
+      "shared_file": "RF-DETR-S/validation/epoch_016.json",
+      "source_sha256": "333de0539124a4feadb57ec6a7eb2d04a539b2f12dd3780a0a01a48176114405",
+      "shared_sha256": "98e57d8d78f211538048e5a9a62329f2ffa6197265de8d2455e4e7e234f16dad",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_017.json",
+      "shared_file": "RF-DETR-S/validation/epoch_017.json",
+      "source_sha256": "2682b76b80596bd5875bbc7833c80c87d500f0ab83de520665bac541cfc27f01",
+      "shared_sha256": "692e93935e138297b3623a0622fa07c101792d11571028ae4113b4daaea03c31",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_018.json",
+      "shared_file": "RF-DETR-S/validation/epoch_018.json",
+      "source_sha256": "3c65b7777f4f3638d96aec933862481d6a8c7fe0070bcc44cc128e93d7884052",
+      "shared_sha256": "79f57f7a0728bbdd0cb2b77036beeadceaf5425e403818eab4e04cc66cc9fe3f",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_019.json",
+      "shared_file": "RF-DETR-S/validation/epoch_019.json",
+      "source_sha256": "10244c9181a5cb52d529eee0b188f876527873f068e2792222adbfda66dccf8f",
+      "shared_sha256": "f12c7b3dd8c6bfaf723150bb97f0344540cc908dd54e25742bb91f7780e3e6a5",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/validation/epoch_020.json",
+      "shared_file": "RF-DETR-S/validation/epoch_020.json",
+      "source_sha256": "10379a6d45f5adfa4e76be7818747e02f338e18ff0411d955f3b15a188952568",
+      "shared_sha256": "0b99ec11dfd001928202b93bbf8bec0b5124befdef355df29b0d56de28b4e782",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_rfdetr_cuda_20261006/training_config.json",
+      "shared_file": "RF-DETR-S/training_config.json",
+      "source_sha256": "3b0d74ba34eda3ea6ca6be23c579ea0d4a52b42adcbfb4fb3233d98782cca33a",
+      "shared_sha256": "6e5c35647cab31ed15a0fe709468ffbe86db2c53c98176a6fa0d715b6bce4133",
+      "path_normalization_only": true
+    },
+    {
+      "source": "runs/v2_direct20_yolo11s_mps_20261006/args.yaml",
+      "shared_file": "YOLO11s/args.json",
+      "source_sha256": "d582459365cc4c47b5de39bea614279e424b8d87b6993e2f4e86ad9fea97b48f",
+      "shared_sha256": "8d954cc2f40312ac2de6f555be8b1f4e4f9d5132dbbe99f93e85708772c843a7",
+      "format_conversion": "YAML to JSON; values preserved except machine paths"
+    }
+  ],
+  "model_weights_and_images_included": false
+}

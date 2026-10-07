@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "source_hashes_verified": 6,
+  "original_modes_regressions": [
+    {
+      "model": "YOLO11s",
+      "split": "val",
+      "matching": "iou50",
+      "max_difference": 1.1102230246251565e-16
+    },
+    {
+      "model": "YOLO11s",
+      "split": "val",
+      "matching": "iou75",
+      "max_difference": 5.551115123125783e-17
+    },
+    {
+      "model": "YOLO11s",
+      "split": "val",
+      "matching": "legacy",
+      "max_difference": 1.1102230246251565e-16
+    },
+    {
+      "model": "YOLO11s",
+      "split": "test",
+      "matching": "iou50",
+      "max_difference": 0.0
+    },
+    {
+      "model": "YOLO11s",
+      "split": "test",
+      "matching": "iou75",
+      "max_difference": 8.326672684688674e-17
+    },
+    {
+      "model": "YOLO11s",
+      "split": "test",
+      "matching": "legacy",
+      "max_difference": 0.0
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "val",
+      "matching": "iou50",
+      "max_difference": 1.1102230246251565e-16
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "val",
+      "matching": "iou75",
+      "max_difference": 5.551115123125783e-17
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "val",
+      "matching": "legacy",
+      "max_difference": 0.0
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "test",
+      "matching": "iou50",
+      "max_difference": 1.1102230246251565e-16
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "test",
+      "matching": "iou75",
+      "max_difference": 5.551115123125783e-17
+    },
+    {
+      "model": "RF-DETR-S",
+      "split": "test",
+      "matching": "legacy",
+      "max_difference": 1.1102230246251565e-16
+    }
+  ],
+  "scoring_implementation": "scripts/xray_eval.py",
+  "protocol_sha256": "dab3b70566ec9ae8bbbc4c029824050a8f905b20331875714109b4b6b104a5b9",
+  "no_training": true,
+  "no_new_inference": true,
+  "no_threshold_tuning": true
+}

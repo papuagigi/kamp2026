@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 예측 CSV(stem, cx, cy, w, h, score)를 정답과 맞춰 채점한다.
-- 박스 매칭: 중심 거리 8px 이내 또는 IoU 0.3 이상 (이물이 10~15px라 IoU 0.5는 가혹)
+- legacy: 중심 거리 8px 이내 또는 IoU 0.3 이상인 과거 자체 기준.
+- iou50/iou75: 박스 겹침 기준. center2/4/6/8: 중심 거리만 사용하는 별도 위치 기준.
 - AP: 자체 매칭의 보간 PR 계단 면적(all-points). COCO AP와 구분한다.
 - 빈 예측은 미탐으로 집계하고, 정답 없는 세트의 AP/재현율은 null(해당 없음).
 사용: .venv/bin/python scripts/xray_eval.py reports/preds_v2_yolov8n_640_val.csv --split val [--thr 0.25]
@@ -15,7 +16,8 @@ REPORTS = ROOT / "reports"
 METRIC_VERSION = "custom_ap_v2"
 MATCH_POLICIES = {"legacy": (8.0, 0.3, "custom_ap_v2"),
                   "iou50": (None, 0.5, "iou50_v1"),
-                  "iou75": (None, 0.75, "iou75_v1")}
+                  "iou75": (None, 0.75, "iou75_v1"),
+                  **{f"center{d}": (float(d), None, f"center{d}px_v1") for d in (2, 4, 6, 8)}}
 GT_COLUMNS = ["stem", "cx", "cy", "w", "h", "size", "edge", "contrast", "card_type", "machine", "width", "n_boxes"]
 PRED_COLUMNS = ["stem", "cx", "cy", "w", "h", "score"]
 
@@ -55,9 +57,11 @@ def iou(a, b):
     inter = iw * ih; union = a[2]*a[3] + b[2]*b[3] - inter
     return inter / union if union > 0 else 0.0
 
-def match(preds, gts, dist_thr=8.0, iou_thr=0.3, iou_only=False):
+def match(preds, gts, dist_thr=8.0, iou_thr=0.3, iou_only=False, center_only=False):
     """예측(점수 내림차순)을 정답에 하나씩 매칭. 반환: 각 예측의 매칭된 정답 index(-1이면 오탐), 각 정답의 매칭 여부와 점수"""
-    gt_hit = np.full(len(gts), np.nan); pred_hit = []
+    if iou_only and center_only:
+        raise ValueError("Choose only one matching mode")
+    gt_hit = np.full(len(gts), np.nan); pred_hit = []; center_errors = []
     gt_by_stem = {}
     for i, g in enumerate(gts.itertuples()): gt_by_stem.setdefault(g.stem, []).append(i)
     preds = preds.sort_values("score", ascending=False, kind="stable")
@@ -67,14 +71,21 @@ def match(preds, gts, dist_thr=8.0, iou_thr=0.3, iou_only=False):
             if np.isfinite(gt_hit[i]): continue
             g = gts.iloc[i]; d = ((p.cx - g.cx)**2 + (p.cy - g.cy)**2) ** 0.5
             overlap = iou((p.cx, p.cy, p.w, p.h), (g.cx, g.cy, g.w, g.h))
-            if iou_only:
+            if center_only:
+                if d <= dist_thr and d < best_d:
+                    best, best_d = i, d
+            elif iou_only:
                 if overlap >= iou_thr and overlap > best_iou:
                     best, best_iou = i, overlap
             elif (d <= dist_thr or overlap >= iou_thr) and d < best_d:
                 best, best_d = i, d
         pred_hit.append(best)
+        center_errors.append(best_d if best >= 0 else np.nan)
         if best >= 0: gt_hit[best] = p.score
-    preds = preds.assign(hit=pred_hit); return preds, gt_hit
+    preds = preds.assign(hit=pred_hit)
+    if center_only:
+        preds = preds.assign(center_error_px=center_errors)
+    return preds, gt_hit
 
 def interpolated_ap(curve, n_gt):
     """관측 재현율의 증가분 × 오른쪽 보간 정밀도를 합한다. 동점은 한 임계값."""
@@ -116,7 +127,9 @@ def evaluate(pred_csv, split, thr=None, stems=None, matching="legacy"):
         raise ValueError("예측 박스의 폭과 높이는 음수일 수 없습니다")
     preds[PRED_COLUMNS[1:]] = numeric
     preds = preds[preds.stem.isin(set(man.stem))].copy()
-    preds, gt_hit = match(preds, gts, dist_thr=dist_thr, iou_thr=iou_thr, iou_only=matching != "legacy")
+    center_only = matching.startswith("center")
+    preds, gt_hit = match(preds, gts, dist_thr=dist_thr, iou_thr=iou_thr,
+                         iou_only=matching.startswith("iou"), center_only=center_only)
     scores = np.sort(preds.score.unique())[::-1]
     rows = []
     # Score-tied predictions enter together. Cumulative counts avoid scanning the
@@ -152,8 +165,10 @@ def evaluate(pred_csv, split, thr=None, stems=None, matching="legacy"):
                best_f1=float(best.f1) if best is not None else (0.0 if len(gts) else None),
                thr_recall99=thr99, fp_at_recall99=fp99,
                images_fully_detected=float(gts.groupby("stem").detected.all().mean()) if len(gts) else None,
-               metric_version=metric_version, ap_definition="all_points_interpolated_custom_matching" if matching == "legacy" else "all_points_interpolated_iou_matching_not_coco",
-               matching={"center_distance_px": dist_thr, "iou": iou_thr, "operator": "or" if matching == "legacy" else "iou_only"},
+               metric_version=metric_version,
+               ap_definition=("all_points_interpolated_center_distance_not_coco" if center_only else
+                              "all_points_interpolated_custom_matching" if matching == "legacy" else "all_points_interpolated_iou_matching_not_coco"),
+               matching={"center_distance_px": dist_thr, "iou": iou_thr, "operator": "center_only" if center_only else "or" if matching == "legacy" else "iou_only"},
                data_version=DATA.name,
                split_csv_md5=hashlib.md5(split_file.read_bytes()).hexdigest() if split_file.exists() else None,
                threshold_source=threshold_source, tp=tp, fp=fp, fn=fn, n_predictions=int(len(preds)),
@@ -163,6 +178,12 @@ def evaluate(pred_csv, split, thr=None, stems=None, matching="legacy"):
                negative_images_with_fp=negative_with_fp,
                image_false_alarm_rate=negative_with_fp / len(negative_stems) if negative_stems else None,
                evaluation_status="no_ground_truth" if not len(gts) else "no_predictions" if preds.empty else "ok")
+    if center_only:
+        errors = sel.loc[sel.hit >= 0, "center_error_px"].to_numpy(dtype=float)
+        res["center_error"] = dict(n_matched=int(len(errors)), n_unmatched_gt=fn,
+                                   median_px=float(np.median(errors)) if len(errors) else None,
+                                   p95_px=float(np.percentile(errors, 95)) if len(errors) else None,
+                                   scope="matched_targets_only; unmatched targets remain FN")
     cond = {}
     gts["size_bin"] = pd.cut(gts["size"].astype(float), [0, 8, 11, 14, 100], labels=["~8px", "8~11px", "11~14px", "14px~"])
     gts["edge_bin"] = pd.cut(gts["edge"].astype(float), [-1, 20, 40, 60, 1000], labels=["가장자리20px이내", "20~40px", "40~60px", "60px~"])

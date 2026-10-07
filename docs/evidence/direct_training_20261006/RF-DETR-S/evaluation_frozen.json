@@ -1,0 +1,9 @@
+{
+  "checkpoint_sha256": "a6fe4ed8408882563b9b55fd1e831f0967438f198077d47c98e49e899e9eff39",
+  "epoch": 10,
+  "thresholds": {
+    "iou50": 0.71692747,
+    "iou75": 0.71819055,
+    "legacy": 0.71692747
+  }
+}

@@ -128,6 +128,32 @@ class EvaluationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "임계값"):
             evaluation.evaluate(self.root / "unused.csv", "test", matching="iou50")
 
+    def test_center_distance_boundary_and_box_size_independence(self):
+        for size in [2., 100.]:
+            result = self.score(["a"], [("a", 22., 20., size, size, .9)], thr=.5, matching="center2")
+            self.assertEqual((result["tp"], result["fp"], result["fn"]), (1, 0, 0))
+            self.assertEqual(result["center_error"]["median_px"], 2.)
+        result = self.score(["a"], [("a", 22.0001, 20., 10., 10., .9)], thr=.5, matching="center2")
+        self.assertEqual((result["tp"], result["fp"], result["fn"]), (0, 1, 1))
+
+    def test_center_no_iou_fallback(self):
+        result = self.score(["a"], [("a", 23., 20., 10., 10., .9)], thr=.5, matching="center2")
+        self.assertEqual(result["tp"], 0)
+
+    def test_center_duplicates_and_missed_targets_remain_in_counts(self):
+        result = self.score(["a", "b"], [self.box("a"), self.box("a", .8)], thr=.5, matching="center4")
+        self.assertEqual((result["tp"], result["fp"], result["fn"]), (1, 1, 1))
+        self.assertEqual(result["center_error"]["n_matched"], 1)
+        result = self.score(["a", "b"], [], thr=.5, matching="center4")
+        self.assertEqual((result["tp"], result["fp"], result["fn"]), (0, 0, 2))
+        self.assertIsNone(result["center_error"]["median_px"])
+
+    def test_center_no_cross_image_match_and_low_score_is_excluded(self):
+        result = self.score(["a"], [self.box("b"), self.box("a", .49)], thr=.5, matching="center8")
+        self.assertEqual((result["tp"], result["fp"], result["fn"]), (0, 1, 1))
+        with self.assertRaisesRegex(ValueError, "임계값"):
+            evaluation.evaluate(self.root / "unused.csv", "test", matching="center2")
+
     def test_missing_csv_header_rejected(self):
         csv = self.root / "empty.csv"
         csv.touch()

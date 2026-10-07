@@ -1,0 +1,144 @@
+{
+  "pred_csv": "runs/v2_direct20_yolo11s_mps_20261006/predictions_test.csv",
+  "split": "test",
+  "n_images": 97,
+  "n_gt": 225,
+  "thr": 0.6884128,
+  "precision": 0.9288888888888889,
+  "recall": 0.9288888888888889,
+  "f1": 0.9288888888888889,
+  "fp_per_image": 0.16494845360824742,
+  "ap": 0.8988285042206215,
+  "best_f1": 0.9309576837416481,
+  "thr_recall99": null,
+  "fp_at_recall99": null,
+  "images_fully_detected": 0.8350515463917526,
+  "metric_version": "center2px_v1",
+  "ap_definition": "all_points_interpolated_center_distance_not_coco",
+  "matching": {
+    "center_distance_px": 2.0,
+    "iou": null,
+    "operator": "center_only"
+  },
+  "data_version": "xray_v2",
+  "split_csv_md5": "8e58184ae24dfd1b48da2e9dfd88fedc",
+  "threshold_source": "provided",
+  "tp": 209,
+  "fp": 16,
+  "fn": 16,
+  "n_predictions": 3179,
+  "n_selected_predictions": 225,
+  "n_zero_area_predictions": 0,
+  "n_negative_images": 0,
+  "negative_images_with_fp": 0,
+  "image_false_alarm_rate": null,
+  "evaluation_status": "ok",
+  "center_error": {
+    "n_matched": 209,
+    "n_unmatched_gt": 16,
+    "median_px": 0.9490831101848887,
+    "p95_px": 1.8328053473433012,
+    "scope": "matched_targets_only; unmatched targets remain FN"
+  },
+  "recall_by_condition": {
+    "card_type": {
+      "막대1": [
+        0.939,
+        33
+      ],
+      "막대3": [
+        0.927,
+        192
+      ]
+    },
+    "machine": {
+      "1호기": [
+        0.963,
+        80
+      ],
+      "2호기": [
+        0.963,
+        81
+      ],
+      "3호기": [
+        0.844,
+        64
+      ]
+    },
+    "width": {
+      "316": [
+        0.965,
+        86
+      ],
+      "352": [
+        0.96,
+        75
+      ],
+      "576": [
+        0.844,
+        64
+      ]
+    },
+    "n_boxes": {
+      "1": [
+        0.939,
+        33
+      ],
+      "3": [
+        0.927,
+        192
+      ]
+    },
+    "size_bin": {
+      "~8px": [
+        1.0,
+        13
+      ],
+      "8~11px": [
+        0.942,
+        103
+      ],
+      "11~14px": [
+        0.926,
+        94
+      ],
+      "14px~": [
+        0.8,
+        15
+      ]
+    },
+    "edge_bin": {
+      "20~40px": [
+        1.0,
+        2
+      ],
+      "40~60px": [
+        0.948,
+        173
+      ],
+      "60px~": [
+        0.86,
+        50
+      ]
+    },
+    "contrast_bin": {
+      "대비~35": [
+        0.571,
+        7
+      ],
+      "35~45": [
+        0.963,
+        82
+      ],
+      "45~55": [
+        0.899,
+        69
+      ],
+      "55~": [
+        0.955,
+        67
+      ]
+    }
+  },
+  "protocol": "reports/center_evaluation_20261007/protocol.json"
+}

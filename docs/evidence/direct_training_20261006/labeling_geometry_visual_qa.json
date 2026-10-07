@@ -1,0 +1,27 @@
+{
+  "version": "dark_core_margin3_v1",
+  "sample_visual_check": "passed",
+  "reviewer": "Codex parent",
+  "sample_image": "reports/direct_labeling_20261006/geometry_examples.png",
+  "indices": [
+    0,
+    10,
+    70,
+    119,
+    608,
+    612,
+    617,
+    650,
+    700,
+    800,
+    900,
+    1000,
+    1256,
+    1260,
+    1300,
+    1450,
+    1500,
+    1530
+  ],
+  "scope": "18 selected-dot close-ups, all visibly enclosed with local context. Not an exhaustive boundary or accuracy validation. All automated geometry flags stay in review queue."
+}

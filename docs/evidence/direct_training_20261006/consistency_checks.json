@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-07T20:33:06.832224+09:00",
+  "status": "passed",
+  "rescore_results": 12,
+  "object_fp_fn_counts_reconciled": true,
+  "complement_categories_reconciled": true,
+  "visual_review_targets": 68,
+  "visual_review_image_hashes_match": true,
+  "live_pair_calls": 321,
+  "limits": "Technical consistency, no independent human label accuracy or field validation."
+}
